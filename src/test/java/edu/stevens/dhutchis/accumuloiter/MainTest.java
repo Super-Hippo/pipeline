@@ -63,7 +63,7 @@ public class MainTest {
     public void tearDown() {
     }
 
-    //@Test
+    @Test
     public void testMini() throws Exception {
 
         File tempDir = tempFolder.newFolder();
@@ -79,7 +79,7 @@ public class MainTest {
         tempDir.delete();
     }
 
-    //@Test
+    @Test
     public void testNormal() throws Exception {
         Instance instance = new ZooKeeperInstance(myconfig.get(ClientConfiguration.ClientProperty.INSTANCE_NAME), myconfig.get(ClientConfiguration.ClientProperty.INSTANCE_ZK_HOST));
         //System.out.println("made instance : "+instance);
