@@ -99,11 +99,11 @@ public class Main {
         }
         
         // check results
-        Scanner scan = conn.createScanner(tableName, Authorizations.EMPTY);
+        Scanner scan = conn.createScanner("TseqRaw", Authorizations.EMPTY);
        // System.out.println("Scanner range: "+scan.getRange());
         for(Entry<Key,Value> entry : scan) {
-           // System.out.println(entry);
-            Assert.assertEquals("12", entry.getValue().toString());
+           System.out.println(entry);
+           // Assert.assertEquals("12", entry.getValue().toString());
         }
 
         // try a custom iterator...
