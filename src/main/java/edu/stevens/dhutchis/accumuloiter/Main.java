@@ -105,14 +105,16 @@ public class Main {
 
 
         // check results
-        Scanner scan = conn.createScanner("Tseq", Authorizations.EMPTY);
-        scan.setRange(new Range("BAA22448.1"));
+        Scanner scan = conn.createScanner("TseqDegT", Authorizations.EMPTY);
+        scan.setRange(new Range("|Bacteria; Cyanobacteria"));
        // System.out.println("Scanner range: "+scan.getRange());
+        int i = 0;
         for(Entry<Key,Value> entry : scan) {
            System.out.println(entry);
            // Assert.assertEquals("12", entry.getValue().toString());
+            i++;
         }
-
+        System.out.println("Number of results is: " + i );
         // try a custom iterator...
 
     }
