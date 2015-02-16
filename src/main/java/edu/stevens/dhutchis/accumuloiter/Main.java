@@ -28,7 +28,7 @@ public class Main {
     
     public static void main(String[] args)
     {
-		System.out.println("HI im in main");
+		System.out.println("HI im in main i updated");
 	}
 	
     public void testIter(Connector conn) throws AccumuloException, AccumuloSecurityException, TableNotFoundException, TableExistsException {
