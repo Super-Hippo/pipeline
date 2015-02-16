@@ -61,18 +61,18 @@ public class Main {
         conn.tableOperations().create(tableName);
         */
 
-        String iterName = "summingIter";
+       // String iterName = "summingIter";
 		
         // Setup IteratorSetting
-        IteratorSetting cfg = new IteratorSetting(1, iterName, SummingCombiner.class);
-        LongCombiner.setEncodingType(cfg, LongCombiner.Type.STRING);
+      //  IteratorSetting cfg = new IteratorSetting(1, iterName, SummingCombiner.class);
+       // LongCombiner.setEncodingType(cfg, LongCombiner.Type.STRING);
         // add columns to act on
-        List<IteratorSetting.Column> combineColumns = new ArrayList<>();
-        combineColumns.add(new IteratorSetting.Column(columnFamily, "leg"));
-        Combiner.setColumns(cfg, combineColumns);
+       // List<IteratorSetting.Column> combineColumns = new ArrayList<>();
+       // combineColumns.add(new IteratorSetting.Column(columnFamily, "leg"));
+        //Combiner.setColumns(cfg, combineColumns);
 
         // Add Iterator to table
-        conn.tableOperations().attachIterator(tableName, cfg);
+       // conn.tableOperations().attachIterator(tableName, cfg);
         // Verify successful add
         //Map<String,EnumSet<IteratorUtil.IteratorScope>> iterMap = conn.tableOperations().listIterators(tableName);
         //EnumSet<IteratorUtil.IteratorScope> iterScope = iterMap.get(iterName);
