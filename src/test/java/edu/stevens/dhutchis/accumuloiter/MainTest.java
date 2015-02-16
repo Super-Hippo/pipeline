@@ -69,7 +69,7 @@ public class MainTest {
         File tempDir = tempFolder.newFolder();
         MiniAccumuloCluster accumulo = new MiniAccumuloCluster(tempDir, "password");
         accumulo.start(); // doesn't work on Dylan's computer for some reason.  The OS closes the Zookeeper connection.
-System.out.println("HI1");
+System.out.println("H4H4H4H4H4H4H4H4H4H4");
         Instance instance = new ZooKeeperInstance(accumulo.getInstanceName(), accumulo.getZooKeepers());
         Connector conn = instance.getConnector("root", new PasswordToken("password"));
 
