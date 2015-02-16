@@ -105,8 +105,8 @@ public class Main {
 
 
         // check results
-        Scanner scan = conn.createScanner("TseqRaw", Authorizations.EMPTY);
-        scan.setRange(new Range(" AAA00002.1","AAA02865.1"));
+        Scanner scan = conn.createScanner("Tseq", Authorizations.EMPTY);
+        scan.setRange(new Range("BAA22448.1"));
        // System.out.println("Scanner range: "+scan.getRange());
         for(Entry<Key,Value> entry : scan) {
            System.out.println(entry);
