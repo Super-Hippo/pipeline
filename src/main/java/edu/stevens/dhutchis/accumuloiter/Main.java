@@ -13,6 +13,7 @@ import org.apache.accumulo.core.iterators.user.SummingCombiner;
 import org.apache.accumulo.core.security.Authorizations;
 import org.apache.hadoop.io.Text;
 import org.junit.Assert;
+import org.apache.accumulo.core.data.Range;
 
 import java.util.*;
 import java.util.Map.Entry;
@@ -43,7 +44,7 @@ public class Main {
 
         System.out.println("I am in testIter");
 
-        printList(conn.tableOperations().list(), "tables");
+       // printList(conn.tableOperations().list(), "tables");
 
 
         /*Text rowID = new Text("row1");
@@ -54,10 +55,12 @@ public class Main {
         Value value = new Value("myValue".getBytes());
         Mutation mutation = new Mutation(rowID);
         mutation.put(colFam, colQual, colVis, timestamp, value);*/
+        /*
         if (conn.tableOperations().exists(tableName))
             conn.tableOperations().delete(tableName);
         conn.tableOperations().create(tableName);
-        
+        */
+
         String iterName = "summingIter";
 		
         // Setup IteratorSetting
@@ -71,14 +74,14 @@ public class Main {
         // Add Iterator to table
         conn.tableOperations().attachIterator(tableName, cfg);
         // Verify successful add
-        Map<String,EnumSet<IteratorUtil.IteratorScope>> iterMap = conn.tableOperations().listIterators(tableName);
-        EnumSet<IteratorUtil.IteratorScope> iterScope = iterMap.get(iterName);
-        Assert.assertNotNull(iterScope);
-        Assert.assertTrue(iterScope.containsAll(EnumSet.allOf(IteratorUtil.IteratorScope.class)));
+        //Map<String,EnumSet<IteratorUtil.IteratorScope>> iterMap = conn.tableOperations().listIterators(tableName);
+        //EnumSet<IteratorUtil.IteratorScope> iterScope = iterMap.get(iterName);
+        //Assert.assertNotNull(iterScope);
+        //Assert.assertTrue(iterScope.containsAll(EnumSet.allOf(IteratorUtil.IteratorScope.class)));
         
-        Text row1 = new Text("row1");
-        Text cqleg = new Text("leg");
-        Value[] vlegs = new Value[] {new Value("3".getBytes()), new Value("4".getBytes()), new Value("5".getBytes())  };
+      //  Text row1 = new Text("row1");
+       // Text cqleg = new Text("leg");
+     //   Value[] vlegs = new Value[] {new Value("3".getBytes()), new Value("4".getBytes()), new Value("5".getBytes())  };
 
         // AH HA!! If you batch writes to the same key together, only the last one actually transmits to Accumulo.
         // Lesson: do each write separately.
@@ -86,20 +89,24 @@ public class Main {
 //        for (Value vleg : vlegs)
 //            m1.put(new Text(columnFamily), cqleg, vleg);
         
-        BatchWriterConfig config = new BatchWriterConfig();
-        BatchWriter writer = conn.createBatchWriter(tableName, config);
+//        BatchWriterConfig config = new BatchWriterConfig();
+  //      BatchWriter writer = conn.createBatchWriter(tableName, config);
 //        writer.addMutation(m1);
 //        writer.flush();
 
+        /*
         for (Value vleg : vlegs) {
             Mutation m1 = new Mutation(row1);
             m1.put(new Text(columnFamily), cqleg, vleg);
             writer.addMutation(m1);
             writer.flush();
         }
-        
+        */
+
+
         // check results
         Scanner scan = conn.createScanner("TseqRaw", Authorizations.EMPTY);
+        scan.setRange(new Range(" AAA00002.1","AAA02865.1"));
        // System.out.println("Scanner range: "+scan.getRange());
         for(Entry<Key,Value> entry : scan) {
            System.out.println(entry);
