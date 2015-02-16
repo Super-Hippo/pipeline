@@ -106,17 +106,17 @@ public class Main {
 
         // check results
         Scanner scan = conn.createScanner("Tseq", Authorizations.EMPTY);
-        scan.setRange(new Range("BAA22448.1"));
+        //scan.setRange(new Range("BAA22448.1"));
        // System.out.println("Scanner range: "+scan.getRange());
         for(Entry<Key,Value> entry : scan) {
            System.out.println(entry);
            // Assert.assertEquals("12", entry.getValue().toString());
         }
-        System.out.println("hey");
+
         // try a custom iterator...
-        
+
     }
-    
+
     class ConcatIter extends Combiner {
         @Override
         public Value reduce(Key key, Iterator<Value> iter) {
