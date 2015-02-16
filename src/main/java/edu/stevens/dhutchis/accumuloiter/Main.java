@@ -87,12 +87,12 @@ public class Main {
         
         // check results
         Scanner scan = conn.createScanner(tableName, Authorizations.EMPTY);
-        System.out.println("Scanner range: "+scan.getRange());
+       // System.out.println("Scanner range: "+scan.getRange());
         for(Entry<Key,Value> entry : scan) {
-            System.out.println(entry);
+           // System.out.println(entry);
             Assert.assertEquals("12", entry.getValue().toString());
         }
-System.out.println("HI56");
+
         // try a custom iterator...
         
     }

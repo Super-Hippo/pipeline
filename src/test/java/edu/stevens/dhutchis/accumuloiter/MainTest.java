@@ -69,12 +69,12 @@ public class MainTest {
         File tempDir = tempFolder.newFolder();
         MiniAccumuloCluster accumulo = new MiniAccumuloCluster(tempDir, "password");
         accumulo.start(); // doesn't work on Dylan's computer for some reason.  The OS closes the Zookeeper connection.
-System.out.println("H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4");
+
         Instance instance = new ZooKeeperInstance(accumulo.getInstanceName(), accumulo.getZooKeepers());
         Connector conn = instance.getConnector("root", new PasswordToken("password"));
 
         innerTest(instance, conn);
-System.out.println("HI2");
+
         accumulo.stop();
         tempDir.delete();
     }
@@ -82,9 +82,9 @@ System.out.println("HI2");
     //@Test
     public void testNormal() throws Exception {
         Instance instance = new ZooKeeperInstance(myconfig.get(ClientConfiguration.ClientProperty.INSTANCE_NAME), myconfig.get(ClientConfiguration.ClientProperty.INSTANCE_ZK_HOST));
-        System.out.println("made instance : "+instance);
+        //System.out.println("made instance : "+instance);
         Connector conn = instance.getConnector(username, new PasswordToken(password));
-        System.out.println("made connector: "+conn);
+       // System.out.println("made connector: "+conn);
 
         innerTest(instance, conn);
     }
@@ -92,13 +92,10 @@ System.out.println("HI2");
     private void innerTest(Instance instance, Connector conn) throws Exception {
         printList(conn.tableOperations().list(), "tables");
         printList(instance.getMasterLocations(), "master_locations");
-System.out.println("HI3");
+
         Main main = new Main();
         main.testIter(conn);
     }
 	
-	public static void main(String[] args)
-    {
-		System.out.println("HI im in main");
-	}
+
 }
