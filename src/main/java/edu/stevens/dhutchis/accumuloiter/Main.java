@@ -25,14 +25,27 @@ public class Main {
     private final String tableName = "TestTableIterator";
     private final String columnFamily="";
     private final String columnVisibility="";
-    
+
+    private void printList(Collection<?> list, String prefix) {
+        System.out.print(prefix+": ");
+        for (Object o : list) {
+            System.out.print(o+", ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args)
     {
-		System.out.println("HI im in main i updated again again");
+        System.out.println("HI im in main i updated again again");
 	}
 	
     public void testIter(Connector conn) throws AccumuloException, AccumuloSecurityException, TableNotFoundException, TableExistsException {
-        
+
+        System.out.println("I am in testIter");
+
+        printList(conn.tableOperations().list(), "tables");
+
+
         /*Text rowID = new Text("row1");
         Text colFam = new Text("myColFam");
         Text colQual = new Text("myColQual");

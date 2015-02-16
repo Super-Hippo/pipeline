@@ -63,7 +63,7 @@ public class MainTest {
     public void tearDown() {
     }
 
-    @Test
+    //@Test
     public void testMini() throws Exception {
 
         File tempDir = tempFolder.newFolder();
