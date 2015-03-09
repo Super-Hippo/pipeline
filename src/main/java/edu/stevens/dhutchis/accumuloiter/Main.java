@@ -39,7 +39,91 @@ public class Main {
     {
         System.out.println("HI im in main i updated again again");
 	}
-	
+
+
+    public List<String> taxToAcc(Connector conn,List<String> taxaList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
+    {
+        System.out.println("entered tax to acc");
+        // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
+        String TseqRaw = "Tseq";
+        int numThreads = 1;
+        BatchScanner scan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
+
+        /*
+        List<Range> accessionRanges = new ArrayList<>();
+        for (String accession : accessionList)
+        {
+            accessionRanges.add(new Range(accession));
+        }
+        scan.setRanges(accessionRanges);
+*/
+
+        List<String> accList = new ArrayList<>();
+        String colQual ="";
+
+        // Do the scan
+        for(Map.Entry<Key,Value> entry : scan) {
+            //System.out.println(entry); // for debugging
+            //String accession = entry.getKey().getRow().toString();
+            //  assert accessionList.contains(accession);                            // sanity check
+            // assert entry.getKey().getColumnQualifier().toString().equals("seq"); // sanity check
+            colQual = entry.getKey().getColumnQualifier().toString();
+            System.out.println("colQual is : " + colQual);
+            for( String s : taxaList)
+            {
+                if(colQual.contains(s))
+                {
+                    String acc = entry.getKey().getRow().toString();
+                    System.out.println("acc is : " + acc);
+                    accList.add(acc);
+                    break;
+                }
+            }
+
+
+        }
+        scan.close();
+
+        return accList;
+    }
+
+
+//not sure why we should map, all we care about are sequences
+
+    /** input is a list of Accession numbers ///used to be accession now its just con
+     /   output is a map from accession numbers to sequences */
+    public List<String> accToRaw(Connector conn,List<String> accessionList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
+    {
+
+        System.out.println("entered acc to raw");
+        // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
+        String TseqRaw = "TseqRaw";
+        int numThreads = 1;
+        BatchScanner scan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
+
+        List<Range> accessionRanges = new ArrayList<>(accessionList.size());
+        for (String accession : accessionList)
+        {
+            accessionRanges.add(new Range(accession));
+        }
+        scan.setRanges(accessionRanges);
+
+        List<String> rawSeq = new ArrayList<String>(accessionList.size());
+        // Do the scan
+        for(Map.Entry<Key,Value> entry : scan) {
+            //System.out.println(entry); // for debugging
+            //String accession = entry.getKey().getRow().toString();
+          //  assert accessionList.contains(accession);                            // sanity check
+           // assert entry.getKey().getColumnQualifier().toString().equals("seq"); // sanity check
+            String seq = entry.getValue().toString();
+            System.out.println(seq);
+            rawSeq.add(seq);
+        }
+        scan.close();
+        return rawSeq;
+    }
+
+
     public void testIter(Connector conn) throws AccumuloException, AccumuloSecurityException, TableNotFoundException, TableExistsException {
 
         System.out.println("I am in testIter");
@@ -62,7 +146,7 @@ public class Main {
         */
 
        // String iterName = "summingIter";
-		
+
         // Setup IteratorSetting
       //  IteratorSetting cfg = new IteratorSetting(1, iterName, SummingCombiner.class);
        // LongCombiner.setEncodingType(cfg, LongCombiner.Type.STRING);
@@ -78,7 +162,7 @@ public class Main {
         //EnumSet<IteratorUtil.IteratorScope> iterScope = iterMap.get(iterName);
         //Assert.assertNotNull(iterScope);
         //Assert.assertTrue(iterScope.containsAll(EnumSet.allOf(IteratorUtil.IteratorScope.class)));
-        
+
       //  Text row1 = new Text("row1");
        // Text cqleg = new Text("leg");
      //   Value[] vlegs = new Value[] {new Value("3".getBytes()), new Value("4".getBytes()), new Value("5".getBytes())  };
@@ -88,7 +172,7 @@ public class Main {
 //        Mutation m1 = new Mutation(row1);
 //        for (Value vleg : vlegs)
 //            m1.put(new Text(columnFamily), cqleg, vleg);
-        
+
 //        BatchWriterConfig config = new BatchWriterConfig();
   //      BatchWriter writer = conn.createBatchWriter(tableName, config);
 //        writer.addMutation(m1);
@@ -98,6 +182,7 @@ public class Main {
         for (Value vleg : vlegs) {
             Mutation m1 = new Mutation(row1);
             m1.put(new Text(columnFamily), cqleg, vleg);
+ vleg);
             writer.addMutation(m1);
             writer.flush();
         }
