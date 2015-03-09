@@ -48,7 +48,7 @@ public class Main {
         String TseqRaw = "Tseq";
         int numThreads = 1;
         Scanner scan = conn.createScanner(TseqRaw, Authorizations.EMPTY);
-        scan.setRange(new Range());
+        scan.setRange(new Range("AAA00002.1","AAA62758.1"));
        // Range r = new Range();
         //scan.setRanges((Collection<Range>) new Range());
         /*
