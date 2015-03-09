@@ -47,8 +47,10 @@ public class Main {
         // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
         String TseqRaw = "Tseq";
         int numThreads = 1;
-        BatchScanner scan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
-
+        Scanner scan = conn.createScanner(TseqRaw, Authorizations.EMPTY);
+        scan.setRange(new Range());
+       // Range r = new Range();
+        //scan.setRanges((Collection<Range>) new Range());
         /*
         List<Range> accessionRanges = new ArrayList<>();
         for (String accession : accessionList)
@@ -64,7 +66,7 @@ public class Main {
         // Do the scan
         System.out.println("entering scan");
         for(Map.Entry<Key,Value> entry : scan) {
-            System.out.println("in scan");
+          //  System.out.println("in scan");
             //System.out.println(entry); // for debugging
             //String accession = entry.getKey().getRow().toString();
             //  assert accessionList.contains(accession);                            // sanity check
