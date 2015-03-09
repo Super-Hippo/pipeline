@@ -92,18 +92,12 @@ public class MainTest {
 
     @Test
     public void testNormal() throws Exception {
-       // Instance instance = new ZooKeeperInstance(myconfig.get(ClientConfiguration.ClientProperty.INSTANCE_NAME), myconfig.get(ClientConfiguration.ClientProperty.INSTANCE_ZK_HOST));
-        //System.out.println("made instance : "+instance);
-        //Connector conn = instance.getConnector(username, new PasswordToken(password));
-       // System.out.println("made connector: "+conn);
+
         Connector conn = connectToAccumulo();
         innerTest( conn);
     }
 
     private void innerTest( Connector conn) throws Exception {
-        //printList(conn.tableOperations().list(), "tables");
-        //printList(instance.getMasterLocations(), "master_locations");
-
 
         List<String> taxa = new ArrayList<>();
         taxa.add("Bacteria");
