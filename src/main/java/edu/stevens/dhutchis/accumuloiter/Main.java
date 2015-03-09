@@ -48,7 +48,8 @@ public class Main {
         String TseqRaw = "Tseq";
         int numThreads = 1;
         Scanner scan = conn.createScanner(TseqRaw, Authorizations.EMPTY);
-        scan.setRange(new Range("AAA00002.1","AAA62758.1"));
+        scan.setRange(new Range());
+       // scan.setRange(new Range("AAA00002.1","AAA62758.1"));
        // Range r = new Range();
         //scan.setRanges((Collection<Range>) new Range());
         /*
@@ -72,13 +73,13 @@ public class Main {
             //  assert accessionList.contains(accession);                            // sanity check
             // assert entry.getKey().getColumnQualifier().toString().equals("seq"); // sanity check
             colQual = entry.getKey().getColumnQualifier().toString();
-            System.out.println("colQual is : " + colQual);
+         //   System.out.println("colQual is : " + colQual);
             for( String s : taxaList)
             {
                 if(colQual.contains(s))
                 {
                     String acc = entry.getKey().getRow().toString();
-                    System.out.println("acc is : " + acc);
+                   // System.out.println("acc is : " + acc);
                     accList.add(acc);
                     break;
                 }
@@ -120,7 +121,7 @@ public class Main {
           //  assert accessionList.contains(accession);                            // sanity check
            // assert entry.getKey().getColumnQualifier().toString().equals("seq"); // sanity check
             String seq = entry.getValue().toString();
-            System.out.println(seq);
+        //    System.out.println(seq);
             rawSeq.add(seq);
         }
         scan.close();
