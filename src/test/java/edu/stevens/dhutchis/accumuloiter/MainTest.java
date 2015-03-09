@@ -5,10 +5,7 @@
  */
 package edu.stevens.dhutchis.accumuloiter;
 
-import org.apache.accumulo.core.client.ClientConfiguration;
-import org.apache.accumulo.core.client.Connector;
-import org.apache.accumulo.core.client.Instance;
-import org.apache.accumulo.core.client.ZooKeeperInstance;
+import org.apache.accumulo.core.client.*;
 import org.apache.accumulo.core.client.security.tokens.PasswordToken;
 import org.apache.accumulo.core.data.Range;
 import org.apache.accumulo.minicluster.MiniAccumuloCluster;
@@ -24,6 +21,11 @@ import java.util.List;
  *
  * @author dhutchis
  */
+
+
+
+
+
 public class MainTest {
     @Rule
     public TemporaryFolder tempFolder = new TemporaryFolder();
@@ -34,9 +36,15 @@ public class MainTest {
     static {
         String instance = "instance";
         String host = "b412srv.ece.stevens-tech.edu:2181";
-        int timeout = 100000;
-        myconfig = new ClientConfiguration().withInstance(instance).withZkHosts(host).withZkTimeout(timeout);
+        int timeout = 10000; // 10 seconds
+        myconfig = ClientConfiguration.loadDefault().withInstance(instance).withZkHosts(host).withZkTimeout(timeout);
     }
+
+    public Connector connectToAccumulo() throws AccumuloSecurityException, AccumuloException {
+        Instance instance = new ZooKeeperInstance(myconfig);
+        return instance.getConnector(username, new PasswordToken(password));
+    }
+
 
     private void printList(Collection<?> list, String prefix) {
         System.out.print(prefix+": ");
@@ -76,7 +84,7 @@ public class MainTest {
         Instance instance = new ZooKeeperInstance(accumulo.getInstanceName(), accumulo.getZooKeepers());
         Connector conn = instance.getConnector("root", new PasswordToken("password"));
 
-        innerTest(instance, conn);
+      //  innerTest(instance, conn);
 
         accumulo.stop();
         tempDir.delete();
@@ -84,17 +92,17 @@ public class MainTest {
 
     @Test
     public void testNormal() throws Exception {
-        Instance instance = new ZooKeeperInstance(myconfig.get(ClientConfiguration.ClientProperty.INSTANCE_NAME), myconfig.get(ClientConfiguration.ClientProperty.INSTANCE_ZK_HOST));
+       // Instance instance = new ZooKeeperInstance(myconfig.get(ClientConfiguration.ClientProperty.INSTANCE_NAME), myconfig.get(ClientConfiguration.ClientProperty.INSTANCE_ZK_HOST));
         //System.out.println("made instance : "+instance);
-        Connector conn = instance.getConnector(username, new PasswordToken(password));
+        //Connector conn = instance.getConnector(username, new PasswordToken(password));
        // System.out.println("made connector: "+conn);
-
-        innerTest(instance, conn);
+        Connector conn = connectToAccumulo();
+        innerTest( conn);
     }
 
-    private void innerTest(Instance instance, Connector conn) throws Exception {
-        printList(conn.tableOperations().list(), "tables");
-        printList(instance.getMasterLocations(), "master_locations");
+    private void innerTest( Connector conn) throws Exception {
+        //printList(conn.tableOperations().list(), "tables");
+        //printList(instance.getMasterLocations(), "master_locations");
 
 
         List<String> taxa = new ArrayList<>();
