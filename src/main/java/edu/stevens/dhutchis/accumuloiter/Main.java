@@ -62,7 +62,9 @@ public class Main {
         String colQual ="";
 
         // Do the scan
+        System.out.println("entering scan");
         for(Map.Entry<Key,Value> entry : scan) {
+            System.out.println("in scan");
             //System.out.println(entry); // for debugging
             //String accession = entry.getKey().getRow().toString();
             //  assert accessionList.contains(accession);                            // sanity check
