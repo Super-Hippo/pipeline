@@ -121,7 +121,7 @@ public class Main {
           //  assert accessionList.contains(accession);                            // sanity check
            // assert entry.getKey().getColumnQualifier().toString().equals("seq"); // sanity check
             String seq = entry.getValue().toString();
-        //    System.out.println(seq);
+           System.out.println(seq);
             rawSeq.add(seq);
         }
         scan.close();
