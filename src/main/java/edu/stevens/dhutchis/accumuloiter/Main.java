@@ -64,7 +64,7 @@ public class Main {
         String colQual ="";
 
         // Do the scan
-        System.out.println("entering scan");
+       // System.out.println("entering scan");
         for(Map.Entry<Key,Value> entry : scan) {
           //  System.out.println("in scan");
             //System.out.println(entry); // for debugging
@@ -78,7 +78,7 @@ public class Main {
                 if(colQual.contains(s))
                 {
                     String acc = entry.getKey().getRow().toString();
-                    System.out.println("acc is : " + acc);
+                    //System.out.println("acc is : " + acc);
                     accList.add(acc);
                     break;
                 }
