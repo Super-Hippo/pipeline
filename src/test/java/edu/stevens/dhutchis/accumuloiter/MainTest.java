@@ -10,12 +10,15 @@ import org.apache.accumulo.core.client.Connector;
 import org.apache.accumulo.core.client.Instance;
 import org.apache.accumulo.core.client.ZooKeeperInstance;
 import org.apache.accumulo.core.client.security.tokens.PasswordToken;
+import org.apache.accumulo.core.data.Range;
 import org.apache.accumulo.minicluster.MiniAccumuloCluster;
 import org.junit.*;
 import org.junit.rules.TemporaryFolder;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 /**
  *
@@ -93,8 +96,14 @@ public class MainTest {
         printList(conn.tableOperations().list(), "tables");
         printList(instance.getMasterLocations(), "master_locations");
 
+
+        List<String> taxa = new ArrayList<>();
+        taxa.add("Bacteria");
+        taxa.add("Proteobacteria");
+
         Main main = new Main();
-        main.testIter(conn);
+        List<String> result = main.accToRaw(conn,main.taxToAcc(conn,taxa));
+        String[]   s = result.toArray(new String[result.size()]);
     }
 	
 
