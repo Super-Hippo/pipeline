@@ -72,7 +72,7 @@ public class Main {
             //  assert accessionList.contains(accession);                            // sanity check
             // assert entry.getKey().getColumnQualifier().toString().equals("seq"); // sanity check
             colQual = entry.getKey().getColumnQualifier().toString();
-            System.out.println("colQual is : " + colQual);
+           // System.out.println("colQual is : " + colQual);
             for( String s : taxaList)
             {
                 if(colQual.contains(s))
