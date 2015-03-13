@@ -45,11 +45,11 @@ public class Main {
     {
         System.out.println("entered tax to acc");
         // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
-        String TseqRaw = "Tseq";
+        String TseqRaw = "TseqT";
         int numThreads = 1;
         Scanner scan = conn.createScanner(TseqRaw, Authorizations.EMPTY);
        // scan.setRange(new Range());
-        scan.setRange(new Range("AAA00002.1","AAA62758.1"));
+        scan.setRange(new Range("taxonomy|Bacteria; Cyanobacteria" ,"taxonomy|Bacteria; Cyanobacteria~"));
        // Range r = new Range();
 
         List<String> accList = new ArrayList<>();
@@ -59,18 +59,12 @@ public class Main {
 
         for(Map.Entry<Key,Value> entry : scan) {
 
-            colQual = entry.getKey().getColumnQualifier().toString();
+            //colQual = entry.getKey().getColumnQualifier().toString();
          //   System.out.println("colQual is : " + colQual);
-            for( String s : taxaList)
-            {
-                if(colQual.contains(s))
-                {
-                    String acc = entry.getKey().getRow().toString();
-                   // System.out.println("acc is : " + acc);
+
+                    String acc = entry.getKey().getColumnQualifier().toString();
+                   System.out.println("acc is : " + acc);
                     accList.add(acc);
-                    break;
-                }
-            }
 
 
         }
