@@ -63,7 +63,7 @@ public class Main {
          //   System.out.println("colQual is : " + colQual);
 
                     String acc = entry.getKey().getColumnQualifier().toString();
-                   System.out.println("acc is : " + acc);
+                   System.out.println("row is: " +entry.getKey().getRow().toString()+" acc is : " + acc );
                     accList.add(acc);
 
 
