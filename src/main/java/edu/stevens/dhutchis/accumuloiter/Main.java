@@ -40,6 +40,7 @@ public class Main {
         System.out.println("HI im in main i updated again again");
 	}
 
+    /*
 //the output should really be ranges instead of strings
     public List<Range> taxToAcc(Connector conn,List<String> taxaList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
@@ -64,11 +65,14 @@ public class Main {
         return accList;
     }
 
+    //this is after I couldnt pull a branch
+*/
 
 
 
     /** input is a list of Accession numbers
      /   output is a map from accession numbers to sequences */
+    /*
     public Map<String,String> accToRaw(Connector conn,List<Range> accessionList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
 
@@ -94,6 +98,78 @@ System.out.println("size is: " + accessionList.size());
         //rawSeq.values().toArray();
         return rawSeq;
     }
+//this is after I couldnt pull a branch
+*/
+
+
+    public List<String> taxToAcc(Connector conn,List<String> taxaList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
+    {
+        System.out.println("entered tax to acc");
+        // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
+        String TseqRaw = "TseqT";
+        int numThreads = 1;
+        Scanner scan = conn.createScanner(TseqRaw, Authorizations.EMPTY);
+        // scan.setRange(new Range());
+        scan.setRange(new Range("AAA00002.1","AAA62758.1"));
+       // scan.setRange(new Range("taxonomy|Bacteria; Cyanobacteria" ,"taxonomy|Bacteria; Cyanobacteria~"));
+        // Range r = new Range();
+
+        List<String> accList = new ArrayList<>();
+        String colQual ="";
+
+        // Do the scan
+
+        for(Map.Entry<Key,Value> entry : scan) {
+
+            //colQual = entry.getKey().getColumnQualifier().toString();
+            //   System.out.println("colQual is : " + colQual);
+
+            String acc = entry.getKey().getColumnQualifier().toString();
+            System.out.println("row is: " +entry.getKey().getRow().toString()+" acc is : " + acc );
+            accList.add(acc);
+
+
+        }
+        scan.close();
+
+        return accList;
+    }
+
+
+//not sure why we should map, all we care about are sequences
+
+    /** input is a list of Accession numbers ///used to be accession now its just con
+     /   output is a map from accession numbers to sequences */
+    public List<String> accToRaw(Connector conn,List<String> accessionList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
+    {
+
+        System.out.println("entered acc to raw");
+        // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
+        String TseqRaw = "TseqRaw";
+        int numThreads = 1;
+        BatchScanner scan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
+
+        List<Range> accessionRanges = new ArrayList<>(accessionList.size());
+        for (String accession : accessionList)
+        {
+            System.out.println(accession);
+            accessionRanges.add(new Range(accession));
+        }
+        scan.setRanges(accessionRanges);
+
+        List<String> rawSeq = new ArrayList<String>(accessionList.size());
+        // Do the scan
+        for(Map.Entry<Key,Value> entry : scan) {
+            String seq = entry.getValue().toString();
+            System.out.println(seq);
+            rawSeq.add(seq);
+        }
+        scan.close();
+        return rawSeq;
+    }
+
+
+
 
     /*
     //old
