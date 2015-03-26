@@ -120,6 +120,11 @@ System.out.println("size is: " + accessionList.size());
             // System.out.println("row is: " +entry.getKey().getRow().toString()+" acc is : " + acc );
             accList.add(new Range(acc));
         }
+
+        for(Range r : accList)
+        {
+            System.out.println("range is : " + r.toString());
+        }
         scan.close();
 
         return accList;
