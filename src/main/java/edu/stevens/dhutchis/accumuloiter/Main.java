@@ -106,26 +106,41 @@ System.out.println("size is: " + accessionList.size());
     {
         System.out.println("entered tax to acc");
         // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
-        String TseqRaw = "TseqT";
+        String TseqRaw = "Tseq";
         int numThreads = 1;
         Scanner scan = conn.createScanner(TseqRaw, Authorizations.EMPTY);
-        scan.setRange(new Range("taxonomy|Bacteria; Cyanobacteria" ,"taxonomy|Bacteria; Cyanobacteria~"));
+        // scan.setRange(new Range());
+        scan.setRange(new Range("AAA00002.1","AAA62758.1"));
+        // Range r = new Range();
 
         List<Range> accList = new ArrayList<>();
+        String colQual ="";
 
         // Do the scan
 
         for(Map.Entry<Key,Value> entry : scan) {
-            String acc = entry.getKey().getColumnQualifier().toString();
-            // System.out.println("row is: " +entry.getKey().getRow().toString()+" acc is : " + acc );
-            accList.add(new Range(acc));
+
+            colQual = entry.getKey().getColumnQualifier().toString();
+            //   System.out.println("colQual is : " + colQual);
+            for( String s : taxaList)
+            {
+                if(colQual.contains(s))
+                {
+                    String acc = entry.getKey().getRow().toString();
+                     System.out.println("acc is : " + acc);
+                    accList.add(new Range(acc));
+                    break;
+                }
+            }
+
+
         }
+        scan.close();
 
         for(Range r : accList)
         {
-            System.out.println("range is : " + r.toString());
+            System.out.println(r.toString());
         }
-        scan.close();
 
         return accList;
     }
