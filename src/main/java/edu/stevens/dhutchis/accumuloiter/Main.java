@@ -41,6 +41,8 @@ public class Main {
 	}
 
     /*
+    //this is my new function
+
 //the output should really be ranges instead of strings
     public List<Range> taxToAcc(Connector conn,List<String> taxaList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
@@ -65,40 +67,7 @@ public class Main {
         return accList;
     }
 
-    //this is after I couldnt pull a branch
-*/
 
-
-
-    /** input is a list of Accession numbers
-     /   output is a map from accession numbers to sequences */
-    /*
-    public Map<String,String> accToRaw(Connector conn,List<Range> accessionList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
-    {
-
-        System.out.println("entered acc to raw");
-        // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
-        String TseqRaw = "TseqRaw";
-        int numThreads = 1;
-        BatchScanner scan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
-
-
-        scan.setRanges(accessionList);
-System.out.println("size is: " + accessionList.size());
-
-        Map<String,String> rawSeq = new HashMap<String,String>(accessionList.size());
-        // Do the scan
-        for(Map.Entry<Key,Value> entry : scan) {
-            String seq = entry.getValue().toString();
-            String mykey = entry.getKey().toString();
-           //System.out.println("seq is: "  + seq + " key is : " + mykey);
-            rawSeq.put(mykey,seq);
-        }
-        scan.close();
-        //rawSeq.values().toArray();
-        return rawSeq;
-    }
-//this is after I couldnt pull a branch
 */
 
 
