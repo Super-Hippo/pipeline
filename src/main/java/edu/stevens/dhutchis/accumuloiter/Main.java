@@ -80,13 +80,14 @@ public class Main {
 
 
         scan.setRanges(accessionList);
+System.out.println("size is: " + accessionList.size());
 
         Map<String,String> rawSeq = new HashMap<String,String>(accessionList.size());
         // Do the scan
         for(Map.Entry<Key,Value> entry : scan) {
             String seq = entry.getValue().toString();
             String mykey = entry.getKey().toString();
-           //System.out.println("seq is: "  + seq + " key is : " + mykey);
+           System.out.println("seq is: "  + seq + " key is : " + mykey);
             rawSeq.put(mykey,seq);
         }
         scan.close();
