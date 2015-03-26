@@ -111,7 +111,7 @@ public class MainTest {
 
         for(String str : s)
         {
-            System.out.println(s);
+            System.out.println(str);
         }
 
     }
