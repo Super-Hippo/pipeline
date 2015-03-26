@@ -107,7 +107,7 @@ public class MainTest {
         Main main = new Main();
         Map<String,String> result = main.accToRaw(conn,main.taxToAcc(conn,taxa));
 
-        String[]   s = result.values().toArray(new String[0]);
+        String[]   s = (String[])result.values().toArray();
 
         for(String str : s)
         {
