@@ -102,7 +102,7 @@ System.out.println("size is: " + accessionList.size());
 */
 
 
-    public List<String> taxToAcc(Connector conn,List<String> taxaList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
+    public List<Range> taxToAcc(Connector conn,List<String> taxaList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
         System.out.println("entered tax to acc");
         // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
@@ -113,7 +113,7 @@ System.out.println("size is: " + accessionList.size());
         scan.setRange(new Range("AAA00002.1","AAA62758.1"));
         // Range r = new Range();
 
-        List<String> accList = new ArrayList<>();
+        List<Range> accList = new ArrayList<>();
         String colQual ="";
 
         // Do the scan
@@ -128,7 +128,7 @@ System.out.println("size is: " + accessionList.size());
                 {
                     String acc = entry.getKey().getRow().toString();
                     // System.out.println("acc is : " + acc);
-                    accList.add(acc);
+                    accList.add(new Range(acc));
                     break;
                 }
             }
@@ -145,7 +145,7 @@ System.out.println("size is: " + accessionList.size());
 
     /** input is a list of Accession numbers ///used to be accession now its just con
      /   output is a map from accession numbers to sequences */
-    public List<String> accToRaw(Connector conn,List<String> accessionList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
+    public List<String> accToRaw(Connector conn,List<Range> accessionList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
 
         System.out.println("entered acc to raw");
@@ -154,12 +154,14 @@ System.out.println("size is: " + accessionList.size());
         int numThreads = 1;
         BatchScanner scan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
 
+        /*
         List<Range> accessionRanges = new ArrayList<>(accessionList.size());
         for (String accession : accessionList)
         {
             accessionRanges.add(new Range(accession));
         }
-        scan.setRanges(accessionRanges);
+        */
+        scan.setRanges(accessionList);
 
         List<String> rawSeq = new ArrayList<String>(accessionList.size());
         // Do the scan

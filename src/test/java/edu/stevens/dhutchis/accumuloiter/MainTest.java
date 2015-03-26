@@ -106,12 +106,14 @@ public class MainTest {
 
         Main main = new Main();
         List<String> result = main.accToRaw(conn,main.taxToAcc(conn,taxa));
-        String[]   s = result.toArray(new String[result.size()]);
+
+        /*String[]   s = result.toArray(new String[result.size()]);
 
         for(String str : s)
         {
             System.out.println(s);
         }
+        */
     }
 	
 
