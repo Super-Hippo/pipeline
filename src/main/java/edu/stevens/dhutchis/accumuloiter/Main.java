@@ -56,7 +56,7 @@ public class Main {
 
         for(Map.Entry<Key,Value> entry : scan) {
                     String acc = entry.getKey().getColumnQualifier().toString();
-                  // System.out.println("row is: " +entry.getKey().getRow().toString()+" acc is : " + acc );
+                  System.out.println("row is: " +entry.getKey().getRow().toString()+" acc is : " + acc );
                     accList.add(new Range(acc));
         }
         scan.close();
