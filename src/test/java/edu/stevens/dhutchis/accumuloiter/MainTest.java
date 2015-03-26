@@ -16,6 +16,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -104,8 +105,13 @@ public class MainTest {
         taxa.add("Proteobacteria");
 
         Main main = new Main();
-        List<String> result = main.accToRaw(conn,main.taxToAcc(conn,taxa));
-        String[]   s = result.toArray(new String[result.size()]);
+        Map<String,String> result = main.accToRaw(conn,main.taxToAcc(conn,taxa));
+        String[]   s = result.values().toArray(new String[result.size()]);
+
+        for(String str : s)
+        {
+            System.out.println(s);
+        }
     }
 	
 
