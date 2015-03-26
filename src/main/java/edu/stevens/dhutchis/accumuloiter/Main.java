@@ -86,6 +86,7 @@ System.out.println("size is: " + accessionList.size());
         // Do the scan
         for(Map.Entry<Key,Value> entry : scan) {
             String seq = entry.getValue().toString();
+            System.out.println("seq is: "  + seq);
             String mykey = entry.getKey().toString();
            System.out.println("seq is: "  + seq + " key is : " + mykey);
             rawSeq.put(mykey,seq);
