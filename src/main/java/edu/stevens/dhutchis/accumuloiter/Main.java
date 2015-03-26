@@ -145,7 +145,7 @@ System.out.println("size is: " + accessionList.size());
 
     /** input is a list of Accession numbers ///used to be accession now its just con
      /   output is a map from accession numbers to sequences */
-    public List<String> accToRaw(Connector conn,List<Range> accessionList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
+    public Map<String,String> accToRaw(Connector conn,List<Range> accessionList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
 
         System.out.println("entered acc to raw");
@@ -163,14 +163,16 @@ System.out.println("size is: " + accessionList.size());
         */
         scan.setRanges(accessionList);
 
-        List<String> rawSeq = new ArrayList<String>(accessionList.size());
+        Map<String,String> rawSeq = new HashMap<String,String>(accessionList.size());
         // Do the scan
         for(Map.Entry<Key,Value> entry : scan) {
             String seq = entry.getValue().toString();
-            System.out.println(seq);
-            rawSeq.add(seq);
+            String mykey = entry.getKey().toString();
+            //System.out.println("seq is: "  + seq + " key is : " + mykey);
+            rawSeq.put(mykey,seq);
         }
         scan.close();
+        //rawSeq.values().toArray();
         return rawSeq;
     }
 
