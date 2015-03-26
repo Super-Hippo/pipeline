@@ -106,12 +106,11 @@ System.out.println("size is: " + accessionList.size());
     {
         System.out.println("entered tax to acc");
         // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
-        String TseqRaw = "TseqT";
+        String TseqRaw = "Tseq";
         int numThreads = 1;
         Scanner scan = conn.createScanner(TseqRaw, Authorizations.EMPTY);
         // scan.setRange(new Range());
         scan.setRange(new Range("AAA00002.1","AAA62758.1"));
-       // scan.setRange(new Range("taxonomy|Bacteria; Cyanobacteria" ,"taxonomy|Bacteria; Cyanobacteria~"));
         // Range r = new Range();
 
         List<String> accList = new ArrayList<>();
@@ -121,12 +120,18 @@ System.out.println("size is: " + accessionList.size());
 
         for(Map.Entry<Key,Value> entry : scan) {
 
-            //colQual = entry.getKey().getColumnQualifier().toString();
+            colQual = entry.getKey().getColumnQualifier().toString();
             //   System.out.println("colQual is : " + colQual);
-
-            String acc = entry.getKey().getColumnQualifier().toString();
-            System.out.println("row is: " +entry.getKey().getRow().toString()+" acc is : " + acc );
-            accList.add(acc);
+            for( String s : taxaList)
+            {
+                if(colQual.contains(s))
+                {
+                    String acc = entry.getKey().getRow().toString();
+                    // System.out.println("acc is : " + acc);
+                    accList.add(acc);
+                    break;
+                }
+            }
 
 
         }
@@ -152,7 +157,6 @@ System.out.println("size is: " + accessionList.size());
         List<Range> accessionRanges = new ArrayList<>(accessionList.size());
         for (String accession : accessionList)
         {
-            System.out.println(accession);
             accessionRanges.add(new Range(accession));
         }
         scan.setRanges(accessionRanges);
@@ -167,7 +171,6 @@ System.out.println("size is: " + accessionList.size());
         scan.close();
         return rawSeq;
     }
-
 
 
 
