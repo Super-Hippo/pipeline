@@ -56,7 +56,7 @@ public class Main {
 
         for(Map.Entry<Key,Value> entry : scan) {
                     String acc = entry.getKey().getColumnQualifier().toString();
-                  System.out.println("row is: " +entry.getKey().getRow().toString()+" acc is : " + acc );
+                 // System.out.println("row is: " +entry.getKey().getRow().toString()+" acc is : " + acc );
                     accList.add(new Range(acc));
         }
         scan.close();
@@ -86,7 +86,7 @@ public class Main {
         for(Map.Entry<Key,Value> entry : scan) {
             String seq = entry.getValue().toString();
             String mykey = entry.getKey().toString();
-           System.out.println("seq is: "  + seq + " key is : " + mykey);
+           //System.out.println("seq is: "  + seq + " key is : " + mykey);
             rawSeq.put(mykey,seq);
         }
         scan.close();
