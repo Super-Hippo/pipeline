@@ -105,8 +105,8 @@ public class MainTest {
         taxa.add("Proteobacteria");
 
         Main main = new Main();
-        Map<String,String> result = main.accToRaw(conn,main.taxToAcc(conn,taxa));
-        String[]   s = result.values().toArray(new String[result.size()]);
+        List<String> result = main.accToRaw(conn,main.taxToAcc(conn,taxa));
+        String[]   s = result.toArray(new String[result.size()]);
 
         for(String str : s)
         {
