@@ -84,12 +84,18 @@ public class Main {
         // Do the scan
 
         for(Map.Entry<Key,Value> entry : scan) {
-            String acc = entry.getKey().getColumnQualifier().toString();
-            System.out.println(entry.getKey().toString());
-            set.add(entry.getKey().toString());
+
+            String en = entry.getKey().toString();
+
+            set.add(en.substring(9,en.indexOf(';')));
 
         }
         scan.close();
+
+        for(String s : set)
+        {
+            System.out.println(s);
+        }
 
     }
 
