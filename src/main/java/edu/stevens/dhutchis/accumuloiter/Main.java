@@ -87,7 +87,10 @@ public class Main {
 
             String en = entry.getKey().toString();
 
+            if(en.contains(";"))
             set.add(en.substring(9,en.indexOf(';')));
+            else
+                set.add(en.substring(9));
 
         }
         scan.close();
