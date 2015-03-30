@@ -96,7 +96,7 @@ public class MainTest {
 
         Connector conn = connectToAccumulo();
         System.out.println("hi");
-        //innerTest( conn);
+        innerTest( conn);
     }
 
     private void innerTest( Connector conn) throws Exception {
