@@ -101,6 +101,7 @@ public class MainTest {
 
     private void innerTest( Connector conn) throws Exception {
 
+        /*
         List<String> taxa = new ArrayList<>();
         taxa.add("Bacteria");
         taxa.add("Proteobacteria");
@@ -108,13 +109,18 @@ public class MainTest {
         Main main = new Main();
         Map<String,String> result = main.accToRaw(conn,main.taxToAcc(conn,taxa));
 
+
+
         String[]   s = result.values().toArray(new String[result.size()]);
 
         for(String str : s)
         {
             System.out.println(str);
         }
+        */
 
+        Main main = new Main();
+        main.xin(conn);
     }
 	
 

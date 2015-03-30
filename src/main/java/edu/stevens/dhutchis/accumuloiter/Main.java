@@ -40,7 +40,7 @@ public class Main {
         System.out.println("HI im in main i updated again again");
 	}
 
-    /*
+/*
     //this is my new function
 
 //the output should really be ranges instead of strings
@@ -67,8 +67,31 @@ public class Main {
         return accList;
     }
 
-
 */
+
+    void xin(Connector conn) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
+    {
+
+        System.out.println("entered tax to acc");
+        // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
+        String TseqRaw = "TseqT";
+        int numThreads = 1;
+        Scanner scan = conn.createScanner(TseqRaw, Authorizations.EMPTY);
+        scan.setRange(new Range("taxonomy" ,"taxonomy~"));
+
+        Set<String> set = new HashSet<String>();
+
+        // Do the scan
+
+        for(Map.Entry<Key,Value> entry : scan) {
+            String acc = entry.getKey().getColumnQualifier().toString();
+            System.out.println(entry.getKey().toString());
+            set.add(entry.getKey().toString());
+
+        }
+        scan.close();
+
+    }
 
 
     public List<Range> taxToAcc(Connector conn,List<String> taxaList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
