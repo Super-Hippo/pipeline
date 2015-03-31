@@ -86,17 +86,10 @@ public class Main {
         for(Map.Entry<Key,Value> entry : scan) {
 
             String en = entry.getKey().toString();
-            System.out.println(en);
-            if(en.contains(";")) {
-                if(set.contains(en.substring(9, en.indexOf(';'))))
-                {
-                    System.out.println(en.substring(9, en.indexOf(';')));
-                    set.add(en.substring(9, en.indexOf(';')));
-                }
-            }
-            else {
-                set.add(en.substring(9));
-            }
+            System.out.println("en is : " + en + " substring is " + en.substring(9));
+
+
+
         }
         scan.close();
 
