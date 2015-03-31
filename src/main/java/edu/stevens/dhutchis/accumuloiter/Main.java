@@ -87,7 +87,7 @@ public class Main {
 
             String en = entry.getKey().toString();
 
-            if(en.contains(":")) {
+            if(en.contains(";")) {
                 set.add(en.substring(9, en.indexOf(';')));
             }
 
