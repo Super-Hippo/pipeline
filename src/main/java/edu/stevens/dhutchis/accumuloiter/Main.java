@@ -86,7 +86,7 @@ public class Main {
         for(Map.Entry<Key,Value> entry : scan) {
 
             String en = entry.getKey().toString();
-
+            System.out.println(en);
             if(en.contains(";")) {
                 if(set.contains(en.substring(9, en.indexOf(';'))))
                 {
