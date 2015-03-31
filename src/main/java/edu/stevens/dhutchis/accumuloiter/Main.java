@@ -86,14 +86,18 @@ public class Main {
         for(Map.Entry<Key,Value> entry : scan) {
 
             String en = entry.getKey().toString();
-            System.out.println("en is : " + en + " substring is " + en.substring(9));
 
-
+            if(en.contains(":")) {
+                set.add(en.substring(9, en.indexOf(':')));
+            }
 
         }
         scan.close();
 
-
+        for(String s : set)
+        {
+            System.out.println(s);
+        }
 
     }
 
