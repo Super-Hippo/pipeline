@@ -72,7 +72,7 @@ public class Main {
     void xin(Connector conn) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
 
-        System.out.println("entered tax to acc");
+        System.out.println("entasdfax to acc");
         // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
         String TseqRaw = "TseqT";
         int numThreads = 1;
@@ -87,18 +87,20 @@ public class Main {
 
             String en = entry.getKey().toString();
 
-            if(en.contains(";"))
-            set.add(en.substring(9,en.indexOf(';')));
-            else
+            if(en.contains(";")) {
+                if(set.contains(en.substring(9, en.indexOf(';'))))
+                {
+                    System.out.println(en.substring(9, en.indexOf(';')));
+                    set.add(en.substring(9, en.indexOf(';')));
+                }
+            }
+            else {
                 set.add(en.substring(9));
-
+            }
         }
         scan.close();
 
-        for(String s : set)
-        {
-            System.out.println(s);
-        }
+
 
     }
 
