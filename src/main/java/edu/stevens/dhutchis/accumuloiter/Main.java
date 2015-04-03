@@ -170,6 +170,7 @@ public class Main {
 
         Map<String,String> rawSeq = new HashMap<String,String>(accessionList.size());
         // Do the scan
+        System.out.println("I am about to scan");
         for(Map.Entry<Key,Value> entry : scan) {
             String seq = entry.getValue().toString();
             String mykey = entry.getKey().toString();
