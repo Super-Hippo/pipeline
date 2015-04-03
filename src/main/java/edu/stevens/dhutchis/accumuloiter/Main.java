@@ -40,7 +40,7 @@ public class Main {
         System.out.println("HI im in main i updated again again");
 	}
 
-/*
+
     //this is my new function
 
 //the output should really be ranges instead of strings
@@ -67,7 +67,7 @@ public class Main {
         return accList;
     }
 
-*/
+
 
     void xin(Connector conn) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
@@ -101,7 +101,7 @@ public class Main {
 
     }
 
-
+/*
     public List<Range> taxToAcc(Connector conn,List<String> taxaList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
         System.out.println("entered tax to acc");
@@ -144,7 +144,7 @@ public class Main {
 
         return accList;
     }
-
+*/
 
 //not sure why we should map, all we care about are sequences
 

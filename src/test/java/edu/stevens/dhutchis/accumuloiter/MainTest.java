@@ -101,7 +101,7 @@ public class MainTest {
 
     private void innerTest( Connector conn) throws Exception {
 
-        /*
+
         List<String> taxa = new ArrayList<>();
         taxa.add("Bacteria");
         taxa.add("Proteobacteria");
@@ -117,10 +117,10 @@ public class MainTest {
         {
             System.out.println(str);
         }
-        */
 
-        Main main = new Main();
-        main.xin(conn);
+
+        //Main main = new Main();
+        //main.xin(conn);
     }
 	
 
