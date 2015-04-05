@@ -13,18 +13,13 @@ import org.junit.*;
 import org.junit.rules.TemporaryFolder;
 
 import java.io.File;
+import java.io.*;
+import java.util.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-
-/**
- *
- * @author dhutchis
- */
-
-
-
+import java.util.Scanner;
 
 
 public class MainTest {
@@ -105,19 +100,52 @@ public class MainTest {
         List<String> taxa = new ArrayList<>();
         taxa.add("Bacteria");
         taxa.add("Proteobacteria");
-        String taxon = "taxonomy|Bacteria; Cyanobacteria";
+        String taxon = ""; //"taxonomy|Bacteria; Cyanobacteria";
 
         Main main = new Main();
-        Map<String,String> result = main.taxToRaw(conn,taxon);
+        File f = new File("/home/echerin/ppp/pipeline/taxons.txt");
+        java.util.Scanner s = new Scanner(f);
+        List<String> data = new ArrayList<>();
 
+        while(s.hasNextLine()) //assume taxonomy| ... has no spaces in family/genus names
+        {
+            taxon = s.nextLine();
+            java.util.Scanner wScan = new Scanner(taxon);
+            String tInput = "taxonomy|";
 
+            boolean first = true;
+            while(wScan.hasNext())
+            {
+                if(first)
+                {
+                    tInput += wScan.next();
+                    first = false;
+                }
+                else
+                {
+                    tInput += "; " + wScan.next();
+                }
+                data.add(main.taxToRaw(conn, tInput));
+            }
 
+        }
+
+        PrintWriter writer = new PrintWriter("graph" + new Date( ).toString() + ".txt", "UTF-8");
+
+        for(String str : data)
+        {
+            writer.println(str);
+        }
+        writer.close();
+
+/*
         String[]   s = result.values().toArray(new String[result.size()]);
 
         for(String str : s)
         {
             System.out.println(str);
         }
+*/
 
 
         //Main main = new Main();

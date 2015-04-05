@@ -99,8 +99,9 @@ public class Main {
         return accList;
     }
 
-    public Map<String,String> taxToRaw(Connector conn, String taxon) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
+    public String taxToRaw(Connector conn, String taxon) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
+        long startTime = System.currentTimeMillis();
         int batchSize = 10000;
         System.out.println("entered tax to raw");
         // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
@@ -156,8 +157,8 @@ public class Main {
 
         batScan.close();
         scan.close();
-
-        return rawSeq;
+       String data =  Integer.toString(counter) + " " +  Long.toString(System.currentTimeMillis()-startTime);
+        return data;
     }
 
 
