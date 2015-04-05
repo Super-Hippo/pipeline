@@ -40,6 +40,38 @@ public class Main {
         System.out.println("HI im in main i updated again again");
 	}
 
+    void xin(Connector conn) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
+    {
+
+        System.out.println("entasdfax to acc");
+        // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
+        String TseqRaw = "TseqT";
+        int numThreads = 1;
+        Scanner scan = conn.createScanner(TseqRaw, Authorizations.EMPTY);
+        scan.setRange(new Range("taxonomy" ,"taxonomy~"));
+
+        Set<String> set = new HashSet<String>();
+
+        // Do the scan
+
+        for(Map.Entry<Key,Value> entry : scan)
+        {
+
+            String en = entry.getKey().toString();
+
+            if(en.contains(";")) {
+                set.add(en.substring(9, en.indexOf(';')));
+            }
+
+        }
+        scan.close();
+
+        for(String s : set)
+        {
+            System.out.println(s);
+        }
+
+    }
 
     //this is my new function
 
@@ -67,86 +99,66 @@ public class Main {
         return accList;
     }
 
-
-
-    void xin(Connector conn) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
+    public Map<String,String> taxToRaw(Connector conn, String taxon) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
-
-        System.out.println("entasdfax to acc");
+        int batchSize = 10000;
+        System.out.println("entered tax to raw");
         // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
-        String TseqRaw = "TseqT";
+        String TseqT = "TseqT";
+        String TseqRaw = "TseqRaw";
         int numThreads = 1;
-        Scanner scan = conn.createScanner(TseqRaw, Authorizations.EMPTY);
-        scan.setRange(new Range("taxonomy" ,"taxonomy~"));
 
-        Set<String> set = new HashSet<String>();
+        Scanner scan = conn.createScanner(TseqT, Authorizations.EMPTY);
+        scan.setRange(new Range(taxon ,taxon + "~"));
 
-        // Do the scan
-
-        for(Map.Entry<Key,Value> entry : scan) {
-
-            String en = entry.getKey().toString();
-
-            if(en.contains(";")) {
-                set.add(en.substring(9, en.indexOf(';')));
-            }
-
-        }
-        scan.close();
-
-        for(String s : set)
-        {
-            System.out.println(s);
-        }
-
-    }
-
-/*
-    public List<Range> taxToAcc(Connector conn,List<String> taxaList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
-    {
-        System.out.println("entered tax to acc");
-        // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
-        String TseqRaw = "Tseq";
-        int numThreads = 1;
-        Scanner scan = conn.createScanner(TseqRaw, Authorizations.EMPTY);
-        // scan.setRange(new Range());
-        scan.setRange(new Range("AAA00002.1","AAA62758.1"));
-        // Range r = new Range();
+        BatchScanner batScan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
 
         List<Range> accList = new ArrayList<>();
-        String colQual ="";
+        Map<String,String> rawSeq = new HashMap<String,String>();
 
         // Do the scan
-
-        for(Map.Entry<Key,Value> entry : scan) {
-
-            colQual = entry.getKey().getColumnQualifier().toString();
-            //   System.out.println("colQual is : " + colQual);
-            for( String s : taxaList)
+        int counter = 0;
+        for(Map.Entry<Key,Value> entry : scan)
+        {
+            if(counter%batchSize == 0 && counter !=0)// when we have enough ranges
             {
-                if(colQual.contains(s))
+                batScan.setRanges(accList);
+                for(Map.Entry<Key,Value> batEntry : batScan)
                 {
-                    String acc = entry.getKey().getRow().toString();
-                     System.out.println("acc is : " + acc);
-                    accList.add(new Range(acc));
-                    break;
+                    String seq = batEntry.getValue().toString();
+                    String mykey = batEntry.getKey().toString();
+                    rawSeq.put(mykey,seq);
                 }
+                batScan.close();
+
+                accList  = new ArrayList<>();
             }
 
+            String acc = entry.getKey().getColumnQualifier().toString();
+            accList.add(new Range(acc));
 
+            counter++;
         }
         scan.close();
 
-        for(Range r : accList)
+        //scan the last batch
+        if(!accList.isEmpty())
         {
-            System.out.println(r.toString());
+            batScan.setRanges(accList);
+            for(Map.Entry<Key,Value> batEntry : batScan)
+            {
+                String seq = batEntry.getValue().toString();
+                String mykey = batEntry.getKey().toString();
+                rawSeq.put(mykey,seq);
+            }
+            batScan.close();
         }
 
-        return accList;
-    }
-*/
 
-//not sure why we should map, all we care about are sequences
+
+        return rawSeq;
+    }
+
 
     /** input is a list of Accession numbers ///used to be accession now its just con
      /   output is a map from accession numbers to sequences */
@@ -157,7 +169,7 @@ public class Main {
         // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
         String TseqRaw = "TseqRaw";
         int numThreads = 1;
-        BatchScanner scan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
+        BatchScanner batScan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
 
         /*
         List<Range> accessionRanges = new ArrayList<>(accessionList.size());
@@ -166,54 +178,25 @@ public class Main {
             accessionRanges.add(new Range(accession));
         }
         */
-        scan.setRanges(accessionList);
+
 
         Map<String,String> rawSeq = new HashMap<String,String>(accessionList.size());
         // Do the scan
         System.out.println("I am about to scan");
-        for(Map.Entry<Key,Value> entry : scan) {
+
+        batScan.setRanges(accessionList);
+        for(Map.Entry<Key,Value> entry : batScan)
+        {
             String seq = entry.getValue().toString();
             String mykey = entry.getKey().toString();
             //System.out.println("seq is: "  + seq + " key is : " + mykey);
             rawSeq.put(mykey,seq);
         }
-        scan.close();
+        batScan.close();
         //rawSeq.values().toArray();
         return rawSeq;
     }
 
-
-
-    /*
-    //old
-        public List<String> accToRaw(Connector conn,List<String> accessionList) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
-    {
-
-        System.out.println("entered acc to raw");
-        // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
-        String TseqRaw = "TseqRaw";
-        int numThreads = 1;
-        BatchScanner scan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
-
-        List<Range> accessionRanges = new ArrayList<>(accessionList.size());
-        for (String accession : accessionList)
-        {
-            accessionRanges.add(new Range(accession));
-        }
-        scan.setRanges(accessionRanges);
-
-        List<String> rawSeq = new ArrayList<String>(accessionList.size());
-        // Do the scan
-        for(Map.Entry<Key,Value> entry : scan) {
-            String seq = entry.getValue().toString();
-           System.out.println(seq);
-            rawSeq.add(seq);
-        }
-        scan.close();
-        return rawSeq;
-    }
-
-     */
 
     public void testIter(Connector conn) throws AccumuloException, AccumuloSecurityException, TableNotFoundException, TableExistsException {
 

@@ -105,9 +105,10 @@ public class MainTest {
         List<String> taxa = new ArrayList<>();
         taxa.add("Bacteria");
         taxa.add("Proteobacteria");
+        String taxon = "taxonomy|Bacteria; Cyanobacteria";
 
         Main main = new Main();
-        Map<String,String> result = main.accToRaw(conn,main.taxToAcc(conn,taxa));
+        Map<String,String> result = main.taxToRaw(conn,taxon);
 
 
 
