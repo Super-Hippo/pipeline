@@ -129,7 +129,7 @@ public class Main {
                     String mykey = batEntry.getKey().toString();
                     rawSeq.put(mykey,seq);
                 }
-                batScan.close();
+
 
                 accList  = new ArrayList<>();
             }
@@ -139,7 +139,7 @@ public class Main {
 
             counter++;
         }
-        scan.close();
+
 
         //scan the last batch
         if(!accList.isEmpty())
@@ -154,7 +154,8 @@ public class Main {
             batScan.close();
         }
 
-
+        batScan.close();
+        scan.close();
 
         return rawSeq;
     }
