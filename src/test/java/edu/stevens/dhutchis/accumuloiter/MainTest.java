@@ -109,7 +109,10 @@ public class MainTest {
 
         while(s.hasNextLine()) //assume taxonomy| ... has no spaces in family/genus names
         {
+
             taxon = s.nextLine();
+            System.out.println("We are in outer while loop and using: " + taxon);
+
             java.util.Scanner wScan = new Scanner(taxon);
             String tInput = "taxonomy|";
 
@@ -125,6 +128,7 @@ public class MainTest {
                 {
                     tInput += "; " + wScan.next();
                 }
+                System.out.println("scanning with : " + tInput);
                 data.add(main.taxToRaw(conn, tInput));
             }
 
