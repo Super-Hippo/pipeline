@@ -106,6 +106,7 @@ public class MainTest {
         File f = new File("/home/echerin/ppp/pipeline/taxons.txt");
         java.util.Scanner s = new Scanner(f);
         List<String> data = new ArrayList<>();
+        List<String> used = new ArrayList<>();
 
         while(s.hasNextLine()) //assume taxonomy| ... has no spaces in family/genus names
         {
@@ -129,7 +130,12 @@ public class MainTest {
                     tInput += "; " + wScan.next();
                 }
                 System.out.println("scanning with : " + tInput);
-                data.add(main.taxToRaw(conn, tInput));
+                if(!used.contains(tInput))
+                {
+                    data.add(main.taxToRaw(conn, tInput));
+                    used.add(tInput);
+                }
+
             }
 
         }
