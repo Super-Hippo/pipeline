@@ -128,7 +128,7 @@ public class Main {
                 {
                     String seq = batEntry.getValue().toString();
                     String mykey = batEntry.getKey().toString();
-                    rawSeq.put(mykey,seq);
+                   // rawSeq.put(mykey,seq);
                 }
 
 
@@ -150,9 +150,9 @@ public class Main {
             {
                 String seq = batEntry.getValue().toString();
                 String mykey = batEntry.getKey().toString();
-                rawSeq.put(mykey,seq);
+                //rawSeq.put(mykey,seq);
             }
-            batScan.close();
+
         }
 
         batScan.close();
