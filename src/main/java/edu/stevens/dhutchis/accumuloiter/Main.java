@@ -106,7 +106,7 @@ public class Main {
     {
         long startTime = System.currentTimeMillis();
 
-        System.load("/home/echerin/multi/dynamic/Wrap.so");
+        System.load("/home/echerin/multi/dynamifc/Wrap.so");
         Main main = new Main();
         String hmm_path = "/home/echerin/48.hmm";
 
