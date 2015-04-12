@@ -22,7 +22,7 @@ import java.util.Map.Entry;
  *
  * @author dhutchis
  */
-public class Main {
+public class Wrap {
 
     public native boolean []    seqpass(String[] n , String hmm_path);
 
@@ -107,7 +107,7 @@ public class Main {
         long startTime = System.currentTimeMillis();
 
         System.load("/home/echerin/multi/dynamic/Wrap.so");
-        Main main = new Main();
+        Wrap wrap = new Wrap();
         String hmm_path = "/home/echerin/48.hmm";
 
 
@@ -142,7 +142,7 @@ public class Main {
 
                 }
 
-                main.seqpass( rawSeq.values().toArray(new String[rawSeq.size()]), hmm_path);
+                wrap.seqpass( rawSeq.values().toArray(new String[rawSeq.size()]), hmm_path);
                 accList  = new ArrayList<>();
             }
 
@@ -163,7 +163,7 @@ public class Main {
                 String mykey = batEntry.getKey().toString();
                 rawSeq.put(mykey,seq);
             }
-            main.seqpass( rawSeq.values().toArray(new String[rawSeq.size()]), hmm_path);
+            wrap.seqpass( rawSeq.values().toArray(new String[rawSeq.size()]), hmm_path);
         }
 
         batScan.close();

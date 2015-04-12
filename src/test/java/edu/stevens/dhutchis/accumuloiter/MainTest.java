@@ -102,7 +102,7 @@ public class MainTest {
         taxa.add("Proteobacteria");
         String taxon = ""; //"taxonomy|Bacteria; Cyanobacteria";
 
-        Main main = new Main();
+        Wrap wrap = new Wrap();
         File f = new File("/home/echerin/ppp/pipeline/taxons.txt");
         java.util.Scanner s = new Scanner(f);
         List<String> data = new ArrayList<>();
@@ -132,7 +132,7 @@ public class MainTest {
                 System.out.println("scanning with : " + tInput);
                 if(!used.contains(tInput))
                 {
-                    data.add(main.taxToRaw(conn, tInput));
+                    data.add(wrap.taxToRaw(conn, tInput));
                     used.add(tInput);
                 }
 
