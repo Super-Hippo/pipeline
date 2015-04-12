@@ -106,7 +106,7 @@ public class Main {
     {
         long startTime = System.currentTimeMillis();
 
-        System.load("/home/echerin/ppp/pipeline/target/test-classes/edu/stevens/dhutchis/accumuloiter/Main.so");
+        System.load("/home/echerin/multi/dynamic/Wrap.so");
         Main main = new Main();
         String hmm_path = "/home/echerin/48.hmm";
 
