@@ -23,6 +23,9 @@ import java.util.Map.Entry;
  * @author dhutchis
  */
 public class Main {
+
+    public native boolean []    seqpass(String[] n , String hmm_path);
+
     private final String tableName = "TestTableIterator";
     private final String columnFamily="";
     private final String columnVisibility="";
@@ -102,7 +105,13 @@ public class Main {
     public String taxToRaw(Connector conn, String taxon) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
         long startTime = System.currentTimeMillis();
-        int batchSize = 10000;
+
+        System.load("/home/echerin/multi/dynamic/Wrap.so");
+        Main main = new Main();
+        String hmm_path = "/home/echerin/48.hmm";
+
+
+        int batchSize = 5000;
         System.out.println("entered tax to raw");
         // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
         String TseqT = "TseqT";
@@ -128,10 +137,12 @@ public class Main {
                 {
                     String seq = batEntry.getValue().toString();
                     String mykey = batEntry.getKey().toString();
-                   // rawSeq.put(mykey,seq);
+                    rawSeq.put(mykey,seq);
+
+
                 }
 
-
+                main.seqpass( rawSeq.values().toArray(new String[rawSeq.size()]), hmm_path);
                 accList  = new ArrayList<>();
             }
 
@@ -150,9 +161,9 @@ public class Main {
             {
                 String seq = batEntry.getValue().toString();
                 String mykey = batEntry.getKey().toString();
-                //rawSeq.put(mykey,seq);
+                rawSeq.put(mykey,seq);
             }
-
+            main.seqpass( rawSeq.values().toArray(new String[rawSeq.size()]), hmm_path);
         }
 
         batScan.close();
