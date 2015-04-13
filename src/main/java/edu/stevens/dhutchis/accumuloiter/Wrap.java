@@ -106,7 +106,7 @@ public class Wrap {
     {
         long startTime = System.currentTimeMillis();
 
-        System.load("/home/echerin/multi/dynamic/Wrap.so");
+        System.load("/home/echerin/ppp/pipeline/src/main/java/edu/stevens/dhutchis/accumuloiter/Wrap.so");
         Wrap wrap = new Wrap();
         String hmm_path = "/home/echerin/48.hmm";
 
