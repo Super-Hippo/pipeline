@@ -132,13 +132,15 @@ public class Wrap {
         {
             if(counter%batchSize == 0 && counter !=0)// when we have enough ranges
             {
+                int co = 0;
                 batScan.setRanges(accList);
                 for(Map.Entry<Key,Value> batEntry : batScan)
                 {
                     String seq = batEntry.getValue().toString();
                     String mykey = batEntry.getKey().toString();
                     rawSeq.put(mykey,seq);
-
+                    System.out.println("co is: : " + co + " value is : " + seq + "\n");
+                    co++;
 
                 }
 
@@ -147,7 +149,7 @@ public class Wrap {
             }
 
             String acc = entry.getKey().getColumnQualifier().toString();
-            System.out.println("acc is: " + acc);
+
             accList.add(new Range(acc));
 
             counter++;
