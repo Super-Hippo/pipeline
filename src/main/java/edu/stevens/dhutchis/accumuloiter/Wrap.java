@@ -147,6 +147,7 @@ public class Wrap {
             }
 
             String acc = entry.getKey().getColumnQualifier().toString();
+            System.out.println("acc is: " + acc);
             accList.add(new Range(acc));
 
             counter++;
