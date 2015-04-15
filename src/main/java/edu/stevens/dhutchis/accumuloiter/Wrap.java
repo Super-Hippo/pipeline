@@ -140,7 +140,7 @@ public class Wrap {
                     String mykey = batEntry.getKey().toString();
                     rawSeq.put(mykey,seq);
 
-                        System.out.println("co is: : " + co + " value is : " + seq + "\n");
+                        System.out.println("counter is: : " + counter + " value is : " + seq + "\n");
 
                     co++;
 
