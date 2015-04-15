@@ -16,20 +16,23 @@ JNIEXPORT jbooleanArray JNICALL Java_edu_stevens_dhutchis_accumuloiter_Wrap_seqp
 	const char *stringholder[sizeout];
 	
 	jint i;
+	i=0;
 	for(i = 0; i < sizeout;i++)//there is no standard function to convert java array of strings(which are seen as objects) to a native array of strings
 	{
 		 jstring str = (jstring) env->GetObjectArrayElement( array, i);//convert a jobject in an array to a jstring
 		 stringholder[i] = env->GetStringUTFChars( str, 0);		
+		 printf("\nres ult %i is: %s\n", i,   stringholder[i]);
 	}	
 	const char *Chmm_path = env->GetStringUTFChars( hmm_path, 0);		
 	
-	//printf("I am in jni and about to go to cuda, path is: %s", Chmm_path);
+	printf("					I am in jni and about to go to cuda, path is: %s", Chmm_path);
 	
 	narray = mymain((int)sizeout, stringholder, Chmm_path); // DH->ERIC: pass sizeout as an int, stringholder as a char**
 	
 	//Release the hmm paths, we are done with them
 	env->ReleaseStringUTFChars( hmm_path, Chmm_path);		
 	
+	i=0;
 	for(i = 0; i < sizeout;i++)//cast all native booleans to jboolean
 	{
 		carray[i] = (jboolean)narray[i];
@@ -43,7 +46,8 @@ JNIEXPORT jbooleanArray JNICALL Java_edu_stevens_dhutchis_accumuloiter_Wrap_seqp
 	
 	// DH->ERIC: Free the manually allocated memory once finished.
 	//free(carray);
-//printf("\n leaving cpp");
+	//free(i);
+	printf("\n leaving cpp");
 	return boolholder;
 }
 
