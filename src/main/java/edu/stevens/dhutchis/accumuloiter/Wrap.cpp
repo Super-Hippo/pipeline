@@ -21,7 +21,7 @@ JNIEXPORT jbooleanArray JNICALL Java_edu_stevens_dhutchis_accumuloiter_Wrap_seqp
 	{
 		 jstring str = (jstring) env->GetObjectArrayElement( array, i);//convert a jobject in an array to a jstring
 		 stringholder[i] = env->GetStringUTFChars( str, 0);		
-		 printf("\nres ult %i is: %s\n", i,   stringholder[i]);
+		 printf("\nresult %i is: %s\n", i,   stringholder[i]);
 	}	
 	const char *Chmm_path = env->GetStringUTFChars( hmm_path, 0);		
 	
