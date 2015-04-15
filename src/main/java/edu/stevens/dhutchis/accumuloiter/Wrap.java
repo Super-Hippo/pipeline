@@ -139,7 +139,7 @@ public class Wrap {
                     String seq = batEntry.getValue().toString();
                     String mykey = batEntry.getKey().toString();
                     rawSeq.put(mykey,seq);
-                    System.out.println("co is: : " + co + " value is : " + seq + "\n");
+                    //System.out.println("co is: : " + co + " value is : " + seq + "\n");
                     co++;
 
                 }
