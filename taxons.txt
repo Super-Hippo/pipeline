@@ -1,0 +1,1522 @@
+Viruses ssRNApositive-strandviruses,noDNAstage
+Bacteria Firmicutes Clostridia Clostridiales
+Eukaryota Metazoa Ctenophora Typhlocoela
+Viruses dsDNAviruses,noRNAstage Caudovirales
+Eukaryota Stramenopiles Bacillariophyta
+Eukaryota Alveolata Ciliophora Intramacronucleata
+Bacteria Cyanobacteria Stigonematales Westiellopsis
+Bacteria Proteobacteria Betaproteobacteria
+Eukaryota Diplomonadida Enteromonadidae Enteromonas
+Eukaryota Rhodophyta Florideophyceae Ceramiales
+Eukaryota Stramenopiles Synchromophyceae Synchroma
+Eukaryota Fungi Dikarya Ascomycota
+Eukaryota Stramenopiles Pelagophyceae
+Eukaryota Rhizaria Haplosporidia Haplosporidiidae
+Bacteria CandidatusSaccharibacteria
+Eukaryota Euglenozoa Diplonemida Diplonema
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Haptophyceae Coccolithales
+Eukaryota Rhodophyta Florideophyceae unclassified
+Bacteria Cyanobacteria Nostocales Rivulariaceae
+Eukaryota Metazoa Ctenophora Cyclocoela Beroida
+Bacteria Lentisphaerae Lentisphaeria Victivallales
+Bacteria Firmicutes Clostridia Natranaerobiales
+Archaea Euryarchaeota Methanomicrobia environmental
+Eukaryota Rhodophyta Florideophyceae
+Viruses ssDNAviruses Parvoviridae Parvovirinae
+Eukaryota Viridiplantae Chlorophyta prasinophytes
+Bacteria Bacteroidetes Cytophagia environmental
+Eukaryota Metazoa Platyhelminthes Rhabditophora
+Archaea Thaumarchaeota unclassifiedThaumarchaeota
+Eukaryota Cryptophyta Cryptomonadales
+Eukaryota Fungi Glomeromycota Glomeromycetes
+Eukaryota Ichthyosporea Ichthyophonida
+Eukaryota Choanoflagellida Codonosigidae Sphaeroeca
+Eukaryota Cryptophyta Pyrenomonadales
+Bacteria Firmicutes Bacilli Bacillales
+Eukaryota Metazoa Lophotrochozoa Brachiopoda
+Eukaryota Haptophyceae Zygodiscales
+Viruses ssRNAnegative-strandviruses unclassified
+Viruses ssDNAviruses Parvoviridae Densovirinae
+Bacteria Chlorobi Chlorobia Chlorobiales
+Eukaryota Viridiplantae Chlorophyta Ulvophyceae
+Bacteria Spirochaetes Spirochaetales
+Eukaryota Metazoa Ecdysozoa Arthropoda Crustacea
+Eukaryota Stramenopiles Bolidophyceae unclassified
+Bacteria Cloacimonetes CandidatusCloacimonas
+Bacteria Cyanobacteria Prochlorales
+Eukaryota Cryptophyta Pyrenomonadales
+Viruses dsDNAviruses,noRNAstage Ligamenvirales
+Eukaryota Metazoa Cnidaria Anthozoa Anthozoa
+Viruses ssRNApositive-strandviruses,noDNAstage
+Eukaryota Euglenozoa Euglenida Rhabdomonadales
+Eukaryota Haptophyceae Prymnesiales Prymnesiaceae
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Rhodophyta Florideophyceae Halymeniales
+Viruses ssRNAnegative-strandviruses Bunyaviridae
+Eukaryota Alveolata Dinophyceae Phytodiniales
+Eukaryota Stramenopiles Schizocladia
+Eukaryota Fungi Microsporidia Glugeidae Loma
+Viruses dsDNAviruses,noRNAstage Nimaviridae
+Viruses ssDNAviruses Microviridae Microvirus
+Viruses dsDNAviruses,noRNAstage Salterprovirus
+Eukaryota Viridiplantae Streptophyta
+Bacteria Proteobacteria Alphaproteobacteria
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Eukaryota Metazoa Lophotrochozoa Mollusca
+Eukaryota Metazoa Porifera Demospongiae
+Eukaryota Ichthyosporea Ichthyophonida
+Eukaryota Viridiplantae Streptophyta
+Bacteria Lentisphaerae Lentisphaeria
+Eukaryota Heterolobosea Percolomonas
+Viruses unassignedviruses Megabirnavirus
+Bacteria Cyanobacteria Stigonematales Mastigocladus
+Viruses dsDNAviruses,noRNAstage Phycodnaviridae
+Eukaryota Centroheliozoa Raphidiophryidae
+Bacteria Firmicutes environmentalsamples
+Bacteria Chloroflexi Sphaerobacteridae
+Bacteria Proteobacteria Alphaproteobacteria
+Eukaryota Fungi Dikarya Basidiomycota
+Eukaryota Alveolata Dinophyceae Gonyaulacales
+Viruses dsRNAviruses Totiviridae Leishmaniavirus
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Eukaryota Parabasalia Trichonymphida
+Bacteria Tenericutes Mollicutes Acholeplasmatales
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Bacteria Proteobacteria Zetaproteobacteria
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Eukaryota Metazoa Ecdysozoa Onychophora
+Eukaryota Rhizaria Acantharea Symphyacanthida
+Bacteria Cyanobacteria Pleurocapsales Dermocarpa
+Bacteria Deferribacteres Deferribacterales
+Bacteria Thermodesulfobacteria
+Bacteria Thermotogae Thermotogales environmental
+Bacteria Bacteroidetes Flavobacteriia
+Eukaryota Stramenopiles Oomycetes Olpidiopsidales
+Bacteria Firmicutes Bacilli Lactobacillales
+Bacteria Cyanobacteria Stigonematales Fischerella
+Eukaryota Stramenopiles Bicosoecida Bicosoecidae
+Viruses dsRNAviruses Reoviridae Spinareovirinae
+Eukaryota Rhodophyta Florideophyceae
+Eukaryota Alveolata Dinophyceae environmental
+Eukaryota Fungi Entomophthoromycota
+Eukaryota Diplomonadida Hexamitidae Hexamitinae
+Viruses Retro-transcribingviruses Hepadnaviridae
+Bacteria Aquificae Aquificales
+Eukaryota Metazoa Cnidaria Hydrozoa Siphonophora
+Eukaryota Metazoa Porifera unclassifiedPorifera
+Bacteria Firmicutes Bacilli Lactobacillales
+Viruses dsRNAviruses Totiviridae Victorivirus
+othersequences artificialsequences vectors
+Eukaryota Alveolata Colponemidia Colponema
+Bacteria Thermobaculum environmentalsamples
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Fungi Microsporidia Glugeidae
+Eukaryota Rhodophyta Florideophyceae Nemaliales
+othersequences artificialsequences
+Bacteria Pseudogluconobacter
+Eukaryota Amoebozoa Mycetozoa Dictyosteliida
+Eukaryota Metazoa Ecdysozoa Nematoda Enoplea
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Oxymonadida
+Viruses ssDNAviruses Parvoviridae unclassified
+Bacteria Firmicutes Clostridia Clostridiales
+Viruses ssRNAnegative-strandviruses Ophioviridae
+Viruses ssDNAviruses Inoviridae Plectrovirus
+Archaea Euryarchaeota Thermococci Thermococcales
+Eukaryota Metazoa Ecdysozoa Arthropoda Crustacea
+Viruses Satellites SatelliteViruses unclassified
+Eukaryota Metazoa Hemichordata Enteropneusta
+Archaea Euryarchaeota Methanomicrobia
+Bacteria Cyanobacteria Stigonematales Westiella
+Eukaryota Alveolata Apicomplexa Aconoidasida
+Eukaryota Metazoa Cnidaria Anthozoa Hexacorallia
+Eukaryota Metazoa Placozoa Trichoplax
+Eukaryota Stramenopiles Pelagophyceae unclassified
+Eukaryota Alveolata Perkinsea Perkinsida
+Eukaryota Parabasalia Trichonymphida Teranymphidae
+Bacteria Cyanobacteria Prochlorales environmental
+Eukaryota Metazoa Chordata Craniata Vertebrata
+Bacteria Tenericutes Mollicutes Mycoplasmataceae
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Viruses dsRNAviruses Totiviridae Victorivirus
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Bacteria Firmicutes Erysipelotrichia
+Eukaryota Fungi Dikarya Basidiomycota Myriococcum
+Bacteria Chloroflexi Ktedonobacteria
+Eukaryota Metazoa Lophotrochozoa Nemertea Enopla
+Bacteria Bacteroidetes Cytophagia Cytophagales
+Bacteria Cyanobacteria Pleurocapsales
+Eukaryota Rhizaria Haplosporidia Haplosporidiidae
+Bacteria Proteobacteria Alphaproteobacteria
+Bacteria Nitrospirae Nitrospirales Nitrospiraceae
+Eukaryota Haptophyceae Coccosphaerales
+Eukaryota Euglenozoa Kinetoplastida
+Eukaryota Metazoa Hemichordata Enteropneusta
+Eukaryota Heterolobosea Psalteriomonadidae
+Eukaryota Rhizaria Haplosporidia
+Eukaryota Trimastix
+Viruses ssRNApositive-strandviruses,noDNAstage
+Eukaryota Rhizaria Foraminifera Rotaliida
+Viruses ssRNAnegative-strandviruses Varicosavirus
+Bacteria Acetothermia environmentalsamples
+Viruses dsDNAviruses,noRNAstage Herpesvirales
+Eukaryota Apusozoa Apusomonadidae Thecamonas
+Bacteria Cyanobacteria Stigonematales
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Stramenopiles Chrysophyceae
+Bacteria Firmicutes Bacilli Bacillales
+Eukaryota Haptophyceae Coccosphaerales
+Viruses Retro-transcribingviruses Retroviridae
+Eukaryota Viridiplantae Streptophyta environmental
+Eukaryota Metazoa Platyhelminthes Monogenea
+Viruses ssDNAviruses Circoviridae environmental
+Eukaryota Stramenopiles Oomycetes Rhipidiales
+Bacteria Proteobacteria Alphaproteobacteria SAR116
+Eukaryota Alveolata Ciliophora
+Eukaryota Ichthyosporea Ichthyophonida Creolimax
+Eukaryota Fungi Fungiincertaesedis Early
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Eukaryota Rhizaria Polycystinea Nassellaria
+Eukaryota Metazoa Porifera Calcarea Calcaronea
+unclassifiedsequences environmentalsamples
+Viruses dsDNAviruses,noRNAstage Iridoviridae
+Bacteria Firmicutes Clostridia Clostridiales
+Archaea Euryarchaeota Candidatus
+Eukaryota Haptophyceae Syracosphaerales
+Eukaryota Metazoa Porifera Demospongiae
+Bacteria Chlamydiae Chlamydiales Criblamydiaceae
+Eukaryota Amoebozoa Archamoebae Entamoebidae
+Viruses unassignedssRNAviruses Emaravirus
+Eukaryota Stramenopiles Olisthodiscus
+Eukaryota Alveolata Voromonas
+Bacteria Proteobacteria Betaproteobacteria
+Eukaryota Rhizaria Foraminifera Textulariida
+Eukaryota Amoebozoa Discosea Himatismenida
+Eukaryota Alveolata Chromerida Vitrella
+Bacteria Proteobacteria Gammaproteobacteria SAR86
+Bacteria Planctomycetes Phycisphaerae
+Viruses ssDNAviruses Anelloviridae
+Eukaryota Rhodophyta unclassifiedRhodophyta
+Eukaryota Viridiplantae Streptophyta
+Eukaryota Rhodophyta Florideophyceae Balbianiales
+Eukaryota Choanoflagellida Acanthoecidae Savillea
+Eukaryota Viridiplantae Streptophyta Embryophyta
+Eukaryota Fungi
+Eukaryota Viridiplantae Streptophyta Embryophyta
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Viruses dsRNAviruses Birnaviridae Aquabirnavirus
+Viruses dsRNAviruses Cystoviridae
+Eukaryota Rhizaria Cercozoa Cercomonadida Metopion
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Eukaryota Amoebozoa Discosea Flabellinia
+Eukaryota Metazoa Cnidaria Myxozoa Myxosporea
+Viruses ssRNAnegative-strandviruses Tenuivirus
+Eukaryota Metazoa Lophotrochozoa Brachiopoda
+Eukaryota Amoebozoa Tubulinea Euamoebida
+Eukaryota Metazoa Cnidaria Hydrozoa Hydroida
+Eukaryota Metazoa Lophotrochozoa Myzostomida
+Eukaryota Alveolata Dinophyceae Peridiniales
+Eukaryota Jakobida Andalucia
+Eukaryota Corallochytrium
+Eukaryota Rhodophyta Compsopogonophyceae
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Amoebozoa Mycetozoa Myxogastria
+Eukaryota Rhodophyta Florideophyceae Gelidiales
+Eukaryota Rhodophyta Florideophyceae Plocamiales
+Viruses dsRNAviruses Reoviridae unclassified
+Viruses dsRNAviruses Partitiviridae
+Eukaryota Viridiplantae Streptophyta Embryophyta
+Viruses dsDNAviruses,noRNAstage Adenoviridae
+Eukaryota Rhizaria Foraminifera Rotaliida
+Eukaryota Ministeria
+Eukaryota Amoebozoa Mycetozoa Protosteliales
+Eukaryota Rhodophyta Florideophyceae Halymeniales
+Bacteria Chlamydiae Chlamydiales Parachlamydiaceae
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Metazoa Cnidaria Hydrozoa environmental
+Viruses dsRNAviruses Reoviridae Spinareovirinae
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Viruses ssRNAnegative-strandviruses
+Eukaryota Metazoa Cnidaria Anthozoa Octocorallia
+Bacteria Proteobacteria Deltaproteobacteria
+Eukaryota Stramenopiles PXclade Xanthophyceae
+Eukaryota Metazoa Ecdysozoa Scalidophora
+Viruses dsRNAviruses Partitiviridae
+Viruses ssDNAviruses Parvoviridae Parvovirinae
+Viruses dsRNAviruses Endornaviridae Endornavirus
+Viruses dsDNAviruses,noRNAstage Iridoviridae
+Eukaryota Stramenopiles Actinophryidae
+Viruses dsDNAviruses,noRNAstage Adenoviridae
+Eukaryota Jakobida Seculamonas
+Eukaryota Viridiplantae Streptophyta Embryophyta
+Eukaryota Metazoa Ecdysozoa Arthropoda Crustacea
+Viruses ssRNAnegative-strandviruses Bunyaviridae
+Bacteria Proteobacteria Epsilonproteobacteria
+Eukaryota Metromonas
+Bacteria Verrucomicrobia Spartobacteria
+Eukaryota Alveolata Apicomplexa
+Eukaryota Metazoa Chaetognatha unclassified
+Viruses ssDNAviruses Anelloviridae Betatorquevirus
+Eukaryota Stramenopiles Raphidophyceae
+Bacteria Proteobacteria Alphaproteobacteria
+Eukaryota Metazoa Platyhelminthes Trematoda
+Viruses unassignedviruses Glossinavirus
+Viruses dsRNAviruses Birnaviridae Blosnavirus
+Eukaryota Stramenopiles Oomycetes Lagenidiales
+Eukaryota Haptophyceae Coccolithales
+Viruses dsDNAviruses,noRNAstage Polyomaviridae
+Eukaryota Metazoa Ecdysozoa Nematoda
+Eukaryota Metazoa Ecdysozoa Nematoda Chromadorea
+Bacteria Proteobacteria Betaproteobacteria
+Eukaryota Metazoa Chordata unclassifiedChordata
+Viruses ssRNApositive-strandviruses,noDNAstage
+Eukaryota Fungi Microsporidia
+Eukaryota Fungi Microsporidia Pleistophoridae
+Eukaryota Haptophyceae Syracosphaerales
+Archaea Crenarchaeota
+Viruses ssDNAviruses Geminiviridae unclassified
+Eukaryota Metazoa Ecdysozoa Scalidophora
+Viruses ssRNAnegative-strandviruses Varicosavirus
+Viruses dsDNAviruses,noRNAstage
+Eukaryota Trimastix environmentalsamples
+Eukaryota Heterolobosea Schizopyrenida
+Bacteria Firmicutes Clostridia Clostridiales
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Eukaryota Viridiplantae Chlorophyta Ulvophyceae
+Bacteria Firmicutes Clostridia Clostridiales
+Eukaryota Stramenopiles environmentalsamples
+Eukaryota Rhizaria Foraminifera Textulariida
+Bacteria Proteobacteria Gammaproteobacteria
+Viruses ssDNAviruses Geminiviridae Mastrevirus
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Eukaryota Rhodophyta Compsopogonophyceae
+Archaea Euryarchaeota Methanopyri Methanopyrales
+Viruses dsRNAviruses Reoviridae Sedoreovirinae
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Viruses dsDNAviruses,noRNAstage Polydnaviridae
+Eukaryota Metazoa Lophotrochozoa Bryozoa
+Viruses ssDNAviruses Anelloviridae environmental
+Viruses dsRNAviruses Hypoviridae Hypovirus
+Eukaryota Metazoa Cnidaria Hydrozoa Leptothecatae
+Bacteria Cyanobacteria Pleurocapsales Pleurocapsa
+Eukaryota Rhizaria Cercozoa Chlorarachniophyceae
+Eukaryota Rhizaria Cercozoa Silicofilosea
+Eukaryota Stramenopiles Bacillariophyta
+Bacteria Bacteroidetes Bacteroidia Bacteroidales
+Viruses ssDNAviruses Parvoviridae Densovirinae
+Eukaryota Stramenopiles Phaeothamniophyceae
+Eukaryota Amoebozoa Discosea Longamoebia
+Archaea Thaumarchaeota Nitrososphaerales
+Eukaryota Metazoa Ecdysozoa Onychophora
+Eukaryota Metazoa Cnidaria Hydrozoa Siphonophora
+Bacteria Aquificae Aquificales Hydrogenothermaceae
+Bacteria Chloroflexi Ktedonobacteria
+Eukaryota Metazoa Platyhelminthes Catenulida
+Eukaryota Stramenopiles Oomycetes Pythiales
+Eukaryota Stramenopiles Phaeothamniophyceae
+Eukaryota Apusozoa Planomonadidae Planomonas
+Bacteria Chlamydiae Chlamydiales Chlamydiaceae
+Eukaryota Metazoa Cnidaria Anthozoa Hexacorallia
+Bacteria Firmicutes Bacilli Bacillales Bacillales
+Viruses ssDNAviruses Circoviridae Circovirus
+Viruses dsRNAviruses Reoviridae Spinareovirinae
+Eukaryota Stramenopiles Oomycetes Pythiales
+Bacteria CandidatusSaccharibacteria Candidatus
+Eukaryota Alveolata Dinophyceae Gymnodiniales
+Eukaryota Stramenopiles Dictyochophyceae
+Eukaryota Metazoa Ecdysozoa Arthropoda Myriapoda
+Bacteria Proteobacteria Deltaproteobacteria
+Viruses ssRNApositive-strandviruses,noDNAstage
+Eukaryota Stramenopiles Oomycetes Peronosporales
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Viruses ssDNAviruses Anelloviridae unclassified
+Eukaryota Fungi Glomeromycota Glomeromycetes
+Bacteria Tenericutes Mollicutes Entomoplasmatales
+Eukaryota Stramenopiles Chrysophyceae Hydrurales
+Eukaryota Metazoa Lophotrochozoa Acanthocephala
+Bacteria Firmicutes Clostridia Clostridiales
+Eukaryota Alveolata Dinophyceae Peridiniales
+Bacteria candidatedivisionSR1
+Eukaryota Carpediemonas-likeorganisms Dysnectes
+Viruses dsDNAviruses,noRNAstage Caudovirales
+Eukaryota Amoebozoa Telaepolella
+Eukaryota Rhizaria Foraminifera Rotaliida
+Archaea Thaumarchaeota Nitrosopumilales
+Eukaryota Haptophyceae Coccolithales
+Eukaryota Rhizaria Foraminifera Rzehakinidae
+Bacteria Nitrospirae Nitrospirales Nitrospiraceae
+Eukaryota Rhizaria Mikrocytiidae Paramikrocytos
+Eukaryota Rhizaria Polycystinea Spumellaria
+Bacteria Fibrobacteres Fibrobacterales
+Bacteria Bacteroidetes Cytophagia Cytophagales
+Eukaryota Haptophyceae Haptophytaincertaesedis
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Eukaryota Stramenopiles PXclade Xanthophyceae
+Bacteria Proteobacteria
+Viruses dsRNAviruses Partitiviridae Cryspovirus
+Bacteria Tenericutes Mollicutes Anaeroplasmatales
+Eukaryota Metazoa Lophotrochozoa Micrognathozoa
+Eukaryota Metazoa Lophotrochozoa Bryozoa
+Eukaryota Alveolata Ciliophora environmental
+Bacteria Actinobacteria Rubrobacteridae
+Eukaryota Metazoa Ecdysozoa Tardigrada
+Bacteria Bacteroidetes CandidatusPaenicardinium
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Eukaryota Metazoa Platyhelminthes Rhabditophora
+Archaea Thaumarchaeota Nitrosopumilales
+Viruses unassignedviruses Clavavirus
+Eukaryota Alveolata Ciliophora Intramacronucleata
+Eukaryota Euglenozoa Kinetoplastida Bodonidae Bodo
+Eukaryota Haptophyceae Isochrysidales
+Eukaryota Parabasalia Hypotrichomonadida
+Eukaryota Alveolata Dinophyceae Peridiniales
+Eukaryota Haptophyceae Haptophytaincertaesedis
+Eukaryota Metazoa Lophotrochozoa Bryozoa
+Eukaryota Alveolata Dinophyceae Gymnodiniales
+Viruses ssDNAviruses Circoviridae Circovirus
+Eukaryota Amoebozoa Archamoebae Mastigamoebidae
+Eukaryota Metazoa Lophotrochozoa Mollusca
+Eukaryota Rhodophyta Bangiophyceae Cyanidiales
+Eukaryota Rhodophyta Florideophyceae Ahnfeltiales
+Eukaryota Metazoa Lophotrochozoa Rotifera
+Eukaryota Metazoa Lophotrochozoa Myzostomida
+Bacteria Cyanobacteria Stigonematales Nostochopsis
+Viruses ssDNAviruses Nanoviridae unclassified
+Eukaryota Fungi Microsporidia Burenellidae
+Bacteria candidatedivisionJS1 environmental
+Eukaryota Centroheliozoa Heterophryidae
+Bacteria Cyanobacteria Nostocales Microchaetaceae
+Bacteria Nitrospirae environmentalsamples
+Eukaryota Parabasalia environmentalsamples
+Eukaryota Alveolata Dinophyceae Lophodiniales
+Viruses dsDNAviruses,noRNAstage Fuselloviridae
+Eukaryota Viridiplantae Chlorophyta
+Eukaryota Rhizaria Gromiidae Gromia
+Eukaryota Metazoa Porifera Hexactinellida
+Eukaryota Metazoa Cnidaria Hydrozoa Hydroida
+Eukaryota Metazoa Ecdysozoa Tardigrada
+Eukaryota Jakobida Jakobidae Jakoba
+Viruses ssDNAviruses Parvoviridae Parvovirinae
+Eukaryota Viridiplantae Chlorophyta Ulvophyceae
+Eukaryota Fungi Glomeromycota Glomeromycetes
+Bacteria Proteobacteria Alphaproteobacteria
+Eukaryota Fungi Microsporidia Unikaryonidae
+Viruses ssDNAviruses Geminiviridae Eragrovirus
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Eukaryota Parabasalia
+Eukaryota Rhizaria Cercozoa Silicofilosea
+Bacteria Thermotogae Thermotogales Thermotogaceae
+Eukaryota Euglenozoa Euglenida Eutreptiales
+Eukaryota Metazoa Lophotrochozoa Entoprocta
+Eukaryota Alveolata Ciliophora Intramacronucleata
+Viruses dsRNAviruses Reoviridae Sedoreovirinae
+Viruses dsRNAviruses Partitiviridae environmental
+Bacteria Proteobacteria Betaproteobacteria
+Eukaryota Rhizaria Haplosporidia Bonamia
+Bacteria Latescibacteria environmentalsamples
+Eukaryota Metazoa Cnidaria Cubozoa Carybdeida
+Viruses ssRNAnegative-strandviruses Bunyaviridae
+Bacteria Acidobacteria Acidobacteriales
+Eukaryota Amoebozoa Mycetozoa Protosteliales
+Eukaryota Stramenopiles Dictyochophyceae
+Eukaryota Parabasalia Tritrichomonadida
+Eukaryota Amoebozoa Acramoeba
+Bacteria Chloroflexi Chloroflexia Chloroflexales
+Eukaryota Stramenopiles PXclade Aurearenophyceae
+Bacteria Verrucomicrobia Verrucomicrobiae
+Viruses ssDNAviruses Inoviridae Inovirus
+Eukaryota Metazoa Porifera Calcarea Calcinea
+Eukaryota Stramenopiles Synchromophyceae
+Archaea Crenarchaeota Thermoprotei Sulfolobales
+Eukaryota Cryptophyta Cryptomonadales
+Viruses ssDNAviruses Parvoviridae Parvovirinae
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Eukaryota Breviatea Breviata
+Bacteria Aminicenantes environmentalsamples
+Eukaryota Diplomonadida Hexamitidae Giardiinae
+Eukaryota Metazoa Porifera Demospongiae Agelasida
+Eukaryota Dimorpha
+Eukaryota Haptophyceae Pavlovales Pavlovaceae
+Viruses ssDNAviruses Circoviridae Circovirus
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Tsukubamonadidae Tsukubamonas
+Viruses unclassifiedarchaealviruses
+Viruses Retro-transcribingviruses Hepadnaviridae
+Eukaryota Metazoa Gnathostomulida Bursovaginoidea
+Bacteria Elusimicrobia environmentalsamples
+Bacteria Proteobacteria Gammaproteobacteria
+Viruses dsDNAviruses,noRNAstage Bicaudaviridae
+Eukaryota Metazoa Porifera Demospongiae
+Eukaryota Alveolata Dinophyceae Dinophysiales
+Eukaryota Fungi Dikarya Basidiomycota
+Eukaryota Stramenopiles Phaeothamniophyceae
+Viruses dsRNAviruses Reoviridae Sedoreovirinae
+Viruses dsDNAviruses,noRNAstage Polydnaviridae
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Eukaryota Metazoa Cnidaria Scyphozoa Coronatae
+Bacteria Chlamydiae Chlamydiales Criblamydiaceae
+Archaea Crenarchaeota Thermoprotei Acidilobales
+Eukaryota Viridiplantae Chlorophyta
+Viruses dsDNAviruses,noRNAstage Caudovirales
+Eukaryota Metazoa Ecdysozoa Nematoda environmental
+Eukaryota Metazoa Cnidaria Scyphozoa Coronatae
+Archaea Crenarchaeota environmentalsamples
+Bacteria Cyanobacteria Prochlorales Prochloraceae
+Eukaryota Choanoflagellida Stephanoecidae
+Eukaryota Fungi Microsporidia Pleistophoridae
+Eukaryota Rhizaria Cercozoa Thecofilosea Ebriidae
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Rhodophyta Florideophyceae Ceramiales
+Eukaryota Retortamonadidae Chilomastix
+Eukaryota Amoebozoa Tubulinea Arcellinida
+Eukaryota Fungi Glomeromycota environmentalsamples
+Eukaryota Rhizaria Cercozoa Cercomonadida
+Eukaryota Alveolata Dinophyceae Gonyaulacales
+Eukaryota Alveolata Ciliophora unclassified
+Eukaryota Ichthyosporea Ichthyophonida
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Viruses dsDNAviruses,noRNAstage Mimiviridae
+Bacteria Proteobacteria Alphaproteobacteria
+Eukaryota Fungi Microsporidia Endoreticulatus
+Eukaryota Metazoa Ecdysozoa Arthropoda Crustacea
+Eukaryota Viridiplantae Chlorophyta Ulvophyceae
+Eukaryota Stramenopiles Eustigmatophyceae
+Eukaryota Amoebozoa Discosea Himatismenida
+Eukaryota Apusozoa Mantamonadidae Mantamonas
+Viruses dsRNAviruses Birnaviridae
+Bacteria Deinococcus-Thermus Deinococci Thermales
+Eukaryota Amoebozoa Discosea Flabellinia
+Eukaryota Fungi Microsporidia Kabatana
+Bacteria Acidobacteria Acidobacteriasubdivision4
+Bacteria Proteobacteria Alphaproteobacteria RA14
+Eukaryota Apusozoa Ancyromonadidae Ancyromonas
+Eukaryota Metazoa Ctenophora Cyclocoela Lobata
+Eukaryota Rhizaria Foraminifera Textulariida
+Bacteria Proteobacteria Epsilonproteobacteria
+Eukaryota Metazoa Porifera Demospongiae
+Eukaryota Cryptophyta Pyrenomonadales
+Viruses ssDNAviruses Geminiviridae Begomovirus
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Eukaryota Rhizaria Cercozoa Cercomonadida
+Eukaryota Rhodophyta Bangiophyceae Bangiales
+Bacteria Fusobacteria Fusobacteriales
+Viruses dsRNAviruses Reoviridae Spinareovirinae
+Bacteria Cloacimonetes CandidatusCloacimonas
+Bacteria Nitrospirae Nitrospirales Nitrospiraceae
+Eukaryota Haptophyceae environmentalsamples
+Viruses ssRNAnegative-strandviruses Bunyaviridae
+Bacteria Cyanobacteria Pleurocapsales
+Eukaryota Stramenopiles Bacillariophyta
+Eukaryota Metazoa Ecdysozoa Tardigrada
+Archaea Euryarchaeota Aciduliprofundum
+Eukaryota Amoebozoa Stereomyxa
+Bacteria Proteobacteria Epsilonproteobacteria
+Eukaryota Stramenopiles Blastocystis
+Viruses dsRNAviruses Totiviridae Totivirus
+Bacteria Proteobacteria Betaproteobacteria
+Viruses dsDNAviruses,noRNAstage Baculoviridae
+Bacteria Deinococcus-Thermus environmentalsamples
+Eukaryota Diplomonadida Hexamitidae Hexamitinae
+Eukaryota Microheliella
+Bacteria Bacteroidetes Cytophagia Cytophagales
+Eukaryota Stramenopiles Slopalinida
+Bacteria Thermotogae Thermotogales Thermotogaceae
+Viruses ssRNAnegative-strandviruses Bunyaviridae
+Bacteria Spirochaetes Spirochaetales
+Eukaryota Euglenozoa Kinetoplastida
+Bacteria Tenericutes Mollicutes Entomoplasmatales
+Eukaryota Glaucocystophyceae Glaucocystales
+Eukaryota Metazoa Cnidaria Cubozoa Carybdeida
+Eukaryota Rhodophyta Florideophyceae Palmariales
+Viruses unclassifiedvirophages
+Eukaryota Metazoa Ecdysozoa Scalidophora
+Eukaryota Fungi Dikarya Ascomycota Pezizomycotina
+Eukaryota Metazoa Lophotrochozoa Mollusca
+Bacteria Chloroflexi Thermoflexia Thermoflexales
+Eukaryota Alveolata Dinophyceae Syndiniales
+Eukaryota Fungi Chytridiomycota Chytridiomycetes
+Eukaryota Ichthyosporea Capsaspora
+Eukaryota Heterolobosea Schizopyrenida
+Bacteria Chlamydiae Chlamydiales Simkaniaceae
+Eukaryota Metazoa Hemichordata
+Bacteria Tenericutes Mollicutes Mycoplasmataceae
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Eukaryota Metazoa Lophotrochozoa Acanthocephala
+Bacteria Firmicutes Clostridia Clostridiales
+Eukaryota Heterolobosea Stephanopogon
+Eukaryota Carpediemonas-likeorganisms Ergobibamus
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Fungi Microsporidia Spraguidae Spraguea
+Bacteria Bacteroidetes BacteroidetesOrderII
+Eukaryota Metazoa Lophotrochozoa Acanthocephala
+Eukaryota Fungi Blastocladiomycota
+Viruses dsDNAviruses,noRNAstage Ascoviridae
+Eukaryota Rhizaria Cercozoa Gymnophrys
+Eukaryota Metazoa Platyhelminthes Rhabditophora
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Diplomonadida Enteromonadidae
+Viruses dsDNAviruses,noRNAstage Nudiviridae
+Eukaryota Metazoa Lophotrochozoa Mollusca
+Bacteria Gemmatimonadetes Gemmatimonadales
+Bacteria Verrucomicrobia Verrucomicrobiae
+Eukaryota Metazoa Chaetognatha Sagittoidea
+Viruses ssDNAviruses Circoviridae Gyrovirus
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Viruses ssDNAviruses Geminiviridae Curtovirus
+Bacteria Actinobacteria Actinobacteridae
+Eukaryota Rhodophyta Florideophyceae Ceramiales
+Eukaryota Metazoa Chordata Craniata Vertebrata
+Eukaryota Metazoa Cnidaria Scyphozoa
+Eukaryota Stramenopiles Oomycetes Albuginales
+Eukaryota Amoebozoa Mycetozoa Myxogastria
+Bacteria Chloroflexi Anaerolineae Anaerolineales
+Bacteria Firmicutes Bacilli Bacillales
+Eukaryota Fungi Dikarya Basidiomycota Trichosporon
+Bacteria Tenericutes Mollicutes
+Viruses Satellites SatelliteNucleicAcids
+Eukaryota Metazoa Echinodermata Eleutherozoa
+Eukaryota Alveolata Apicomplexa Conoidasida
+Eukaryota Metazoa Ecdysozoa Tardigrada
+Eukaryota Parabasalia Trichomonadida
+Eukaryota Fungi Dikarya Ascomycota environmental
+Eukaryota Euglenozoa Euglenida Heteronematales
+Eukaryota Viridiplantae Chlorophyta Palmophyllales
+Bacteria Nitrospirae Nitrospirales Nitrospiraceae
+Viruses ssDNAviruses Geminiviridae environmental
+Eukaryota Metazoa Lophotrochozoa Myzostomida
+Eukaryota Fungi Dikarya Basidiomycota Jaculispora
+Eukaryota Stramenopiles Eustigmatophyceae
+Bacteria Proteobacteria Betaproteobacteria
+Viruses dsDNAviruses,noRNAstage Herpesvirales
+Bacteria Proteobacteria Alphaproteobacteria
+Eukaryota Diplomonadida Enteromonadidae Trimitus
+Viruses dsDNAviruses,noRNAstage Baculoviridae
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Eukaryota Metazoa Lophotrochozoa Myzostomida
+Bacteria Firmicutes Bacilli Bacillales
+Bacteria Chloroflexi Caldilineae Caldilineales
+Archaea Crenarchaeota Thermoprotei Sulfolobales
+Eukaryota Fungi Dikarya Ascomycota
+Viruses dsRNAviruses Partitiviridae unassigned
+Eukaryota Metazoa Ecdysozoa Arthropoda Hexapoda
+Eukaryota Metazoa Platyhelminthes Monogenea
+Bacteria Cyanobacteria environmentalsamples
+Viruses Virus-associatedRNAs
+Bacteria candidatedivisionNC10 environmental
+Eukaryota Fungi Microsporidia Antonospora
+Eukaryota Rhodophyta Compsopogonophyceae
+Eukaryota Metazoa Xenacoelomorpha Xenoturbellida
+Eukaryota Metazoa Platyhelminthes Trematoda
+Eukaryota Metazoa Ctenophora Cyclocoela Lobata
+Eukaryota Metazoa Echinodermata Eleutherozoa
+Eukaryota Metazoa Ctenophora Cyclocoela Cestida
+Bacteria Firmicutes Clostridia Clostridiales
+Eukaryota Rhodophyta Florideophyceae environmental
+Viruses ssRNAnegative-strandviruses
+Viruses dsDNAviruses,noRNAstage Adenoviridae
+Bacteria Firmicutes Clostridia Clostridiales
+Eukaryota Metazoa Ecdysozoa Arthropoda Crustacea
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Eukaryota Amoebozoa Phalansterium
+Eukaryota Metazoa Cnidaria Calicogorgia
+Bacteria Firmicutes Bacilli Lactobacillales
+Eukaryota Euglenozoa Euglenida Euglenales
+Archaea Euryarchaeota Methanomicrobia
+Eukaryota Oxymonadida Pyrsonymphidae Dinenympha
+Viruses dsRNAviruses Reoviridae Sedoreovirinae
+Archaea Crenarchaeota CandidatusNitrosocaldus
+Viruses ssDNAviruses Parvoviridae Densovirinae
+Eukaryota Viridiplantae Chlorophyta Ulvophyceae
+Eukaryota Viridiplantae Chlorophyta Ulvophyceae
+Viruses unassignedviruses Bidensovirus
+Eukaryota Metazoa Lophotrochozoa Brachiopoda
+Bacteria Firmicutes Bacilli Bacillales
+Eukaryota Rhodophyta Bangiophyceae Porphyridiales
+Bacteria Bacteroidetes Sphingobacteriia
+Viruses ssDNAviruses Microviridae unclassified
+Eukaryota Rhodophyta Florideophyceae Sebdeniales
+Eukaryota Metazoa Ecdysozoa Arthropoda Hexapoda
+Bacteria Firmicutes Clostridia Clostridiales
+Bacteria Proteobacteria Zetaproteobacteria
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Eukaryota Metazoa Cnidaria Hydrozoa unclassified
+Eukaryota Rhizaria Foraminifera
+Archaea Crenarchaeota Thermoprotei Fervidicoccales
+Eukaryota Amoebozoa Archamoebae Pelomyxidae
+Eukaryota Fungi Microsporidia Enterocytozoonidae
+Eukaryota Metazoa Lophotrochozoa Annelida
+Eukaryota Amoebozoa Discosea Longamoebia
+Viruses ssDNAviruses Anelloviridae Etatorquevirus
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Eukaryota Metazoa Hemichordata Enteropneusta
+Eukaryota Metazoa Platyhelminthes Cestoda
+Viruses ssDNAviruses Anelloviridae Iotatorquevirus
+Eukaryota Metazoa Cnidaria Anthozoa Octocorallia
+Eukaryota Parabasalia Trichomonadida
+Eukaryota Choanoflagellida Salpingoecidae
+Eukaryota Heterolobosea Psalteriomonadidae Harpagon
+Eukaryota Amoebozoa Discosea Flabellinia
+Eukaryota Amoebozoa Mycetozoa Myxogastria
+Eukaryota Metazoa Lophotrochozoa Nemertea Nemertea
+Eukaryota Stramenopiles Slopalinida Opalinidae
+Eukaryota Rhizaria Acantharea Arthracanthida
+Eukaryota Metazoa Porifera environmentalsamples
+Bacteria Firmicutes Bacilli Bacillales
+Eukaryota Fungi Microsporidia Pleistophoridae
+Viruses ssDNAviruses Inoviridae unclassified
+Viruses ssDNAviruses Anelloviridae
+Bacteria Firmicutes Clostridia Clostridiales
+Viruses dsRNAviruses Birnaviridae Avibirnavirus
+Bacteria Proteobacteria Deltaproteobacteria
+Bacteria Firmicutes Bacilli Bacillales
+Bacteria Cyanobacteria Stigonematales Hapalosiphon
+Eukaryota Rhizaria Acantharea Arthracanthida
+Viruses ssDNAviruses Parvoviridae Parvovirinae
+Bacteria Thermobaculum
+Bacteria Firmicutes Bacilli
+Viruses dsDNAviruses,noRNAstage Plasmaviridae
+Viruses dsDNAviruses,noRNAstage Mimiviridae
+Eukaryota Viridiplantae Chlorophyta Ulvophyceae
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Bacteria Cyanobacteria Nostocales
+Bacteria Cyanobacteria Pleurocapsales Stanieria
+Eukaryota Metazoa Porifera Calcarea Calcaronea
+Bacteria Proteobacteria Betaproteobacteria
+Eukaryota Metazoa Lophotrochozoa Brachiopoda
+Viruses dsDNAviruses,noRNAstage unassigned
+Eukaryota Viridiplantae Streptophyta Charophyceae
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Alveolata Dinophyceae Pyrocystales
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Eukaryota Fungi Microsporidia Dubosqiidae
+Bacteria Verrucomicrobia unclassified
+Bacteria Firmicutes Clostridia Halanaerobiales
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Rhodophyta Florideophyceae Rhodymeniales
+Bacteria candidatedivisionNC10 Candidatus
+Eukaryota Alveolata Dinophyceae Noctilucales
+Eukaryota Metazoa Chordata Tunicata unclassified
+Viruses unclassifiedssRNAviruses
+Bacteria Acidobacteria environmentalsamples
+Eukaryota Haptophyceae Pavlovales Pavlovaceae
+Viruses dsDNAviruses,noRNAstage Fuselloviridae
+Viruses dsRNAviruses Hypoviridae Hypovirus
+Viruses Satellites SatelliteNucleicAcids Single
+Eukaryota Stramenopiles Dictyochophyceae
+Eukaryota Rhodophyta Florideophyceae Nemaliales
+Eukaryota Metazoa Cnidaria Hydrozoa Trachylina
+Viruses dsDNAviruses,noRNAstage Poxviridae
+Eukaryota Rhodophyta Florideophyceae Ceramiales
+Bacteria Proteobacteria Deltaproteobacteria
+Eukaryota Fungi Microsporidia Nosematidae
+Eukaryota Amoebozoa Discosea Stygamoebida
+Bacteria Bacteroidetes Bacteroidia Bacteroidales
+Viruses ssDNAviruses Geminiviridae Turncurtovirus
+Viruses ssDNAviruses Spiraviridae Alphaspiravirus
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Bacteria Firmicutes Clostridia Clostridiales
+Eukaryota Rhizaria Cercozoa Chlorarachniophyceae
+Bacteria Actinobacteria Acidimicrobidae
+Archaea Crenarchaeota miscellaneousCrenarchaeota
+Eukaryota Euglenozoa Euglenida Euglenales
+Viruses dsDNAviruses,noRNAstage Polyomaviridae
+Archaea Thaumarchaeota environmentalsamples
+Archaea Euryarchaeota Methanobacteria
+Bacteria Cyanobacteria Nostocales Microchaetaceae
+Eukaryota Euglenozoa Euglenida Rapaza
+Bacteria Aquificae Aquificales Aquificaceae
+Eukaryota Rhodophyta Florideophyceae Halymeniales
+Viruses ssRNApositive-strandviruses,noDNAstage
+Viruses dsRNAviruses Reoviridae Sedoreovirinae
+Bacteria Cyanobacteria Oscillatoriophycideae
+Viruses ssDNAviruses Anelloviridae Zetatorquevirus
+Bacteria Firmicutes Clostridia
+Bacteria Spirochaetes Spirochaetales environmental
+Viruses ssDNAviruses Microviridae environmental
+Bacteria Chlamydiae Chlamydiales Parachlamydiaceae
+Viruses dsRNAviruses Partitiviridae unclassified
+Viruses ssRNApositive-strandviruses,noDNAstage
+Eukaryota Euglenozoa Kinetoplastida Bodonidae
+Bacteria Spirochaetes Spirochaetales
+Eukaryota Metazoa Porifera Demospongiae
+Bacteria Acetothermia CandidatusAcetothermum
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Bacteria Firmicutes Clostridia Clostridiales
+Viruses ssDNAviruses Anelloviridae
+Eukaryota Katablepharidophyta Katablepharidaceae
+Eukaryota Stramenopiles Synurophyceae
+Bacteria Firmicutes Clostridia Clostridiales
+Bacteria Proteobacteria Alphaproteobacteria
+Viruses dsDNAviruses,noRNAstage Iridoviridae
+Eukaryota Rhizaria Foraminifera Monothalamids
+Bacteria Cyanobacteria Pleurocapsales Hyella
+Eukaryota Stramenopiles Oomycetes Pythiales
+Bacteria Dictyoglomi Dictyoglomales
+Viruses dsRNAviruses Birnaviridae Aquabirnavirus
+Eukaryota Rhizaria Acantharea Arthracanthida
+Eukaryota Euglenozoa Euglenida Euglenales
+Viruses ssDNAviruses Anelloviridae
+Viruses dsRNAviruses Cystoviridae Cystovirus
+Viruses Satellites SatelliteViruses unclassified
+Bacteria Cyanobacteria Gloeobacteria
+Eukaryota Metazoa Chaetognatha Sagittoidea
+Viruses ssDNAviruses Anelloviridae
+Bacteria Cyanobacteria Stigonematales Fischerella
+Eukaryota Alveolata Dinophyceae Peridiniales
+othersequences insertionsequences
+Bacteria Armatimonadetes Chthonomonadetes
+Bacteria Cyanobacteria Prochlorales
+Eukaryota Viridiplantae Chlorophyta
+Eukaryota Haptophyceae unclassifiedHaptophyceae
+Eukaryota Metazoa Chordata Tunicata Ascidiacea
+Eukaryota Metazoa Porifera Demospongiae
+Eukaryota Metazoa Porifera Demospongiae
+Bacteria Firmicutes Bacillales Bacillaceae
+Eukaryota Apusozoa Planomonadidae
+Viruses ssRNApositive-strandviruses,noDNAstage
+Eukaryota Centroheliozoa Heterophryidae Heterophrys
+Eukaryota Metazoa Chaetognatha Sagittoidea
+Eukaryota Stramenopiles Labyrinthulomycetes
+Eukaryota Rhizaria Cercozoa Thecofilosea
+Eukaryota Oxymonadida environmentalsamples
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Rhizaria unclassifiedRhizaria
+Eukaryota Rhizaria Cercozoa Plasmodiophorida
+Bacteria Marinimicrobia environmentalsamples
+Bacteria Bacteroidetes Bacteroidia Bacteroidales
+Viruses dsDNAviruses,noRNAstage Iridoviridae
+Bacteria Bacteroidetes Flavobacteriia environmental
+Bacteria Gemmatimonadetes Gemmatimonadales
+Bacteria Proteobacteria Alphaproteobacteria
+Eukaryota Rhodophyta Florideophyceae Entwisleiales
+Eukaryota Metazoa Ecdysozoa Arthropoda
+Viruses ssDNAviruses Parvoviridae Densovirinae
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Eukaryota Metazoa Lophotrochozoa Cycliophora
+Eukaryota Rhizaria Cercozoa Thecofilosea
+Viruses Retro-transcribingviruses Caulimoviridae
+Eukaryota Viridiplantae Chlorophyta Pedinophyceae
+Eukaryota Stramenopiles Chrysophyceae Hibberdiales
+Eukaryota Metazoa Lophotrochozoa Mollusca
+Viruses ssRNAnegative-strandviruses Bunyaviridae
+Viruses dsRNAviruses
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Stramenopiles Synurophyceae
+Eukaryota Metazoa Lophotrochozoa Entoprocta
+Viruses unassignedviruses Muscavirus
+Bacteria Proteobacteria Gammaproteobacteria
+Viruses unassignedssRNAviruses Emaravirus
+Viruses dsRNAviruses Chrysoviridae Chrysovirus
+Eukaryota Metazoa Lophotrochozoa Annelida
+Bacteria Cyanobacteria Nostocales Scytonemataceae
+Eukaryota Metazoa Lophotrochozoa Mollusca
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Eukaryota Metazoa Gnathostomulida Bursovaginoidea
+Eukaryota Metazoa Platyhelminthes Rhabditophora
+Viruses ssDNAviruses Inoviridae environmental
+Eukaryota Alveolata Ciliophora Intramacronucleata
+Eukaryota Rhodophyta Florideophyceae
+Eukaryota Rhizaria Foraminifera Monothalamids
+Eukaryota Haptophyceae Isochrysidales
+Eukaryota Stramenopiles Bacillariophyta
+Eukaryota Rhizaria Cercozoa Chlorarachniophyceae
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Eukaryota Parabasalia Tritrichomonadida
+Eukaryota Metazoa Ecdysozoa Arthropoda Crustacea
+Viruses ssRNApositive-strandviruses,noDNAstage
+Eukaryota Stramenopiles Actinophryidae Actinophrys
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Eukaryota Fungi Dikarya Ascomycota
+Bacteria Acidobacteria Solibacteres Solibacterales
+Eukaryota Rhizaria Polycystinea Spumellaria
+Eukaryota Rhodophyta Stylonematophyceae
+Eukaryota Metazoa Cnidaria Cubozoa Unclassified
+Eukaryota Stramenopiles Dictyochophyceae
+Eukaryota Rhizaria Foraminifera Rotaliida
+Bacteria Planctomycetes Planctomycetia
+Eukaryota Rhodophyta Florideophyceae Palmariales
+Eukaryota Rhizaria Cercozoa Phaeodarea
+Archaea Crenarchaeota Thermoprotei Acidilobales
+Eukaryota Metazoa Chordata Tunicata
+Viruses unassignedviruses Bacilladnavirus
+Bacteria Firmicutes Bacilli Bacillales
+Eukaryota Fungi Chytridiomycota Chytridiomycetes
+Eukaryota Heterolobosea Psalteriomonadidae Sawyeria
+Eukaryota Haptophyceae Prymnesiales Prymnesiaceae
+Viruses ssDNAviruses Anelloviridae
+Eukaryota Alveolata Ciliophora Intramacronucleata
+Eukaryota Metazoa Lophotrochozoa Gastrotricha
+Viruses Retro-transcribingviruses Hepadnaviridae
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Eukaryota Stramenopiles Oomycetes Peronosporales
+Eukaryota Metazoa Platyhelminthes Rhabditophora
+Bacteria Proteobacteria Deltaproteobacteria
+Eukaryota Metazoa Porifera Demospongiae Verongida
+Eukaryota Rhizaria Cercozoa Chlorarachniophyceae
+Viruses Retro-transcribingviruses
+Eukaryota Metazoa Ecdysozoa Arthropoda Myriapoda
+Archaea Euryarchaeota environmentalsamples
+Viruses dsDNAviruses,noRNAstage Turriviridae
+Eukaryota Viridiplantae Streptophyta
+Viruses dsDNAviruses,noRNAstage Herpesvirales
+Bacteria Synergistetes Synergistia Synergistales
+Bacteria Proteobacteria Gammaproteobacteria
+Bacteria Actinobacteria Actinobacteridae
+Bacteria Proteobacteria Deltaproteobacteria
+Bacteria Chlamydiae Chlamydiales Waddliaceae
+Viruses dsDNAviruses,noRNAstage Baculoviridae
+Eukaryota Euglenozoa Kinetoplastida Bodonidae
+Viruses unassignedviruses Dinodnavirus
+Viruses dsDNAviruses,noRNAstage Asfarviridae
+Eukaryota Metazoa Echinodermata Pelmatozoa
+Eukaryota Choanoflagellida Stephanoecidae Didymoeca
+Bacteria Proteobacteria Betaproteobacteria
+Bacteria Actinobacteria Thermoleophilia
+Eukaryota Metazoa Mesozoa Rhombozoa Dicyemida
+Bacteria environmentalsamples
+Eukaryota Metazoa Lophotrochozoa Rotifera
+Eukaryota Alveolata Apicomplexa Conoidasida
+Viruses ssDNAviruses Geminiviridae Begomovirus
+Eukaryota Metazoa Ecdysozoa Arthropoda Hexapoda
+Bacteria Chloroflexi Dehalococcoidia
+Eukaryota Metazoa Chordata Cephalochordata
+Eukaryota Rhodophyta Florideophyceae
+Eukaryota Metazoa Lophotrochozoa Annelida
+Bacteria Bacteroidetes Bacteroidia Bacteroidales
+Eukaryota Fungi Microsporidia Nosematidae Nosema
+Eukaryota Amoebozoa Tubulinea Arcellinida
+Bacteria Cyanobacteria Nostocales Rivulariaceae
+Viruses ssDNAviruses Nanoviridae Nanovirus
+Viruses ssDNAviruses Inoviridae Plectrovirus
+Eukaryota Euglenozoa environmentalsamples
+Viruses ssDNAviruses
+Bacteria Firmicutes Bacilli Bacillales
+Eukaryota Heterolobosea Schizopyrenida unclassified
+Eukaryota Alveolata Ciliophora Intramacronucleata
+Eukaryota Metazoa Ecdysozoa Arthropoda
+Viruses ssRNAnegative-strandviruses Bunyaviridae
+Bacteria Ignavibacteriae Ignavibacteria
+Bacteria Bacteroidetes Flavobacteriia
+Eukaryota Viridiplantae environmentalsamples
+Eukaryota Euglenozoa Euglenida Euglenales Colacium
+Eukaryota Jakobida Histionidae Reclinomonas
+Eukaryota NucleariidaeandFonticulagroup Fonticula
+Bacteria Firmicutes Clostridia Clostridiales
+Eukaryota Amoebozoa Mycetozoa Myxogastria
+Viruses ssDNAviruses Geminiviridae Curtovirus
+Eukaryota Stramenopiles Oomycetes Saprolegniales
+Viruses ssDNAviruses Parvoviridae Densovirinae
+Eukaryota Stramenopiles Bacillariophyta
+Eukaryota Metazoa Lophotrochozoa Brachiopoda
+Eukaryota Metazoa Ecdysozoa Nematoda Chromadorea
+Eukaryota Amoebozoa Mycetozoa Dictyosteliida
+Eukaryota Cryptophyta unclassifiedCryptophyta
+Eukaryota Metazoa Cnidaria Cubozoa Chirodropida
+Bacteria Chrysiogenetes Chrysiogenales
+Eukaryota Metazoa Cnidaria Myxozoa Malacosporea
+Eukaryota Rhizaria Foraminifera Textulariida
+Archaea Crenarchaeota Thermoprotei Sulfolobales
+Eukaryota Viridiplantae Chlorophyta Ulvophyceae
+Bacteria Chloroflexi environmentalsamples
+Eukaryota Metazoa Lophotrochozoa Myzostomida
+Eukaryota Stramenopiles Oomycetes
+Bacteria Proteobacteria Alphaproteobacteria
+Bacteria Proteobacteria Epsilonproteobacteria
+Eukaryota Metazoa Lophotrochozoa Nemertea Anopla
+Bacteria Proteobacteria Gammaproteobacteria
+Viruses ssRNAnegative-strandviruses Arenaviridae
+Eukaryota Rhizaria Cercozoa Lecythium
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Eukaryota Amoebozoa Mycetozoa Dictyosteliida
+Viruses dsDNAviruses,noRNAstage Poxviridae
+Eukaryota Oxymonadida Polymastigidae
+Eukaryota Metazoa Gnathostomulida Bursovaginoidea
+Bacteria Fusobacteria Fusobacteriales
+Viruses unassignedssRNAviruses Alvernaviridae
+Eukaryota Collodictyonidae Collodictyon
+Eukaryota Metazoa Gnathostomulida Bursovaginoidea
+Bacteria Cyanobacteria
+Eukaryota Euglenozoa Kinetoplastida Bodonidae
+Eukaryota Metazoa Lophotrochozoa Nemertea
+Eukaryota Metazoa Ecdysozoa Nematomorpha
+Eukaryota Rhodophyta Florideophyceae Balliales
+Eukaryota Ichthyosporea Dermocystida Sphaerothecum
+Eukaryota Stramenopiles PXclade Xanthophyceae
+Eukaryota Metazoa Gnathostomulida Filospermoidea
+Viruses Retro-transcribingviruses Caulimoviridae
+Viruses dsDNAviruses,noRNAstage Poxviridae
+Eukaryota Metazoa Placozoa unclassifiedPlacozoa
+Eukaryota Metazoa Porifera Homoscleromorpha
+Viruses ssDNAviruses Parvoviridae Densovirinae
+Viruses dsRNAviruses Picobirnaviridae
+Eukaryota Stramenopiles Chrysophyceae
+Eukaryota Choanoflagellida unclassified
+Eukaryota Malawimonadidae Malawimonas
+Bacteria Proteobacteria Gammaproteobacteria
+Bacteria Proteobacteria Betaproteobacteria
+Bacteria Firmicutes
+Bacteria Verrucomicrobia Opitutae Opitutales
+Eukaryota Rhizaria Cercozoa Chlorarachniophyceae
+Bacteria Proteobacteria Betaproteobacteria
+Bacteria Chloroflexi Chloroflexia Chloroflexales
+Eukaryota Glaucocystophyceae Cyanoptyche
+Viruses dsDNAviruses,noRNAstage Adenoviridae
+Eukaryota Metazoa Lophotrochozoa Rotifera
+Eukaryota Fungi Microsporidia Edhazardia
+Eukaryota Alveolata Dinophyceae Gonyaulacales
+Eukaryota Metazoa Ecdysozoa Nematoda Chromadorea
+Eukaryota Haptophyceae Pavlovales Pavlovaceae
+Archaea Euryarchaeota Halobacteria Halobacteriales
+Eukaryota Euglenozoa Euglenida Euglenales
+Bacteria Firmicutes Bacilli Bacillales
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Bacteria Chlamydiae Chlamydiales
+Eukaryota Alveolata Dinophyceae Peridiniales
+Viruses dsDNAviruses,noRNAstage unclassified
+Eukaryota Stramenopiles PXclade Xanthophyceae
+Bacteria Bacteroidetes
+Viruses Retro-transcribingviruses Retroviridae
+Eukaryota Metazoa Ecdysozoa Nematoda Chromadorea
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Archaea Euryarchaeota MarineGroupII environmental
+Viruses unclassifiedphages
+Bacteria Chloroflexi Chloroflexia
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Viruses ssDNAviruses Anelloviridae
+Bacteria Proteobacteria Gammaproteobacteria OMG
+Eukaryota Alveolata Dinophyceae Peridiniales
+Viruses ssRNApositive-strandviruses,noDNAstage
+Bacteria Proteobacteria Alphaproteobacteria
+Archaea Euryarchaeota MarineGroupIII
+Eukaryota Metazoa Ecdysozoa Nematoda Enoplea
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Metazoa Ctenophora Typhlocoela
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Eukaryota Haptophyceae Pavlovales Pavlovaceae
+Viruses ssRNAnegative-strandviruses Arenaviridae
+Viruses dsDNAviruses,noRNAstage Marseillevirus
+Bacteria Proteobacteria Epsilonproteobacteria
+Viruses dsDNAviruses,noRNAstage Fuselloviridae
+Eukaryota Parabasalia Trichonymphida
+Bacteria Actinobacteria CandidatusActinomarinidae
+Viruses ssDNAviruses Circoviridae unclassified
+Bacteria candidatedivisionWWE3
+Eukaryota Euglenozoa Kinetoplastida Perkinsela
+Eukaryota Metazoa Ecdysozoa Onychophora
+Bacteria Verrucomicrobia environmentalsamples
+Eukaryota Metazoa Platyhelminthes Cestoda
+Eukaryota Viridiplantae Chlorophyta
+Eukaryota Rhizaria Foraminifera Toxisarcon
+Eukaryota Retortamonadidae Retortamonas
+Eukaryota Fungi Microsporidia Tubulinosematidae
+Eukaryota Viridiplantae Chlorophyta Tetraedoron
+Eukaryota Centroheliozoa Acanthocystidae
+Viruses dsDNAviruses,noRNAstage Nudiviridae
+Eukaryota Stramenopiles Slopalinida Opalinidae
+Bacteria Verrucomicrobia Opitutae Puniceicoccales
+Eukaryota Metazoa Lophotrochozoa Myzostomida
+Eukaryota Alveolata Dinophyceae Gonyaulacales
+Eukaryota Apusozoa Apusomonadidae Amastigomonas
+Eukaryota Rhizaria Cercozoa Cercomonadida
+Bacteria Chlamydiae Chlamydiales Simkaniaceae
+Eukaryota Alveolata Dinophyceae Gymnodiniales
+Viruses dsDNAviruses,noRNAstage unclassified
+Eukaryota Rhizaria Cercozoa Desmothoracida
+Eukaryota Metazoa Chordata Tunicata Thaliacea
+Eukaryota Metazoa Cnidaria Scyphozoa Rhizostomeae
+Bacteria Proteobacteria Deltaproteobacteria
+Bacteria Armatimonadetes Fimbriimonas
+Archaea Korarchaeota CandidatusKorarchaeum
+Eukaryota Metazoa Cnidaria Hydrozoa Stylasterina
+Eukaryota Amoebozoa Mycetozoa Dictyosteliida
+Eukaryota Metazoa Cnidaria Scyphozoa
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Eukaryota Parabasalia Honigbergiellida
+Bacteria Proteobacteria Epsilonproteobacteria
+Eukaryota Stramenopiles Bolidophyceae Bolidomonas
+Bacteria Chlamydiae Chlamydiales environmental
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Eukaryota Rhizaria Cercozoa Vampyrellida
+Eukaryota Oxymonadida Pyrsonymphidae Pyrsonympha
+Eukaryota Viridiplantae Chlorophyta prasinophytes
+Bacteria Firmicutes Bacilli Lactobacillales
+Eukaryota Rhodophyta Florideophyceae Ceramiales
+Bacteria Cyanobacteria Nostocales Microchaetaceae
+Bacteria Proteobacteria Deltaproteobacteria
+Eukaryota Stramenopiles Oomycetes Saprolegniales
+Bacteria Aquificae Aquificales Aquificaceae
+Eukaryota Stramenopiles Synurophyceae Synurales
+Eukaryota Alveolata Dinophyceae Syndiniales
+Bacteria Proteobacteria Epsilonproteobacteria
+Archaea Nanoarchaeota Nanoarchaeum
+Bacteria Firmicutes Clostridia Clostridiales
+Eukaryota Ichthyosporea Ichthyophonida Sphaeroforma
+Eukaryota Viridiplantae Streptophyta Embryophyta
+Eukaryota Metazoa Chordata Craniata Vertebrata
+Eukaryota Metazoa Ecdysozoa Nematoda Chromadorea
+Eukaryota Metazoa Chordata Tunicata Thaliacea
+Eukaryota Rhizaria Foraminifera Rotaliida
+Viruses ssDNAviruses Microviridae Gokushovirinae
+Viruses dsDNAviruses,noRNAstage Adenoviridae
+Viruses Retro-transcribingviruses Caulimoviridae
+Bacteria Deinococcus-Thermus Deinococci
+Viruses dsRNAviruses Totiviridae Leishmaniavirus
+Bacteria Cyanobacteria Nostocales Rivulariaceae
+Bacteria Proteobacteria Gammaproteobacteria
+Viruses ssDNAviruses unclassifiedssDNAviruses
+Eukaryota Rhizaria Foraminifera Rotaliida
+Eukaryota Rhizaria Acantharea Chaunacanthida
+Eukaryota Metazoa Cnidaria Scyphozoa Coronatae
+Bacteria Proteobacteria Deltaproteobacteria
+Bacteria Cyanobacteria Nostocales Microchaetaceae
+Eukaryota Metazoa Cnidaria Anthozoa Octocorallia
+Eukaryota Metazoa Cnidaria Cubozoa Carybdeida
+Viruses dsRNAviruses Reoviridae Spinareovirinae
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Viruses ssRNApositive-strandviruses,noDNAstage
+Viruses ssDNAviruses Microviridae Gokushovirinae
+Eukaryota Glaucocystophyceae Cyanophoraceae
+Eukaryota Parabasalia Cristamonadida
+Eukaryota Amoebozoa Mycetozoa Protosteliales
+Eukaryota Fungi Microsporidia Microsporidium
+Bacteria Aquificae Desulfurobacteriales
+Viruses ssDNAviruses Anelloviridae
+Eukaryota Stramenopiles Labyrinthulomycetes
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Eukaryota Metazoa Cnidaria Cubozoa Carybdeida
+Viruses dsRNAviruses Totiviridae
+Eukaryota Rhodophyta Bangiophyceae Cyanidiales
+Bacteria Proteobacteria Deltaproteobacteria
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Eukaryota Apusozoa Rigifilida Micronuclearia
+Eukaryota Stramenopiles Bicosoecida Nerada
+Bacteria Aquificae Aquificales Aquificaceae
+Eukaryota Oxymonadida unclassifiedOxymonadida
+Viruses ssRNApositive-strandviruses,noDNAstage
+Viruses ssDNAviruses Anelloviridae
+Archaea Euryarchaeota Archaeoglobi Archaeoglobales
+Eukaryota Euglenozoa Euglenida Distigma
+Eukaryota Choanoflagellida Stephanoecidae
+Bacteria Actinobacteria
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Eukaryota Haptophyceae Isochrysidales
+Eukaryota Metazoa Lophotrochozoa Entoprocta
+Bacteria Bacteroidetes Bacteroidia Bacteroidales
+Eukaryota Fungi Dikarya Ascomycota mitosporic
+othersequences transposons
+Viruses ssDNAviruses Geminiviridae Topocuvirus
+Eukaryota Cryptophyta Cryptomonadales
+Viruses ssDNAviruses Parvoviridae Parvovirinae
+Eukaryota Stramenopiles Chrysomerophyceae
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Eukaryota Metazoa Lophotrochozoa Gastrotricha
+Bacteria Firmicutes Clostridia Halanaerobiales
+Eukaryota Alveolata Dinophyceae Peridiniales
+Bacteria Acidobacteria Acidobacteriales
+Eukaryota Stramenopiles Bicosoecida Cafeteriaceae
+Bacteria Aquificae Aquificales Aquificaceae
+Eukaryota Viridiplantae Chlorophyta Geminella
+Eukaryota Stramenopiles PXclade Xanthophyceae
+Eukaryota Breviatea Breviata environmentalsamples
+Bacteria candidatedivisionWWE3 environmental
+Eukaryota Alveolata Dinophyceae Thoracosphaerales
+unclassifiedsequences metagenomes organismal
+Eukaryota Metazoa Chordata Craniata Vertebrata
+Viruses dsDNAviruses,noRNAstage Salterprovirus
+Eukaryota Fungi Entomophthoromycota
+Eukaryota Katablepharidophyta Roombia
+Eukaryota Viridiplantae Chlorophyta Ulvophyceae
+Eukaryota Rhizaria Cercozoa Cercomonadida
+Eukaryota Amoebozoa Mycetozoa Hyperamoeba
+Viruses dsRNAviruses Endornaviridae Endornavirus
+Eukaryota environmentalsamples
+Viruses ssRNApositive-strandviruses,noDNAstage
+Viruses ssDNAviruses Parvoviridae Parvovirinae
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Eukaryota Rhodophyta Rhodellophyceae
+Viruses dsDNAviruses,noRNAstage Adenoviridae
+Eukaryota Stramenopiles Bicosoecida unclassified
+Eukaryota Alveolata Dinophyceae Suessiales
+Bacteria Bacteroidetes Sphingobacteriia
+Eukaryota Euglenozoa Diplonemida Rhynchopus
+Eukaryota Rhizaria Foraminifera Miliolida
+Bacteria Tenericutes Mollicutes Mycoplasmataceae
+Eukaryota Metazoa Cnidaria Hydrozoa Hydroida
+Bacteria Proteobacteria Alphaproteobacteria SAR11
+unclassifiedsequences metagenomes ecological
+Viruses Retro-transcribingviruses Caulimoviridae
+Viruses ssDNAviruses Microviridae Gokushovirinae
+Bacteria Proteobacteria Alphaproteobacteria
+Eukaryota Rhodophyta Florideophyceae Gracilariales
+Eukaryota Fungi Dikarya Ascomycota Ascomycota
+Eukaryota Metazoa Cnidaria environmentalsamples
+Viruses dsRNAviruses Reoviridae Spinareovirinae
+Eukaryota Fungi Microsporidia Pleistophoridae
+Eukaryota Metazoa Chordata Tunicata Ascidiacea
+Eukaryota Metazoa Porifera Calcarea Calcaronea
+Eukaryota Apusozoa Apusomonadidae Apusomonas
+Eukaryota Rhodophyta Stylonematophyceae Rufusiales
+Eukaryota Alveolata Dinophyceae Gonyaulacales
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Euglenozoa Euglenida Euglenales
+Viruses ssDNAviruses Parvoviridae Parvovirinae
+Bacteria Proteobacteria Deltaproteobacteria SAR324
+Eukaryota Metazoa Xenacoelomorpha Acoelomorpha
+Archaea Crenarchaeota Thermoprotei
+Viruses dsRNAviruses Amalgaviridae Amalgavirus
+Viruses Satellites SatelliteViruses
+Eukaryota Metazoa Ecdysozoa Nematoda Enoplea
+Bacteria Aquificae environmentalsamples
+Eukaryota Telonemida Telonema
+Viruses ssDNAviruses Circoviridae Gyrovirus
+Eukaryota Metazoa Ecdysozoa Arthropoda Myriapoda
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Eukaryota Stramenopiles Phaeothamniophyceae
+Eukaryota Stramenopiles Bacillariophyta
+Eukaryota Viridiplantae Chlorophyta prasinophytes
+Viruses unassignedviruses Bacilladnavirus
+Eukaryota Rhodophyta Florideophyceae
+Eukaryota Heterolobosea Psalteriomonadidae
+Eukaryota Rhodophyta Florideophyceae Gelidiales
+Bacteria Firmicutes Clostridia Clostridiales
+Eukaryota Alveolata Dinophyceae unclassified
+Eukaryota Metazoa Lophotrochozoa Myzostomida
+Eukaryota Parabasalia Trichonymphida
+Eukaryota Metazoa Cnidaria Anthozoa Hexacorallia
+Eukaryota Amoebozoa Tubulinea Euamoebida
+Bacteria RA21methanotrophgroup environmental
+Viruses Retro-transcribingviruses Retroviridae
+Bacteria Proteobacteria environmentalsamples
+Eukaryota Stramenopiles Pelagophyceae
+Viruses ssDNAviruses Nanoviridae Babuvirus
+Eukaryota Fungi Cryptomycota Rozella
+Bacteria Caldiserica Caldisericia Caldisericales
+Eukaryota Alveolata Dinophyceae Gymnodiniales
+Eukaryota Rhodophyta Florideophyceae Palmariales
+Eukaryota Rhodophyta Florideophyceae Ceramiales
+Viruses dsDNAviruses,noRNAstage Nudiviridae
+Eukaryota Stramenopiles Synurophyceae Synurales
+Eukaryota Rhizaria Foraminifera Rotaliida
+Eukaryota Rhizaria Cercozoa
+Eukaryota Fungi Neocallimastigomycota
+Eukaryota Rhodophyta Bangiophyceae Bangiales
+Eukaryota Metazoa Lophotrochozoa Acanthocephala
+Eukaryota Haptophyceae Phaeocystales
+Viruses dsRNAviruses HighPlainsvirus
+Eukaryota Metazoa Cnidaria Hydrozoa Milleporina
+Archaea Parvarchaeota CandidatusMicrarchaeum
+Eukaryota Rhodophyta environmentalsamples
+Eukaryota Metazoa Cnidaria Hydrozoa Trachylina
+Bacteria Firmicutes Clostridia Clostridiales
+Bacteria Bacteroidetes Bacteroidia Bacteroidales
+Bacteria Chlamydiae Chlamydiales Simkaniaceae
+Eukaryota Metazoa Lophotrochozoa Myzostomida
+Eukaryota Rhizaria Cercozoa Chlorarachniophyceae
+Eukaryota Amoebozoa Discosea Flabellinia
+Viruses ssDNAviruses Microviridae Gokushovirinae
+Eukaryota Metazoa Porifera Demospongiae
+Eukaryota Rhizaria Cercozoa Glissomonadida
+Bacteria Cyanobacteria Nostocales Scytonemataceae
+Eukaryota Rhodophyta Florideophyceae Thoreales
+Viruses dsDNAviruses,noRNAstage Iridoviridae
+Eukaryota Viridiplantae Chlorophyta Ulvophyceae
+Viruses dsRNAviruses Quadriviridae Quadrivirus
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Eukaryota Fungi Chytridiomycota Chytridiomycetes
+Eukaryota Fungi Dikarya Basidiomycota
+Bacteria Nitrospinae Nitrospinia Nitrospinales
+Eukaryota Fungi Microsporidia Glugeidae Glugea
+Eukaryota Alveolata Dinophyceae Suessiales
+Bacteria Firmicutes Negativicutes Selenomonadales
+Eukaryota Rhizaria Cercozoa Chlorarachniophyceae
+Bacteria Cyanobacteria Oscillatoriophycideae
+Eukaryota Rhodophyta Rhodellophyceae Rhodellales
+Eukaryota Amoebozoa Tubulinea Arcellinida
+Eukaryota Rhodophyta Florideophyceae Gigartinales
+Eukaryota Alveolata Chromerida
+Bacteria Firmicutes Bacilli Bacillales
+Eukaryota Metazoa Cnidaria Myxozoa Myxosporea
+Eukaryota Stramenopiles PXclade Xanthophyceae
+Eukaryota Jakobida Histionidae Histiona
+Eukaryota Metazoa Ctenophora Cyclocoela
+Bacteria Chlorobi environmentalsamples
+Bacteria Firmicutes Bacilli Bacillales Macrococcus
+Eukaryota Amoebozoa unclassifiedAmoebozoa
+Eukaryota Stramenopiles Labyrinthulomycetes
+Bacteria Proteobacteria Betaproteobacteria
+Bacteria Chlamydiae Chlamydiales Chlamydiaceae
+Bacteria Actinobacteria marineActinobacteriaclade
+Viruses dsDNAviruses,noRNAstage Caudovirales
+Eukaryota Metazoa Ctenophora Cyclocoela Lobata
+Eukaryota Metazoa Platyhelminthes Catenulida
+Eukaryota Amoebozoa Tubulinea Pyxidicula
+Viruses environmentalsamples
+Bacteria Poribacteria environmentalsamples
+Eukaryota Euglenozoa Kinetoplastida Bodonidae
+Eukaryota Parabasalia Spirotrichonymphida
+Bacteria Proteobacteria Gammaproteobacteria
+Bacteria Proteobacteria Alphaproteobacteria
+Viruses dsRNAviruses Reoviridae Spinareovirinae
+Bacteria Firmicutes Clostridia environmental
+Eukaryota Viridiplantae Streptophyta
+Eukaryota Euglenozoa Euglenida Cryptoglena
+Eukaryota Rhodophyta Bangiophyceae Cyanidiales
+Bacteria CandidatusEndoecteinascidia
+Viruses dsRNAviruses Totiviridae Giardiavirus
+Eukaryota Viridiplantae Chlorophyta Ulvophyceae
+Eukaryota Stramenopiles Hyphochytriomycetes
+Eukaryota Metazoa Cnidaria Hydrozoa Siphonophora
+Viruses dsRNAviruses Partitiviridae
+Eukaryota Oxymonadida Streblomastigidae
+Eukaryota Viridiplantae Chlorophyta Pedinophyceae
+Viruses dsDNAviruses,noRNAstage Ampullaviridae
+Eukaryota Rhizaria Foraminifera Rotaliida
+Viruses Retro-transcribingviruses Caulimoviridae
+Viruses dsDNAviruses,noRNAstage Globuloviridae
+Eukaryota Stramenopiles Slopalinida Opalinidae
+Eukaryota Haptophyceae Prymnesiales Prymnesiaceae
+Eukaryota Diplomonadida Hexamitidae Hexamitinae
+othersequences plasmids
+Eukaryota Rhizaria Foraminifera Rotaliida
+Eukaryota Metazoa Lophotrochozoa Mollusca
+Archaea Crenarchaeota Thermoprotei Thermoproteales
+Viruses dsDNAviruses,noRNAstage Tectiviridae
+Viruses dsDNAviruses,noRNAstage Mimiviridae
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Eukaryota Carpediemonas-likeorganisms Carpediemonas
+Eukaryota Carpediemonas-likeorganisms Kipferlia
+Eukaryota Metazoa Porifera Demospongiae
+Eukaryota Choanoflagellida Codonosigidae
+Eukaryota Euglenozoa Euglenida Rhabdomonadales
+Bacteria Actinobacteria Rubrobacteridae
+Viruses dsRNAviruses Reoviridae Sedoreovirinae
+Eukaryota NucleariidaeandFonticulagroup
+Bacteria Proteobacteria Alphaproteobacteria
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Eukaryota Stramenopiles
+Eukaryota Alveolata Dinophyceae Oxyrrhinales
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Viruses Satellites SatelliteNucleicAcids RNA
+Eukaryota Metazoa Lophotrochozoa Nemertea Anopla
+Archaea Euryarchaeota Methanomicrobia
+Bacteria Cyanobacteria Pleurocapsales Xenococcus
+Eukaryota Fungi Dikarya Basidiomycota
+Eukaryota Haptophyceae Coccolithales
+Bacteria Firmicutes Bacilli Lactobacillales
+Eukaryota Alveolata unclassifiedAlveolata
+Eukaryota Metazoa Cnidaria Hydrozoa Anthoathecata
+Eukaryota Metazoa Ecdysozoa Nematoda Chromadorea
+Eukaryota Euglenozoa Kinetoplastida Bodonidae
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Eukaryota Rhizaria Haplosporidia Urosporidium
+Bacteria Firmicutes Negativicutes Selenomonadales
+Eukaryota Choanoflagellida Salpingoecidae Choanoeca
+Viruses ssDNAviruses Geminiviridae Begomovirus
+Eukaryota Heterolobosea Acrasida Acrasiaceae
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Rhodophyta Florideophyceae Plocamiales
+Eukaryota Fungi Entomophthoromycota
+Eukaryota Rhizaria unclassifiedRhizaria
+Eukaryota Metazoa Cnidaria Cubozoa Carybdeida
+Bacteria Bacteroidetes Bacteroidia Bacteroidales
+Eukaryota Viridiplantae Chlorophyta Pedinophyceae
+Bacteria Firmicutes Bacilli Lactobacillales
+Eukaryota Alveolata Dinophyceae Peridiniales
+Eukaryota Stramenopiles Dictyochophyceae
+Viruses ssRNApositive-strandviruses,noDNAstage
+Eukaryota Metazoa Ecdysozoa Arthropoda Myriapoda
+Eukaryota Metazoa Gnathostomulida Bursovaginoidea
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Viruses dsDNAviruses,noRNAstage Herpesvirales
+Viruses dsDNAviruses,noRNAstage Adenoviridae
+Bacteria Chloroflexi Dehalococcoidia
+Viruses ssRNApositive-strandviruses,noDNAstage
+Bacteria Proteobacteria Betaproteobacteria
+Viruses Deltavirus
+Bacteria Elusimicrobia Elusimicrobia
+Eukaryota Amoebozoa Mycetozoa Dictyosteliida
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Bacteria Chloroflexi Ktedonobacteria unclassified
+Archaea environmentalsamples
+Eukaryota Euglenozoa Kinetoplastida Bodonidae
+Eukaryota Haptophyceae Prymnesiales
+Viruses ssDNAviruses Parvoviridae Parvovirinae
+Bacteria Proteobacteria Alphaproteobacteria
+Viruses dsDNAviruses,noRNAstage Baculoviridae
+Eukaryota Alveolata Ciliophora Intramacronucleata
+Eukaryota Stramenopiles Eustigmatophyceae
+Eukaryota NucleariidaeandFonticulagroup
+Eukaryota Metazoa Cnidaria Anthozoa Hexacorallia
+Viruses dsDNAviruses,noRNAstage Polydnaviridae
+Eukaryota Metazoa Lophotrochozoa Nemertea Enopla
+Eukaryota Choanoflagellida Codonosigidae Monosiga
+Viruses dsDNAviruses,noRNAstage Iridoviridae
+Eukaryota Stramenopiles Raphidophyceae unclassified
+Eukaryota Parabasalia Tritrichomonadida
+Bacteria Cyanobacteria Pleurocapsales Myxosarcina
+Eukaryota Metazoa Lophotrochozoa Mollusca
+Eukaryota Metazoa Porifera Demospongiae
+Eukaryota Metazoa Ctenophora Cyclocoela Lobata
+Eukaryota Metazoa environmentalsamples
+Eukaryota Euglenozoa Euglenida Euglenales
+Bacteria Bacteroidetes Cytophagia Cytophagales
+Eukaryota Metazoa Cnidaria
+Eukaryota Metazoa Cnidaria Anthozoa Octocorallia
+Archaea Euryarchaeota Thermoplasmata
+Viruses ssRNApositive-strandviruses,noDNAstage
+Eukaryota Metazoa Platyhelminthes Rhabditophora
+Viruses dsDNAviruses,noRNAstage Ligamenvirales
+Bacteria Firmicutes Bacillales Bacillaceae
+Eukaryota Fungi Dikarya Basidiomycota
+Eukaryota Fungi Monoblepharidomycota
+Eukaryota Fungi Glomeromycota Glomeromycetes
+Eukaryota Metazoa Porifera Hexactinellida
+Eukaryota Metazoa Ecdysozoa Arthropoda Crustacea
+Eukaryota Rhodophyta Florideophyceae Nemaliales
+Eukaryota Stramenopiles Oomycetes Leptomitales
+Bacteria Cyanobacteria Stigonematales Stigonema
+Eukaryota Stramenopiles Oomycetes Lagenidiales
+Archaea Euryarchaeota Methanococci Methanococcales
+Bacteria Thermotogae Thermotogales Thermotogaceae
+Viruses dsRNAviruses Reoviridae Spinareovirinae
+Viruses dsRNAviruses Reoviridae Sedoreovirinae
+Bacteria Proteobacteria Alphaproteobacteria
+Eukaryota Stramenopiles Oomycetes Peronosporales
+Eukaryota Metazoa Xenacoelomorpha Acoelomorpha
+Eukaryota Alveolata Acavomonas
+Viruses dsDNAviruses,noRNAstage Bicaudaviridae
+Eukaryota Rhodophyta Florideophyceae
+Eukaryota Rhizaria Foraminifera Allogromida
+Archaea Crenarchaeota CandidatusNitrosocaldus
+Eukaryota Metazoa Hemichordata Pterobranchia
+Bacteria Cyanobacteria Nostocales Microchaetaceae
+Eukaryota Stramenopiles Oomycetes Peronosporales
+Bacteria Gemmatimonadetes
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Eukaryota Fungi Basidiomycota Hymenomycetes
+Eukaryota Haptophyceae Prymnesiales
+Eukaryota Stramenopiles Oomycetes Leptomitales
+Bacteria Thermotogae Thermotogales Thermotogaceae
+Eukaryota Metazoa Cnidaria Anthozoa Hexacorallia
+Viruses unclassifiedviruses
+Viruses ssDNAviruses Geminiviridae Becurtovirus
+Viruses dsDNAviruses,noRNAstage
+Bacteria Planctomycetes Planctomycetia Candidatus
+Eukaryota Viridiplantae Streptophyta Embryophyta
+Viruses unclassifiedphages environmentalsamples
+Archaea Thaumarchaeota unclassifiedThaumarchaeota
+Eukaryota Alveolata Dinophyceae Prorocentrales
+Viruses Retro-transcribingviruses Caulimoviridae
+Viruses ssDNAviruses Parvoviridae Densovirinae
+Eukaryota Rhodophyta Florideophyceae
+Eukaryota Fungi Microsporidia Nosematidae
+Eukaryota Viridiplantae Chlorophyta prasinophytes
+Eukaryota Euglenozoa Kinetoplastida environmental
+Eukaryota Rhizaria Polycystinea Spumellaria
+Eukaryota Amoebozoa Tubulinea Leptomyxida
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Eukaryota Euglenozoa Kinetoplastida Bodonidae
+Bacteria Chloroflexi
+Eukaryota Oxymonadida Saccinobaculidae
+Bacteria Proteobacteria Deltaproteobacteria
+Viruses dsRNAviruses Totiviridae Trichomonasvirus
+Eukaryota Metazoa Ecdysozoa Nematoda Chromadorea
+Bacteria Actinobacteria Coriobacteridae
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Alveolata Dinophyceae Gymnodiniales
+Archaea Thaumarchaeota Cenarchaeales
+Eukaryota Metazoa Ecdysozoa Arthropoda Hexapoda
+Eukaryota Alveolata Chromerida Chromera
+Eukaryota Choanoflagellida Acanthoecidae Acanthoeca
+Bacteria Bacteroidetes environmentalsamples
+Archaea Euryarchaeota Thermoplasmata
+Viruses dsRNAviruses Birnaviridae Entomobirnavirus
+Bacteria Proteobacteria Deltaproteobacteria
+Eukaryota Metazoa Porifera Demospongiae
+Eukaryota Fungi Chytridiomycota Chytridiomycetes
+Eukaryota Rhizaria Cercozoa Thecofilosea
+Bacteria Proteobacteria Betaproteobacteria
+Eukaryota Heterolobosea
+Eukaryota Stramenopiles Oomycetes unclassified
+Eukaryota Metazoa Ctenophora Cyclocoela Lobata
+Eukaryota Metazoa Platyhelminthes Trematoda
+Eukaryota Metazoa Ctenophora unclassified
+Eukaryota Rhizaria Foraminifera Rotaliida
+Eukaryota Amoebozoa Discosea Longamoebia
+Eukaryota Fungi environmentalsamples
+Eukaryota Stramenopiles Pinguiophyceae
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Eukaryota Viridiplantae Chlorophyta prasinophytes
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Eukaryota Metazoa Ecdysozoa Nematoda Enoplea
+Eukaryota Stramenopiles Chrysophyceae unclassified
+Eukaryota Rhizaria Foraminifera Monothalamids
+Viruses dsRNAviruses Reoviridae Spinareovirinae
+Eukaryota Metazoa Lophotrochozoa Myzostomida
+Bacteria Proteobacteria Gammaproteobacteria
+Bacteria Thermotogae Thermotogales Thermotogaceae
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Eukaryota Alveolata Colpodellidae Colpodella
+Bacteria Proteobacteria Gammaproteobacteria
+Eukaryota Amoebozoa Discosea Himatismenida
+Viruses unassignedviruses Bacilladnavirus
+Viruses ssDNAviruses Inoviridae Inovirus
+Viruses ssDNAviruses Nanoviridae Nanovirus
+Archaea Euryarchaeota Halobacteria Halobacteriales
+Bacteria Cyanobacteria Nostocales Nostocaceae
+Bacteria Thermotogae Thermotogales Thermotogaceae
+Eukaryota Stramenopiles Synurophyceae Parmales
+Eukaryota Rhizaria Foraminifera Rotaliida
+Eukaryota Metazoa Cnidaria Scyphozoa Coronatae
+Bacteria Firmicutes Bacilli Bacillales
+Bacteria candidatedivisionWS6 environmental
+Eukaryota Choanoflagellida Acanthoecidae Helgoeca
+Eukaryota Stramenopiles Bicosoecida Caecitellus
+Eukaryota Alveolata Dinophyceae Blastodiniales
+Bacteria Proteobacteria Betaproteobacteria
+Viruses ssRNApositive-strandviruses,noDNAstage
+Eukaryota Viridiplantae Chlorophyta environmental
+Eukaryota Euglenozoa Euglenida Sphenomonadales
+Eukaryota Katablepharidophyta Katablepharidaceae
+Eukaryota Metazoa Ecdysozoa Nematoda Enoplea
+Viruses ssDNAviruses Geminiviridae Mastrevirus
+Eukaryota Metazoa Ecdysozoa Nematoda Chromadorea
+Bacteria Actinobacteria environmentalsamples
+Viruses dsDNAviruses,noRNAstage Corticoviridae
+Bacteria Firmicutes Bacilli Bacillales
+Archaea Euryarchaeota Methanococci Methanococcales
+Eukaryota Glaucocystophyceae Gloeochaetales
+Bacteria Chloroflexi Thermomicrobiales
+Eukaryota Alveolata Dinophyceae Gonyaulacales
+Viruses dsDNAviruses,noRNAstage Adenoviridae
+Eukaryota Stramenopiles PXclade Phaeophyceae
+Eukaryota Viridiplantae Chlorophyta Chlorophyceae
+Eukaryota Fungi Dikarya Basidiomycota
+Eukaryota Metazoa Lophotrochozoa Annelida
+Bacteria Proteobacteria Alphaproteobacteria
+Eukaryota Choanoflagellida Codonosigidae Codosiga
+Viruses ssDNAviruses Nanoviridae environmental
+Eukaryota Euglenozoa Kinetoplastida Bodonidae
+Eukaryota Rhodophyta Florideophyceae Rhodachlyales
+Viruses ssDNAviruses Microviridae Microvirus
+Eukaryota Fungi Chytridiomycota Chytridiomycetes
+Bacteria Cyanobacteria Stigonematales Mastigocoleus
+Eukaryota Metazoa Ecdysozoa Arthropoda
+Viruses ssRNAnegative-strandviruses Bunyaviridae
+Viruses dsDNAviruses,noRNAstage Baculoviridae
+Bacteria Bacteroidetes Bacteroidia Bacteroidales
+Eukaryota Viridiplantae Chlorophyta prasinophytes
+Eukaryota Rhodophyta Florideophyceae
+Eukaryota Carpediemonas-likeorganisms Hicanonectes
+Viruses dsRNAviruses Partitiviridae
+Eukaryota Stramenopiles Oomycetes Lagenidiales
+Eukaryota Rhizaria Polycystinea Spumellaria
+Bacteria Firmicutes Bacilli Bacillales
+Eukaryota Metazoa Gnathostomulida Bursovaginoidea
+Eukaryota Alveolata Apicomplexa Aconoidasida
