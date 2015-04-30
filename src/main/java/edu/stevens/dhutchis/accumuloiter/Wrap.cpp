@@ -19,6 +19,7 @@ JNIEXPORT jbooleanArray JNICALL Java_edu_stevens_dhutchis_accumuloiter_Wrap_seqp
 	i=0;
 	for(i = 0; i < sizeout;i++)//there is no standard function to convert java array of strings(which are seen as objects) to a native array of strings
 	{
+
 		 jstring str = (jstring) env->GetObjectArrayElement( array, i);//convert a jobject in an array to a jstring
 		 stringholder[i] = env->GetStringUTFChars( str, 0);		
 		 printf("\nresult %i is: %s\n", i,   stringholder[i]);
