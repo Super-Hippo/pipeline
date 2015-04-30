@@ -11,10 +11,12 @@ import org.apache.accumulo.core.iterators.IteratorUtil;
 import org.apache.accumulo.core.iterators.LongCombiner;
 import org.apache.accumulo.core.iterators.user.SummingCombiner;
 import org.apache.accumulo.core.security.Authorizations;
+import org.apache.commons.lang.SerializationUtils;
 import org.apache.hadoop.io.Text;
 import org.junit.Assert;
 import org.apache.accumulo.core.data.Range;
 
+import java.io.PrintWriter;
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -102,7 +104,7 @@ public class Wrap {
         return accList;
     }
 
-    public String taxToRaw(Connector conn, String taxon) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
+    public String taxToRaw(Connector conn, String taxon,PrintWriter writer) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
         long startTime = System.currentTimeMillis();
 
@@ -111,42 +113,66 @@ public class Wrap {
         String hmm_path = "/home/echerin/48.hmm";
 
 
-        int batchSize = 5000;
+        int batchSize = 5000;// increase size
         System.out.println("entered tax to raw");
         // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
         String TseqT = "TseqT";
         String TseqRaw = "TseqRaw";
-        int numThreads = 1;
+        int numThreads = 4;
 
         Scanner scan = conn.createScanner(TseqT, Authorizations.EMPTY);
         scan.setRange(new Range(taxon ,taxon + "~"));
 
         BatchScanner batScan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
 
-        List<Range> accList = new ArrayList<>();
-        Map<String,String> rawSeq = new HashMap<String,String>();
+        HMMERIterator h = new HMMERIterator();
 
+
+        List<Range> accList = new ArrayList<>();
+        Map<String,String> rawSeqMap = new HashMap<String,String>();
+
+        long computeTime = 0; //holds total time it takes to filter the raw sequences
+        long startComputeTime;
+
+
+
+        //System.out.println("Going in scanner!");
         // Do the scan
         int counter = 0;
         for(Map.Entry<Key,Value> entry : scan)
         {
+
             if(counter%batchSize == 0 && counter !=0)// when we have enough ranges
             {
-                int co = 0;
                 batScan.setRanges(accList);
-                for(Map.Entry<Key,Value> batEntry : batScan)
+                batScan.addScanIterator(h.hmmerAttachBool());
+
+                for (Map.Entry<Key, Value> batEntry : batScan)
                 {
-                    String seq = batEntry.getValue().toString();
-                    String mykey = batEntry.getKey().toString();
-                    rawSeq.put(mykey,seq);
+                    System.out.println("A Entry: "+batEntry.getKey() + " -> " + batEntry.getValue());
+                    HashMap<String, String> map1 = (HashMap<String, String>) SerializationUtils.deserialize(batEntry.getValue().get());
 
-                        System.out.println("counter is: : " + counter + " value is : " + seq + "\n");
+                    for (Map.Entry<String, String> accToEncodedRawSeq : map1.entrySet())
+                    {
+                        String accID = accToEncodedRawSeq.getKey();
+                        String tmp = accToEncodedRawSeq.getValue();
+                        boolean b = tmp.charAt(0) != '0';
+                        String rawSeq = tmp.substring(1);
+                        writer.append(accID + b + rawSeq+"\n");// do something with accID, b, rawSeq
+                    }
 
-                    co++;
 
-                }
+            }
 
-                wrap.seqpass( rawSeq.values().toArray(new String[rawSeq.size()]), hmm_path);
+                startComputeTime = System.currentTimeMillis();
+                //wrap.seqpass(rawSeqMap.values().toArray(new String[rawSeqMap.size()]), hmm_path);
+                computeTime += System.currentTimeMillis() - startComputeTime;
+
+
+
+
+
+                rawSeqMap= new HashMap<String,String>();
                 accList  = new ArrayList<>();
             }
 
@@ -157,7 +183,7 @@ public class Wrap {
             counter++;
         }
 
-
+        //System.out.println("entering last batch");
         //scan the last batch
         if(!accList.isEmpty())
         {
@@ -166,15 +192,29 @@ public class Wrap {
             {
                 String seq = batEntry.getValue().toString();
                 String mykey = batEntry.getKey().toString();
-                rawSeq.put(mykey,seq);
+                rawSeqMap.put(mykey,seq);
             }
-            wrap.seqpass( rawSeq.values().toArray(new String[rawSeq.size()]), hmm_path);
+
+            /*
+            System.out.println("values to be entering jni");
+            for( String s : rawSeq.values().toArray(new String[rawSeq.size()]))
+            {
+                System.out.println(s);
+            }
+*/
+
+            startComputeTime = System.currentTimeMillis();
+           // wrap.seqpass( rawSeq.values().toArray(new String[rawSeq.size()]), hmm_path);
+            computeTime += System.currentTimeMillis() - startComputeTime;
         }
 
         batScan.close();
         scan.close();
-       String data =  Integer.toString(counter) + " " +  Long.toString(System.currentTimeMillis()-startTime);
-        return data;
+
+        long totalTime = System.currentTimeMillis() - startTime;
+
+       String data = Integer.toString(counter) + " " +  Long.toString(totalTime-computeTime) + " " + Long.toString(computeTime);
+        return data; //taxon string;  how many of taxon was in database; total scan time; total compute time
     }
 
 
