@@ -26,7 +26,7 @@ import java.util.Map.Entry;
  */
 public class Wrap {
 
-    public native boolean []    seqpass(String[] n , String hmm_path);
+    public synchronized static native boolean []    seqpass(String[] n , String hmm_path);
 
     private final String tableName = "TestTableIterator";
     private final String columnFamily="";
@@ -104,13 +104,13 @@ public class Wrap {
         return accList;
     }
 
+    @SuppressWarnings("unchecked")
     public String taxToRaw(Connector conn, String taxon,PrintWriter writer) throws AccumuloSecurityException, AccumuloException, TableNotFoundException
     {
         long startTime = System.currentTimeMillis();
 
         System.load("/home/echerin/ppp/pipeline/src/main/java/edu/stevens/dhutchis/accumuloiter/Wrap.so");
         Wrap wrap = new Wrap();
-        String hmm_path = "/home/echerin/48.hmm";
 
 
         int batchSize = 5000;// increase size
@@ -124,6 +124,11 @@ public class Wrap {
         scan.setRange(new Range(taxon ,taxon + "~"));
 
         BatchScanner batScan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
+        final String hmm_path = "/home/echerin/48.hmm";
+        Map<String,String> options = new HashMap<>();
+        options.put("hmm_path",hmm_path);
+        IteratorSetting itset = new IteratorSetting(18, HMMERIterator.class,options);
+        batScan.addScanIterator(itset);
 
         HMMERIterator h = new HMMERIterator();
 
@@ -145,7 +150,6 @@ public class Wrap {
             if(counter%batchSize == 0 && counter !=0)// when we have enough ranges
             {
                 batScan.setRanges(accList);
-                batScan.addScanIterator(h.hmmerAttachBool());
 
                 for (Map.Entry<Key, Value> batEntry : batScan)
                 {
@@ -158,7 +162,9 @@ public class Wrap {
                         String tmp = accToEncodedRawSeq.getValue();
                         boolean b = tmp.charAt(0) != '0';
                         String rawSeq = tmp.substring(1);
-                        writer.append(accID + b + rawSeq+"\n");// do something with accID, b, rawSeq
+                        writer.append("accID="+accID+"  b="+b+"  rawSeq="+rawSeq.length()+" chars");// do something with accID, b, rawSeq
+
+//                        System.out.println("accID="+accID+"  b="+b+"  rawSeq="+rawSeq.length()+" chars");
                     }
 
 
