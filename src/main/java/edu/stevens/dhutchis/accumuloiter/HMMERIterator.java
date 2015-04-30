@@ -7,11 +7,13 @@ import org.apache.accumulo.core.data.Value;
 import org.apache.accumulo.core.iterators.IteratorEnvironment;
 import org.apache.accumulo.core.iterators.SortedKeyValueIterator;
 import org.apache.commons.lang.SerializationUtils;
+import org.apache.hadoop.io.Text;
 import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Calls HMMER native library.
@@ -25,6 +27,13 @@ import java.util.*;
  */
 public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
   private static final Logger log = Logger.getLogger(HMMERIterator.class);
+
+  private SortedKeyValueIterator<Key,Value> source;
+  private String hmm_path = "/home/echerin/48.hmm";
+  private Key topKey;
+  private Value topValue;
+
+//  private static final AtomicBoolean loadedNativeLibraries = new AtomicBoolean(false);
 
   // Load native library
   static {
@@ -63,12 +72,13 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
   }
 
 
-  @SuppressWarnings("unchecked")
-  protected Value hmmerAttachBool(String[] accIDs, String[] rawSeqs) {
-    String hmm_path = "/home/echerin/48.hmm"; // TODO: put into init options
-//    int batchSize = 5000; // TODO: make batch size option to init
 
-    Wrap wrap = new Wrap();
+
+  //  @SuppressWarnings("unchecked")
+  private Value hmmerAttachBool(String[] accIDs, String[] rawSeqs) {
+    //    int batchSize = 5000; // TODO: make batch size option to init
+
+    Wrap wrap = new Wrap(); // TODO: make wrap seqpass static
 
     // TODO: at some point later, return the score/probability
     boolean[] booleans = wrap.seqpass(rawSeqs, hmm_path);
@@ -95,39 +105,68 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
     return new Value(bytes);
   }
 
+  private static final byte[] SEQ_COL = new Text("seq").copyBytes();
+
+  private void prepareNextEntry() throws IOException {
+    int batchSize = Integer.MAX_VALUE;
+    List<String> accIDs = new ArrayList<>(), rawSeqs = new ArrayList<>();
+    Key k = new Key();
+    for (int i = 0; i < batchSize && source.hasTop(); source.next(), i++) {
+      // must have "seq" col
+      if (!Arrays.equals(source.getTopKey().getColumnQualifierData().getBackingArray(), SEQ_COL))
+        continue;
+      k.set(source.getTopKey());
+      accIDs.add(source.getTopKey().getRow().toString());
+      rawSeqs.add(source.getTopValue().toString());
+    }
+
+    topKey = new Key(k);
+    topValue = hmmerAttachBool(accIDs.toArray(new String[accIDs.size()]),
+        rawSeqs.toArray(new String[rawSeqs.size()]));
+
+  }
+
 
   @Override
-  public void init(SortedKeyValueIterator<Key, Value> sortedKeyValueIterator, Map<String, String> map, IteratorEnvironment iteratorEnvironment) throws IOException {
-
+  public void init(SortedKeyValueIterator<Key, Value> source, Map<String, String> map, IteratorEnvironment iteratorEnvironment) throws IOException {
+    this.source = source;
+    if (map != null && map.containsKey("hmm_path"))
+      hmm_path = map.get("hmm_path");
+    // TODO: add functionality from RemoteWriteIterator to control seeking
   }
 
   @Override
   public boolean hasTop() {
-    return false;
+    return topKey != null;
   }
 
   @Override
   public void next() throws IOException {
-
+    prepareNextEntry();
   }
 
   @Override
-  public void seek(Range range, Collection<ByteSequence> collection, boolean b) throws IOException {
-
+  public void seek(Range range, Collection<ByteSequence> columnFamilies, boolean inclusive) throws IOException {
+//    this.seekRange = range;
+    source.seek(range, columnFamilies, inclusive);
+    prepareNextEntry();
   }
 
   @Override
   public Key getTopKey() {
-    return null;
+    return topKey;
   }
 
   @Override
   public Value getTopValue() {
-    return null;
+    return topValue;
   }
 
   @Override
   public SortedKeyValueIterator<Key, Value> deepCopy(IteratorEnvironment iteratorEnvironment) {
-    return null;
+    HMMERIterator other = new HMMERIterator();
+    other.hmm_path = hmm_path;
+    other.source = source.deepCopy(iteratorEnvironment);
+    return other;
   }
 }
