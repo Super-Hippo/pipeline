@@ -13,7 +13,7 @@ extern "C" {
  * Signature: ([Ljava/lang/String;Ljava/lang/String;)[Z
  */
 JNIEXPORT jbooleanArray JNICALL Java_edu_stevens_dhutchis_accumuloiter_Wrap_seqpass
-  (JNIEnv *, jobject, jobjectArray, jstring);
+  (JNIEnv *, jclass, jobjectArray, jstring);
 
 #ifdef __cplusplus
 }

@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-JNIEXPORT jbooleanArray JNICALL Java_edu_stevens_dhutchis_accumuloiter_Wrap_seqpass(JNIEnv *env, jobject obj,jobjectArray array , jstring hmm_path)
+JNIEXPORT jbooleanArray JNICALL Java_edu_stevens_dhutchis_accumuloiter_Wrap_seqpass(JNIEnv *env, jclass obj,jobjectArray array , jstring hmm_path)
 {
 	
 	jint sizeout = env->GetArrayLength(array);
