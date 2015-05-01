@@ -39,19 +39,19 @@ extern "C" bool* mymain(int sizeout, const char** s, const char *Chmm_path )
 	/* ************************************************ */
 
 	/* get parameters (M, MU[], LAMBDA[]) */
-	if(get_Parameters(hmm, MODEL_PATH) != 1) printf("error!\n");
+	get_Parameters(hmm, MODEL_PATH);
 
 	/* Get raw match & insert emission */
-	if(get_Emission(hmm, MODEL_PATH) != 1) printf("error!\n");
+	get_Emission(hmm, MODEL_PATH);
 
 	/* Transfer to prob from raw data (need do it before get degen)*/
-	if(log_Odd_score(hmm) != 1) printf("error!\n");
+	log_Odd_score(hmm);
 
 	/* Get degenerate residues */
-	if(mat_degen(hmm) != 1) printf("error in getiing 'degenerate residue'! \n");
+	mat_degen(hmm);
 
 	/* Rescaling and rounding */
-	if(mf_conversion(hmm) != 1) printf("error!\n");
+	mf_conversion(hmm);
 
 	//Until now, all preparation works of MSV has been done!
 
@@ -62,19 +62,19 @@ extern "C" bool* mymain(int sizeout, const char** s, const char *Chmm_path )
 
 #if 1
 	/**/
-	if(get_transition(hmm, MODEL_PATH) != 1) printf("error!\n");
+	get_transition(hmm, MODEL_PATH) ;
 
 	/**/
-	if(get_entryScore(hmm) != 1) printf("error!\n");
+	get_entryScore(hmm);
 
 	/**/
-	if(log_Trans(hmm) != 1) printf("error!\n");
+	log_Trans(hmm) ;
 
 	/**/
-	if(xTrans(hmm) != 1) printf("error!\n");
+	xTrans(hmm) ;
 
 	/**/
-	if(vf_conversion(hmm) != 1) printf("error!\n");
+vf_conversion(hmm) ;
 
 	//Until now, all preparation works of Viterbi has been done!
 

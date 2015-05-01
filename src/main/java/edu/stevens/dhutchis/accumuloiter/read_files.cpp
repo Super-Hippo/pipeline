@@ -200,7 +200,7 @@ int get_Emission(HMMER_PROFILE *hmm, const char* hmm_Path)
     getchar();
     return fileERROR;
   } else {
-    printf(".hmm file open well\n");
+    //printf(".hmm file open well\n");
   }
 
   /* 1. locate the 'COMPO' */
@@ -304,7 +304,7 @@ int get_transition(HMMER_PROFILE *hmm, const char* hmm_Path)
     getchar();
     return fileERROR;
   } else {
-    printf(".hmm file open well_trans\n");
+    //printf(".hmm file open well_trans\n");
   }
 
   /* 1. locate the line of 1st stage */

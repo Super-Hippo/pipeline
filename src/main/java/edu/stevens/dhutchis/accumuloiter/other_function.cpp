@@ -272,7 +272,7 @@ void MSV_baseline(HMMER_PROFILE* hmm, int number, int* seq_len, char** iSeq)
      }
   }
 
-  printf("\nTotally %d sequences pass through the MSV filter", msv_counter);
+ // printf("\nTotally %d sequences pass through the MSV filter", msv_counter);
 
   free(SC);
   free(NULLSC);
@@ -503,7 +503,7 @@ void VIT_baseline(HMMER_PROFILE* hmm, int number, int* seq_len, char** iSeq)
       }
   }
 
-  printf("\nTotally %d sequences pass through the VIT filter", vit_counter);
+  //printf("\nTotally %d sequences pass through the VIT filter", vit_counter);
 
   free(SC);
   free(NULLSC);
