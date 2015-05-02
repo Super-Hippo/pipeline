@@ -123,7 +123,7 @@ public class Wrap {
         startComputeTime = System.currentTimeMillis();
         scanTseqRaw(batScan, hmm_path, accList,iterBatchSize, writer);
         computeTime += System.currentTimeMillis() - startComputeTime;
-        accList = new ArrayList<>();
+        accList.clear();
       }
       String acc = entry.getKey().getColumnQualifier().toString();
       accList.add(new Range(acc));
@@ -135,7 +135,7 @@ public class Wrap {
       startComputeTime = System.currentTimeMillis();
       scanTseqRaw(batScan, hmm_path, accList,iterBatchSize, writer);
       computeTime += System.currentTimeMillis() - startComputeTime;
-      accList = new ArrayList<>();
+      accList.clear();
     }
     batScan.close();
 
