@@ -74,7 +74,6 @@ public class Wrap {
     System.out.println("entered tax to acc");
     // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
     String TseqRaw = "TseqT";
-    int numThreads = 1;
     Scanner scan = conn.createScanner(TseqRaw, Authorizations.EMPTY);
     scan.setRange(new Range("taxonomy|Bacteria; Cyanobacteria", "taxonomy|Bacteria; Cyanobacteria~"));
 
@@ -95,7 +94,7 @@ public class Wrap {
   public String taxToRaw(Connector conn, String taxon, PrintWriter writer) throws AccumuloSecurityException, AccumuloException, TableNotFoundException {
     long startTime = System.currentTimeMillis();
 
-    final int batchSize = 10000;// increase size
+    final int batchSize = 100000;// increase size
     System.out.println("entered tax to raw");
     // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
     final String TseqT = "TseqT";
@@ -152,6 +151,7 @@ public class Wrap {
     Map<String, String> options = new HashMap<>();
     options.put("hmm_path", hmm_path);
     options.put("rowRanges", GraphuloUtil.rangesToD4MString(accList));
+    options.put("batchSize","500000");
     IteratorSetting itset = new IteratorSetting(18, HMMERIterator.class, options);
     batScan.addScanIterator(itset);
 

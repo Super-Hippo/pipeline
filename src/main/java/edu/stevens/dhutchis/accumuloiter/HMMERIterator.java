@@ -13,7 +13,6 @@ import org.apache.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Calls HMMER native library.
@@ -36,6 +35,7 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
   private Collection<ByteSequence> columnFamilies;
   private Key topKey;
   private Value topValue;
+  private int batchSize = 10000;
 
 //  private static final AtomicBoolean loadedNativeLibraries = new AtomicBoolean(false);
 
@@ -80,7 +80,7 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
 
   //  @SuppressWarnings("unchecked")
   private Value hmmerAttachBool(String[] accIDs, String[] rawSeqs) {
-    System.out.println("hmmerAttachBool: rawSeqs.length= "+rawSeqs.length);
+    System.out.println("hmmerAttachBool: rawSeqs.length= "+rawSeqs.length+"  Thread= "+Thread.currentThread().getName());
     // TODO: at some point later, return the score/probability
     boolean[] booleans = Wrap.seqpass(rawSeqs, hmm_path);
 
@@ -99,7 +99,6 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
     topKey = null;
     topValue = null;
 
-    final int batchSize = 10000;
     List<String> accIDs = new ArrayList<>(), rawSeqs = new ArrayList<>();
     Key k = new Key();
     for (int i = 0; i < batchSize && (source.hasTop() || rangeIter.hasNext()); source.next(), i++) {
@@ -131,6 +130,8 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
       hmm_path = map.get("hmm_path");
     if (map != null && map.containsKey("rowRanges"))
       rowRanges.setTargetRanges(GraphuloUtil.d4mRowToRanges(map.get("rowRanges")));
+    if (map != null && map.containsKey("batchSize"))
+      batchSize = Integer.parseInt(map.get("batchSize"));
   }
 
   @Override
@@ -150,8 +151,8 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
     this.columnFamilies = columnFamilies;
     this.inclusive = inclusive;
     if (rangeIter.hasNext()) {
-	source.seek(rangeIter.next(), columnFamilies, inclusive);
-	prepareNextEntry();
+    	source.seek(rangeIter.next(), columnFamilies, inclusive);
+	    prepareNextEntry();
     }
   }
 
