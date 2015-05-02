@@ -102,7 +102,29 @@ public class MainTest {
         Wrap wrap = new Wrap();
         PrintWriter writer = new PrintWriter("lightTest" + new Date( ).toString() + ".txt", "UTF-8");
         String tInput = "taxonomy|Bacteria; Firmicutes; Clostridia"; //contains about 500,000 seqs
-        wrap.taxToRaw(conn, tInput, writer);
+        System.out.println(wrap.taxToRaw(conn, tInput, 25000, 50000, writer));
+    }
+
+
+    @Test
+    public void benchTest() throws Exception
+    {
+        Connector conn = connectToAccumulo();
+
+        String taxon = ""; //"taxonomy|Bacteria; Cyanobacteria";
+        Wrap wrap = new Wrap();
+        PrintWriter writer = new PrintWriter("lightTest" + new Date( ).toString() + ".txt", "UTF-8");
+        String tInput = "taxonomy|Bacteria; Firmicutes; Clostridia"; //contains about 500,000 seqs
+
+        for(int iterBatchSize = 10000; iterBatchSize <= 70000; iterBatchSize+=10000)
+        {
+            for(int accIdSize = iterBatchSize; accIdSize <= 500000; accIdSize+=25000)
+            {
+                writer.append(Integer.toString(iterBatchSize) + " " + Integer.toString(accIdSize) + " " + wrap.taxToRaw(conn, tInput, accIdSize, iterBatchSize, writer));
+                //iterator batch size; acc ids batch size; how many of taxon was in database; total scan time; total compute time
+            }
+        }
+
         writer.close();
     }
 
@@ -141,7 +163,7 @@ public class MainTest {
                 System.out.println("scanning with : " + tInput);
                 if(!used.contains(tInput))
                 {
-                    wrap.taxToRaw(conn, tInput, writer);
+                    wrap.taxToRaw(conn, tInput,25000,50000,writer);
                     used.add(tInput);
                 }
             }

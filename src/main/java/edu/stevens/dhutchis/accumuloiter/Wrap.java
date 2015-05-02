@@ -91,10 +91,10 @@ public class Wrap {
     return accList;
   }
 
-  public String taxToRaw(Connector conn, String taxon, PrintWriter writer) throws AccumuloSecurityException, AccumuloException, TableNotFoundException {
+  public String taxToRaw(Connector conn, String taxon, int accIdSize, int iterBatchSize,PrintWriter writer) throws AccumuloSecurityException, AccumuloException, TableNotFoundException {
     long startTime = System.currentTimeMillis();
 
-    final int batchSize = 50000;// increase size
+    final int batchSize = accIdSize;// increase size
     System.out.println("entered tax to raw");
     // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
     final String TseqT = "TseqT";
@@ -121,7 +121,7 @@ public class Wrap {
       {
         // BatchScan TseqRaw with accession IDs from TseqT.
         startComputeTime = System.currentTimeMillis();
-        scanTseqRaw(batScan, hmm_path, accList, writer);
+        scanTseqRaw(batScan, hmm_path, accList,iterBatchSize, writer);
         computeTime += System.currentTimeMillis() - startComputeTime;
         accList = new ArrayList<>();
       }
@@ -133,7 +133,7 @@ public class Wrap {
     //System.out.println("entering last batch");
     if (!accList.isEmpty()) {
       startComputeTime = System.currentTimeMillis();
-      scanTseqRaw(batScan, hmm_path, accList, writer);
+      scanTseqRaw(batScan, hmm_path, accList,iterBatchSize, writer);
       computeTime += System.currentTimeMillis() - startComputeTime;
       accList = new ArrayList<>();
     }
@@ -145,13 +145,13 @@ public class Wrap {
   }
 
   @SuppressWarnings("unchecked")
-  private static void scanTseqRaw(BatchScanner batScan, String hmm_path, Collection<Range> accList, PrintWriter writer) {
+  private static void scanTseqRaw(BatchScanner batScan, String hmm_path, Collection<Range> accList, int iterBatchSize, PrintWriter writer) {
     //                batScan.setRanges(accList);
     batScan.clearScanIterators();
     Map<String, String> options = new HashMap<>();
     options.put("hmm_path", hmm_path);
     options.put("rowRanges", GraphuloUtil.rangesToD4MString(accList));
-    options.put("batchSize","25000");
+    options.put("batchSize",Integer.toString(iterBatchSize));
     IteratorSetting itset = new IteratorSetting(18, HMMERIterator.class, options);
     batScan.addScanIterator(itset);
 
