@@ -49,23 +49,23 @@ public class MainTest {
         }
         System.out.println();
     }
-    
+
     public MainTest() {
-	
+
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -80,7 +80,7 @@ public class MainTest {
         Instance instance = new ZooKeeperInstance(accumulo.getInstanceName(), accumulo.getZooKeepers());
         Connector conn = instance.getConnector("root", new PasswordToken("password"));
 
-      //  innerTest(instance, conn);
+        //  innerTest(instance, conn);
 
         accumulo.stop();
         tempDir.delete();
@@ -89,7 +89,21 @@ public class MainTest {
     @Test
     public void testNormal() throws Exception {
         Connector conn = connectToAccumulo();
-        innerTest( conn);
+        innerTest(conn);
+    }
+
+
+    @Test
+    public void lightTest() throws Exception
+    {
+        Connector conn = connectToAccumulo();
+
+        String taxon = ""; //"taxonomy|Bacteria; Cyanobacteria";
+        Wrap wrap = new Wrap();
+        PrintWriter writer = new PrintWriter("lightTest" + new Date( ).toString() + ".txt", "UTF-8");
+        String tInput = "taxonomy|Bacteria; Firmicutes; Clostridia"; //contains about 500,000 seqs
+        wrap.taxToRaw(conn, tInput, writer);
+        writer.close();
     }
 
     private void innerTest( Connector conn) throws Exception {
@@ -137,6 +151,6 @@ public class MainTest {
         writer.close();
 
     }
-	
+
 
 }
