@@ -106,6 +106,7 @@ public class Wrap {
     scan.setRange(new Range(taxon, taxon + "~"));
 
     BatchScanner batScan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
+    batScan.setRanges(Collections.singleton(new Range()));
     final String hmm_path = "/home/echerin/48.hmm";
 
     List<Range> accList = new ArrayList<>();

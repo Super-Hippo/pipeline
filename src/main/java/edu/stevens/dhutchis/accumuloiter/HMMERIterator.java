@@ -149,9 +149,10 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
     rangeIter = rowRanges.iteratorWithRangeMask(range);
     this.columnFamilies = columnFamilies;
     this.inclusive = inclusive;
-    source.seek(rangeIter.next(), columnFamilies, inclusive);
-
-    prepareNextEntry();
+    if (rangeIter.hasNext()) {
+	source.seek(rangeIter.next(), columnFamilies, inclusive);
+	prepareNextEntry();
+    }
   }
 
   @Override
