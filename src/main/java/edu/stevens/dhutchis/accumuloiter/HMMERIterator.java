@@ -78,7 +78,7 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
   private Value hmmerAttachBool(String[] accIDs, String[] rawSeqs) {
     //    int batchSize = 5000; // TODO: make batch size option to init
 
-    log.debug("hmmerAttachBool: rawSeqs.length= "+rawSeqs.length);
+    System.out.println("hmmerAttachBool: rawSeqs.length= "+rawSeqs.length);
     // TODO: at some point later, return the score/probability
     boolean[] booleans = Wrap.seqpass(rawSeqs, hmm_path);
 
@@ -109,7 +109,7 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
   private void prepareNextEntry() throws IOException {
     topKey = null;
     topValue = null;
-    final int batchSize = Integer.MAX_VALUE;
+    final int batchSize = 10000;
     List<String> accIDs = new ArrayList<>(), rawSeqs = new ArrayList<>();
     Key k = new Key();
     for (int i = 0; i < batchSize && source.hasTop(); source.next(), i++) {
@@ -120,10 +120,11 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
       accIDs.add(source.getTopKey().getRow().toString());
       rawSeqs.add(source.getTopValue().toString());
     }
-
-    topKey = new Key(k);
-    topValue = hmmerAttachBool(accIDs.toArray(new String[accIDs.size()]),
-        rawSeqs.toArray(new String[rawSeqs.size()]));
+    if (rawSeqs.size() > 0) {
+	topKey = new Key(k);
+	topValue = hmmerAttachBool(accIDs.toArray(new String[accIDs.size()]),
+				   rawSeqs.toArray(new String[rawSeqs.size()]));
+    }
   }
 
 
