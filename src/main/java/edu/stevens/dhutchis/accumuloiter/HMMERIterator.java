@@ -30,6 +30,10 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
 
   private SortedKeyValueIterator<Key,Value> source;
   private String hmm_path = "/home/echerin/48.hmm";
+  private RangeSet rowRanges = new RangeSet();
+  private Iterator<Range> rangeIter;
+  private boolean inclusive;
+  private Collection<ByteSequence> columnFamilies;
   private Key topKey;
   private Value topValue;
 
@@ -76,8 +80,6 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
 
   //  @SuppressWarnings("unchecked")
   private Value hmmerAttachBool(String[] accIDs, String[] rawSeqs) {
-    //    int batchSize = 5000; // TODO: make batch size option to init
-
     System.out.println("hmmerAttachBool: rawSeqs.length= "+rawSeqs.length);
     // TODO: at some point later, return the score/probability
     boolean[] booleans = Wrap.seqpass(rawSeqs, hmm_path);
@@ -88,19 +90,6 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
     }
 
     byte[] bytes = SerializationUtils.serialize(map);
-
-//    for (Map.Entry<Key, Value> entry : scanner) {
-////        System.out.println("A Entry: "+entry.getKey() + " -> " + entry.getValue());
-//      HashMap<String, String> map1 = (HashMap<String, String>) SerializationUtils.deserialize(entry.getValue().get());
-//      for (Map.Entry<String, String> accToEncodedRawSeq : map1.entrySet()) {
-//        String accID = accToEncodedRawSeq.getKey();
-//        String tmp = accToEncodedRawSeq.getValue();
-//        boolean b = tmp.charAt(0) != '0';
-//        String rawSeq = tmp.substring(1);
-//        // do something with accID, b, rawSeq
-//      }
-//    }
-
     return new Value(bytes);
   }
 
@@ -109,10 +98,17 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
   private void prepareNextEntry() throws IOException {
     topKey = null;
     topValue = null;
+
     final int batchSize = 10000;
     List<String> accIDs = new ArrayList<>(), rawSeqs = new ArrayList<>();
     Key k = new Key();
-    for (int i = 0; i < batchSize && source.hasTop(); source.next(), i++) {
+    for (int i = 0; i < batchSize && (source.hasTop() || rangeIter.hasNext()); source.next(), i++) {
+      // if finished this range, then goto next range
+      while (!source.hasTop() && rangeIter.hasNext())
+        source.seek(rangeIter.next(), columnFamilies, inclusive);
+      if (!source.hasTop())
+        break; // finished ranges; completely done
+
       // must have "seq" col
       if (!Arrays.equals(source.getTopKey().getColumnQualifierData().getBackingArray(), SEQ_COL))
         continue;
@@ -121,9 +117,9 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
       rawSeqs.add(source.getTopValue().toString());
     }
     if (rawSeqs.size() > 0) {
-	topKey = new Key(k);
-	topValue = hmmerAttachBool(accIDs.toArray(new String[accIDs.size()]),
-				   rawSeqs.toArray(new String[rawSeqs.size()]));
+      topKey = new Key(k);
+      topValue = hmmerAttachBool(accIDs.toArray(new String[accIDs.size()]),
+               rawSeqs.toArray(new String[rawSeqs.size()]));
     }
   }
 
@@ -133,7 +129,8 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
     this.source = source;
     if (map != null && map.containsKey("hmm_path"))
       hmm_path = map.get("hmm_path");
-    // TODO: add functionality from RemoteWriteIterator to control seeking
+    if (map != null && map.containsKey("rowRanges"))
+      rowRanges.setTargetRanges(GraphuloUtil.d4mRowToRanges(map.get("rowRanges")));
   }
 
   @Override
@@ -149,7 +146,11 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
   @Override
   public void seek(Range range, Collection<ByteSequence> columnFamilies, boolean inclusive) throws IOException {
 //    this.seekRange = range;
-    source.seek(range, columnFamilies, inclusive);
+    rangeIter = rowRanges.iteratorWithRangeMask(range);
+    this.columnFamilies = columnFamilies;
+    this.inclusive = inclusive;
+    source.seek(rangeIter.next(), columnFamilies, inclusive);
+
     prepareNextEntry();
   }
 
@@ -168,6 +169,7 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
     HMMERIterator other = new HMMERIterator();
     other.hmm_path = hmm_path;
     other.source = source.deepCopy(iteratorEnvironment);
+    other.rowRanges = rowRanges;
     return other;
   }
 }
