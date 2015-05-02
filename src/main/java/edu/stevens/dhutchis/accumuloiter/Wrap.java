@@ -156,7 +156,7 @@ public class Wrap {
     batScan.addScanIterator(itset);
 
     for (Map.Entry<Key, Value> batEntry : batScan) {
-      System.out.println("A Entry: " + batEntry.getKey() + " -> " + batEntry.getValue());
+//      System.out.println("A Entry: " + batEntry.getKey() + " -> " + batEntry.getValue());
       HashMap<String, String> map1 = (HashMap<String, String>) SerializationUtils.deserialize(batEntry.getValue().get());
 
       for (Map.Entry<String, String> accToEncodedRawSeq : map1.entrySet()) {
@@ -164,7 +164,7 @@ public class Wrap {
         String tmp = accToEncodedRawSeq.getValue();
         boolean b = tmp.charAt(0) != '0';
         String rawSeq = tmp.substring(1);
-        writer.append("accID=" + accID + "  b=" + b + "  rawSeq=" + rawSeq.length() + " chars");// do something with accID, b, rawSeq
+//        writer.append("accID=" + accID + "  b=" + b + "  rawSeq=" + rawSeq.length() + " chars");// do something with accID, b, rawSeq
 //                        System.out.println("accID="+accID+"  b="+b+"  rawSeq="+rawSeq.length()+" chars");
       }
     }
