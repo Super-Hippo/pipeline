@@ -94,7 +94,7 @@ public class Wrap {
   public String taxToRaw(Connector conn, String taxon, PrintWriter writer) throws AccumuloSecurityException, AccumuloException, TableNotFoundException {
     long startTime = System.currentTimeMillis();
 
-    final int batchSize = 100000;// increase size
+    final int batchSize = 50000;// increase size
     System.out.println("entered tax to raw");
     // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
     final String TseqT = "TseqT";
@@ -151,12 +151,12 @@ public class Wrap {
     Map<String, String> options = new HashMap<>();
     options.put("hmm_path", hmm_path);
     options.put("rowRanges", GraphuloUtil.rangesToD4MString(accList));
-    options.put("batchSize","500000");
+    options.put("batchSize","25000");
     IteratorSetting itset = new IteratorSetting(18, HMMERIterator.class, options);
     batScan.addScanIterator(itset);
 
     for (Map.Entry<Key, Value> batEntry : batScan) {
-      System.out.println("A Entry: " + batEntry.getKey() + " -> " + batEntry.getValue());
+//      System.out.println("A Entry: " + batEntry.getKey() + " -> " + batEntry.getValue());
       HashMap<String, String> map1 = (HashMap<String, String>) SerializationUtils.deserialize(batEntry.getValue().get());
 
       for (Map.Entry<String, String> accToEncodedRawSeq : map1.entrySet()) {
@@ -164,7 +164,7 @@ public class Wrap {
         String tmp = accToEncodedRawSeq.getValue();
         boolean b = tmp.charAt(0) != '0';
         String rawSeq = tmp.substring(1);
-        writer.append("accID=" + accID + "  b=" + b + "  rawSeq=" + rawSeq.length() + " chars");// do something with accID, b, rawSeq
+//        writer.append("accID=" + accID + "  b=" + b + "  rawSeq=" + rawSeq.length() + " chars");// do something with accID, b, rawSeq
 //                        System.out.println("accID="+accID+"  b="+b+"  rawSeq="+rawSeq.length()+" chars");
       }
     }

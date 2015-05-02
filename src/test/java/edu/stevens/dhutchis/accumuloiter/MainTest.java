@@ -88,18 +88,11 @@ public class MainTest {
 
     @Test
     public void testNormal() throws Exception {
-
         Connector conn = connectToAccumulo();
-        System.out.println("hi");
         innerTest( conn);
     }
 
     private void innerTest( Connector conn) throws Exception {
-
-
-        List<String> taxa = new ArrayList<>();
-        taxa.add("Bacteria");
-        taxa.add("Proteobacteria");
         String taxon = ""; //"taxonomy|Bacteria; Cyanobacteria";
 
         Wrap wrap = new Wrap();
