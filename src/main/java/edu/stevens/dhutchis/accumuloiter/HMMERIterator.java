@@ -13,6 +13,7 @@ import org.apache.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
+import java.util.concurrent.RunnableFuture;
 
 /**
  * Calls HMMER native library.
@@ -80,7 +81,6 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
 
   //  @SuppressWarnings("unchecked")
   private Value hmmerAttachBool(String[] accIDs, String[] rawSeqs) {
-    System.out.println("hmmerAttachBool: rawSeqs.length= "+rawSeqs.length+"  Thread= "+Thread.currentThread().getName());
     // TODO: at some point later, return the score/probability
     boolean[] booleans = Wrap.seqpass(rawSeqs, hmm_path);
 
@@ -98,7 +98,7 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
   private void prepareNextEntry() throws IOException {
     topKey = null;
     topValue = null;
-
+    long numBases=0;
     List<String> accIDs = new ArrayList<>(), rawSeqs = new ArrayList<>();
     Key k = new Key();
     for (int i = 0; i < batchSize && (source.hasTop() || rangeIter.hasNext()); source.next(), i++) {
@@ -113,9 +113,17 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
         continue;
       k.set(source.getTopKey());
       accIDs.add(source.getTopKey().getRow().toString());
-      rawSeqs.add(source.getTopValue().toString());
+      String rawSeq = source.getTopValue().toString();
+      rawSeqs.add(rawSeq);
+      numBases += rawSeq.length();
     }
     if (rawSeqs.size() > 0) {
+      System.out.println("hmmerAttachBool: rawSeqs.length= "+rawSeqs.size()+", numBases= "+numBases+" memEstimate="+( numBases*2+ rawSeqs.size()*8*2)+"B  Thread= "+Thread.currentThread().getName());
+      long free = Runtime.getRuntime().freeMemory();
+      long max = Runtime.getRuntime().maxMemory();
+      long avail = Runtime.getRuntime().totalMemory();
+
+      System.out.printf("Runtime: Free %d Max %d Avail %d\n",free,max,avail);
       topKey = new Key(k);
       topValue = hmmerAttachBool(accIDs.toArray(new String[accIDs.size()]),
                rawSeqs.toArray(new String[rawSeqs.size()]));

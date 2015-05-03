@@ -117,7 +117,10 @@ public class Wrap {
     // Scan TseqT
     int counter = 0;
     for (Map.Entry<Key, Value> entry : scan) {
-      if (counter % batchSize == 0 && counter != 0)// when we have enough ranges
+      String acc = entry.getKey().getColumnQualifier().toString();
+      accList.add(new Range(acc));
+      counter++;
+      if (counter % batchSize == 0)// when we have enough ranges
       {
         // BatchScan TseqRaw with accession IDs from TseqT.
         startComputeTime = System.currentTimeMillis();
@@ -125,9 +128,6 @@ public class Wrap {
         computeTime += System.currentTimeMillis() - startComputeTime;
         accList.clear();
       }
-      String acc = entry.getKey().getColumnQualifier().toString();
-      accList.add(new Range(acc));
-      counter++;
     }
     scan.close();
     //System.out.println("entering last batch");

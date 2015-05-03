@@ -102,7 +102,7 @@ public class MainTest {
         Wrap wrap = new Wrap();
         PrintWriter writer = new PrintWriter("lightTest" + new Date( ).toString() + ".txt", "UTF-8");
         String tInput = "taxonomy|Bacteria; Firmicutes; Clostridia"; //contains about 500,000 seqs
-        System.out.println(wrap.taxToRaw(conn, tInput, 25000, 50000, writer));
+        System.out.println(wrap.taxToRaw(conn, tInput, 50000, 25000, writer));
     }
 
 
