@@ -118,12 +118,12 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
       numBases += rawSeq.length();
     }
     if (rawSeqs.size() > 0) {
-      System.out.println("hmmerAttachBool: rawSeqs.length= "+rawSeqs.size()+", numBases= "+numBases+" memEstimate="+( numBases*2+ rawSeqs.size()*8*2)+"B  Thread= "+Thread.currentThread().getName());
+      System.out.printf("hmmerAttachBool: rawSeqs.length= %5d numBases= %6d memEstimate=%,7dB  Thread= %s\n", rawSeqs.size(), numBases, numBases*2+ rawSeqs.size()*8*2, Thread.currentThread().getName());
       long free = Runtime.getRuntime().freeMemory();
       long max = Runtime.getRuntime().maxMemory();
       long avail = Runtime.getRuntime().totalMemory();
 
-      System.out.printf("Runtime: Free %d Max %d Avail %d\n",free,max,avail);
+      System.out.printf("Runtime: Free %,9d Max %,9d Avail %,d\n",free,(max == Long.MAX_VALUE ? "no limit" : max),avail);
       topKey = new Key(k);
       topValue = hmmerAttachBool(accIDs.toArray(new String[accIDs.size()]),
                rawSeqs.toArray(new String[rawSeqs.size()]));
