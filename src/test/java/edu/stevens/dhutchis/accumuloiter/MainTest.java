@@ -121,7 +121,7 @@ public class MainTest {
         System.out.println("acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time");
 
 
-        for(int iterBatchSize = 10000; iterBatchSize <= 100000; iterBatchSize+=10000)
+        for(int iterBatchSize = 10000; iterBatchSize <= 500000; iterBatchSize+=10000)
         {
                 System.out.println(Integer.toString(iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, iterBatchSize, iterBatchSize,1));
                 //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
@@ -143,7 +143,7 @@ public class MainTest {
         System.out.println("acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time");
 
 
-        for(int iterBatchSize = 10000; iterBatchSize <= 100000; iterBatchSize+=10000)
+        for(int iterBatchSize = 10000; iterBatchSize <= 500000; iterBatchSize+=10000)
         {
             System.out.println(Integer.toString(iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, iterBatchSize, iterBatchSize,2));
             //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
@@ -164,7 +164,7 @@ public class MainTest {
         System.out.println("Same batch size, Three Threads");
         System.out.println("acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time");
 
-        for(int iterBatchSize = 10000; iterBatchSize <= 100000; iterBatchSize+=10000)
+        for(int iterBatchSize = 10000; iterBatchSize <= 500000; iterBatchSize+=10000)
         {
             System.out.println(Integer.toString(iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, iterBatchSize, iterBatchSize,3));
             //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
@@ -184,7 +184,7 @@ public class MainTest {
         System.out.println("Accession batch size twice iterator batch size, One Threads");
         System.out.println("acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time");
 
-        for(int iterBatchSize = 10000; iterBatchSize <= 100000; iterBatchSize+=10000)
+        for(int iterBatchSize = 10000; iterBatchSize <= 500000; iterBatchSize+=10000)
         {
             System.out.println(Integer.toString(2*iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, 2*iterBatchSize, iterBatchSize,1));
             //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
@@ -203,7 +203,7 @@ public class MainTest {
         String tInput = "taxonomy|Bacteria; Proteobacteria; Epsilonproteobacteria"; //contains about 250,000 seqs
         System.out.println("Accession batch size twice iterator batch size, Two Threads");
         System.out.println("acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time");
-        for(int iterBatchSize = 10000; iterBatchSize <= 100000; iterBatchSize+=10000)
+        for(int iterBatchSize = 10000; iterBatchSize <= 500000; iterBatchSize+=10000)
         {
             System.out.println(Integer.toString(2*iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, 2*iterBatchSize, iterBatchSize,2));
             //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
@@ -223,7 +223,7 @@ public class MainTest {
         System.out.println("Accession batch size twice iterator batch size, Three Threads");
         System.out.println("acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time");
 
-        for(int iterBatchSize = 10000; iterBatchSize <= 100000; iterBatchSize+=10000)
+        for(int iterBatchSize = 10000; iterBatchSize <= 500000; iterBatchSize+=10000)
         {
             System.out.println(Integer.toString(2*iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, 2*iterBatchSize, iterBatchSize,3));
             //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
