@@ -102,30 +102,132 @@ public class MainTest {
         Wrap wrap = new Wrap();
         PrintWriter writer = new PrintWriter("lightTest" + new Date( ).toString() + ".txt", "UTF-8");
         String tInput = "taxonomy|Bacteria; Firmicutes; Clostridia"; //contains about 500,000 seqs
-        System.out.println(wrap.taxToRaw(conn, tInput, 50000, 25000, writer));
+        System.out.println(wrap.taxToRaw(conn, tInput, 50000, 25000,3));
     }
 
 
     @Test
-    public void benchTest() throws Exception
+    public void sameBatchOneThread() throws Exception
     {
         Connector conn = connectToAccumulo();
 
         String taxon = ""; //"taxonomy|Bacteria; Cyanobacteria";
         Wrap wrap = new Wrap();
-        PrintWriter writer = new PrintWriter("lightTest" + new Date( ).toString() + ".txt", "UTF-8");
-        String tInput = "taxonomy|Bacteria; Firmicutes; Clostridia"; //contains about 500,000 seqs
 
-        for(int iterBatchSize = 10000; iterBatchSize <= 70000; iterBatchSize+=10000)
+        //String tInput = "taxonomy|Bacteria; Firmicutes; Clostridia"; //contains about 500,000 seqs
+        String tInput = "taxonomy|Bacteria; Proteobacteria; Epsilonproteobacteria"; //contains about 250,000 seqs
+
+        System.out.println("Same batch size, One Thread");
+        System.out.println("acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time");
+
+
+        for(int iterBatchSize = 10000; iterBatchSize <= 100000; iterBatchSize+=10000)
         {
-            for(int accIdSize = iterBatchSize; accIdSize <= 500000; accIdSize+=25000)
-            {
-                writer.append(Integer.toString(iterBatchSize) + " " + Integer.toString(accIdSize) + " " + wrap.taxToRaw(conn, tInput, accIdSize, iterBatchSize, writer));
-                //iterator batch size; acc ids batch size; how many of taxon was in database; total scan time; total compute time
-            }
+                System.out.println(Integer.toString(iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, iterBatchSize, iterBatchSize,1));
+                //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
         }
+    }
 
-        writer.close();
+    @Test
+    public void sameBatchTwoThread() throws Exception
+    {
+        Connector conn = connectToAccumulo();
+
+        String taxon = ""; //"taxonomy|Bacteria; Cyanobacteria";
+        Wrap wrap = new Wrap();
+
+        //String tInput = "taxonomy|Bacteria; Firmicutes; Clostridia"; //contains about 500,000 seqs
+        String tInput = "taxonomy|Bacteria; Proteobacteria; Epsilonproteobacteria"; //contains about 250,000 seqs
+
+        System.out.println("Same batch size, Two Threads");
+        System.out.println("acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time");
+
+
+        for(int iterBatchSize = 10000; iterBatchSize <= 100000; iterBatchSize+=10000)
+        {
+            System.out.println(Integer.toString(iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, iterBatchSize, iterBatchSize,2));
+            //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
+        }
+    }
+
+    @Test
+    public void sameBatchThreeThread() throws Exception
+    {
+        Connector conn = connectToAccumulo();
+
+        String taxon = ""; //"taxonomy|Bacteria; Cyanobacteria";
+        Wrap wrap = new Wrap();
+
+        //String tInput = "taxonomy|Bacteria; Firmicutes; Clostridia"; //contains about 500,000 seqs
+        String tInput = "taxonomy|Bacteria; Proteobacteria; Epsilonproteobacteria"; //contains about 250,000 seqs
+
+        System.out.println("Same batch size, Three Threads");
+        System.out.println("acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time");
+
+        for(int iterBatchSize = 10000; iterBatchSize <= 100000; iterBatchSize+=10000)
+        {
+            System.out.println(Integer.toString(iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, iterBatchSize, iterBatchSize,3));
+            //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
+        }
+    }
+
+    @Test
+    public void twiceBatchOneThread() throws Exception
+    {
+        Connector conn = connectToAccumulo();
+
+        String taxon = ""; //"taxonomy|Bacteria; Cyanobacteria";
+        Wrap wrap = new Wrap();
+
+        //String tInput = "taxonomy|Bacteria; Firmicutes; Clostridia"; //contains about 500,000 seqs
+        String tInput = "taxonomy|Bacteria; Proteobacteria; Epsilonproteobacteria"; //contains about 250,000 seqs
+        System.out.println("Accession batch size twice iterator batch size, One Threads");
+        System.out.println("acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time");
+
+        for(int iterBatchSize = 10000; iterBatchSize <= 100000; iterBatchSize+=10000)
+        {
+            System.out.println(Integer.toString(2*iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, 2*iterBatchSize, iterBatchSize,1));
+            //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
+        }
+    }
+
+    @Test
+    public void twiceBatchTwoThread() throws Exception
+    {
+        Connector conn = connectToAccumulo();
+
+        String taxon = ""; //"taxonomy|Bacteria; Cyanobacteria";
+        Wrap wrap = new Wrap();
+
+        //String tInput = "taxonomy|Bacteria; Firmicutes; Clostridia"; //contains about 500,000 seqs
+        String tInput = "taxonomy|Bacteria; Proteobacteria; Epsilonproteobacteria"; //contains about 250,000 seqs
+        System.out.println("Accession batch size twice iterator batch size, Two Threads");
+        System.out.println("acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time");
+        for(int iterBatchSize = 10000; iterBatchSize <= 100000; iterBatchSize+=10000)
+        {
+            System.out.println(Integer.toString(2*iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, 2*iterBatchSize, iterBatchSize,2));
+            //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
+        }
+    }
+
+    @Test
+    public void twiceBatchThreeThread() throws Exception
+    {
+        Connector conn = connectToAccumulo();
+
+        String taxon = ""; //"taxonomy|Bacteria; Cyanobacteria";
+        Wrap wrap = new Wrap();
+
+        //String tInput = "taxonomy|Bacteria; Firmicutes; Clostridia"; //contains about 500,000 seqs
+        String tInput = "taxonomy|Bacteria; Proteobacteria; Epsilonproteobacteria"; //contains about 250,000 seqs
+        System.out.println("Accession batch size twice iterator batch size, Three Threads");
+        System.out.println("acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time");
+
+        for(int iterBatchSize = 10000; iterBatchSize <= 100000; iterBatchSize+=10000)
+        {
+            System.out.println(Integer.toString(2*iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, 2*iterBatchSize, iterBatchSize,3));
+            //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
+        }
     }
 
     private void innerTest( Connector conn) throws Exception {
@@ -163,7 +265,7 @@ public class MainTest {
                 System.out.println("scanning with : " + tInput);
                 if(!used.contains(tInput))
                 {
-                    wrap.taxToRaw(conn, tInput,25000,50000,writer);
+                    wrap.taxToRaw(conn, tInput,25000,50000,4);
                     used.add(tInput);
                 }
             }

@@ -91,15 +91,15 @@ public class Wrap {
     return accList;
   }
 
-  public String taxToRaw(Connector conn, String taxon, int accIdSize, int iterBatchSize,PrintWriter writer) throws AccumuloSecurityException, AccumuloException, TableNotFoundException {
+  public String taxToRaw(Connector conn, String taxon, int accIdSize, int iterBatchSize, int threadNumber) throws AccumuloSecurityException, AccumuloException, TableNotFoundException {
     long startTime = System.currentTimeMillis();
 
     final int batchSize = accIdSize;// increase size
-    System.out.println("entered tax to raw");
+    //System.out.println("entered tax to raw");
     // Setup BatchScanner to read rows that contain the accession numbers from TseqRaw, using 1 thread
     final String TseqT = "TseqT";
     final String TseqRaw = "TseqRaw";
-    int numThreads = 4;
+    int numThreads = threadNumber;
 
     Scanner scan = conn.createScanner(TseqT, Authorizations.EMPTY);
     scan.setRange(new Range(taxon, taxon + "~"));
@@ -124,7 +124,7 @@ public class Wrap {
       {
         // BatchScan TseqRaw with accession IDs from TseqT.
         startComputeTime = System.currentTimeMillis();
-        scanTseqRaw(batScan, hmm_path, accList,iterBatchSize, writer);
+        scanTseqRaw(batScan, hmm_path, accList,iterBatchSize);
         computeTime += System.currentTimeMillis() - startComputeTime;
         accList.clear();
       }
@@ -133,7 +133,7 @@ public class Wrap {
     //System.out.println("entering last batch");
     if (!accList.isEmpty()) {
       startComputeTime = System.currentTimeMillis();
-      scanTseqRaw(batScan, hmm_path, accList,iterBatchSize, writer);
+      scanTseqRaw(batScan, hmm_path, accList,iterBatchSize);
       computeTime += System.currentTimeMillis() - startComputeTime;
       accList.clear();
     }
@@ -145,7 +145,7 @@ public class Wrap {
   }
 
   @SuppressWarnings("unchecked")
-  private static void scanTseqRaw(BatchScanner batScan, String hmm_path, Collection<Range> accList, int iterBatchSize, PrintWriter writer) {
+  private static void scanTseqRaw(BatchScanner batScan, String hmm_path, Collection<Range> accList, int iterBatchSize) {
     //                batScan.setRanges(accList);
     batScan.clearScanIterators();
     Map<String, String> options = new HashMap<>();
