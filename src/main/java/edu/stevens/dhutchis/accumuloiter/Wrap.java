@@ -140,7 +140,7 @@ public class Wrap {
     batScan.close();
 
     long totalTime = System.currentTimeMillis() - startTime;
-    return Integer.toString(counter) + " " + Long.toString(totalTime - computeTime) + " " + Long.toString(computeTime);
+    return Integer.toString(counter) + " " + Long.toString(totalTime - computeTime) + " " + Long.toString(computeTime)+ " " + taxon;
     //taxon string;  how many of taxon was in database; total scan time; total compute time
   }
 
