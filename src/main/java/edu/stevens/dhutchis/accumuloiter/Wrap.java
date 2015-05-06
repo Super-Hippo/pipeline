@@ -102,7 +102,7 @@ public class Wrap {
     int numThreads = threadNumber;
 
 
-    BatchScanner scan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, 50);
+    BatchScanner scan = conn.createBatchScanner(TseqT, Authorizations.EMPTY, 50);
     scan.setRanges(Collections.singleton(new Range("taxonomy", "taxonomy~")));
 
     BatchScanner batScan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
@@ -141,7 +141,7 @@ public class Wrap {
     batScan.close();
 
     long totalTime = System.currentTimeMillis() - startTime;
-    return Integer.toString(counter) + " " + Long.toString(totalTime - computeTime) + " " + Long.toString(computeTime)+ taxon;
+    return Integer.toString(counter) + " " + Long.toString(totalTime - computeTime) + " " + Long.toString(computeTime)+ " " +taxon;
     //how many of taxon was in database; total scan time; total compute time; taxon string
   }
 
