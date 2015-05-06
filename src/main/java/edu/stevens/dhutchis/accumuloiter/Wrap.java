@@ -101,12 +101,13 @@ public class Wrap {
     final String TseqRaw = "TseqRaw";
     int numThreads = threadNumber;
 
-    Scanner scan = conn.createScanner(TseqT, Authorizations.EMPTY);
-    scan.setRange(new Range(taxon, taxon + "~"));
+
+    BatchScanner scan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, 50);
+    scan.setRanges(Collections.singleton(new Range("taxonomy", "taxonomy~")));
 
     BatchScanner batScan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
     batScan.setRanges(Collections.singleton(new Range()));
-    final String hmm_path = "/home/echerin/48.hmm";
+    final String hmm_path = "/home/echerin/48.hmm"; //"/home/echerin/2405.hmm"
 
     List<Range> accList = new ArrayList<>();
     Map<String, String> rawSeqMap = new HashMap<String, String>();
@@ -140,8 +141,8 @@ public class Wrap {
     batScan.close();
 
     long totalTime = System.currentTimeMillis() - startTime;
-    return Integer.toString(counter) + " " + Long.toString(totalTime - computeTime) + " " + Long.toString(computeTime);
-    //taxon string;  how many of taxon was in database; total scan time; total compute time
+    return Integer.toString(counter) + " " + Long.toString(totalTime - computeTime) + " " + Long.toString(computeTime)+ taxon;
+    //how many of taxon was in database; total scan time; total compute time; taxon string
   }
 
   @SuppressWarnings("unchecked")

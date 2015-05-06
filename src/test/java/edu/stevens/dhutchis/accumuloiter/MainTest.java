@@ -238,13 +238,13 @@ public class MainTest {
         java.util.Scanner s = new Scanner(f);
         List<String> used = new ArrayList<>();
 
-        PrintWriter writer = new PrintWriter("graph" + new Date( ).toString() + ".txt", "UTF-8");
+        //PrintWriter writer = new PrintWriter("graph" + new Date( ).toString() + ".txt", "UTF-8");
 
         while(s.hasNextLine()) //assume taxonomy| ... has no spaces in family/genus names
         {
 
             taxon = s.nextLine();
-            System.out.println("We are in outer while loop and using: " + taxon);
+            //System.out.println("We are in outer while loop and using: " + taxon);
 
             java.util.Scanner wScan = new Scanner(taxon);
             String tInput = "taxonomy|";
@@ -262,17 +262,17 @@ public class MainTest {
                     tInput += "; " + wScan.next();
                 }
 
-                System.out.println("scanning with : " + tInput);
+                //System.out.println("scanning with : " + tInput);
                 if(!used.contains(tInput))
                 {
-                    wrap.taxToRaw(conn, tInput,25000,50000,4);
+                    wrap.taxToRaw(conn, tInput,100000,100000,4);
                     used.add(tInput);
                 }
             }
 
         }
 
-        writer.close();
+        //writer.close();
 
     }
 
