@@ -102,8 +102,8 @@ public class Wrap {
     int numThreads = threadNumber;
 
 
-    BatchScanner scan = conn.createBatchScanner(TseqT, Authorizations.EMPTY, 50);
-    scan.setRanges(Collections.singleton(new Range("taxonomy", "taxonomy~")));
+    Scanner scan = conn.createScanner(TseqT, Authorizations.EMPTY);
+    scan.setRange(new Range("taxonomy", "taxonomy~"));
 
     BatchScanner batScan = conn.createBatchScanner(TseqRaw, Authorizations.EMPTY, numThreads);
     batScan.setRanges(Collections.singleton(new Range()));
