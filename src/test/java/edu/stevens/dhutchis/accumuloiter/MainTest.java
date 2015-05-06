@@ -265,7 +265,7 @@ public class MainTest {
                 //System.out.println("scanning with : " + tInput);
                 if(!used.contains(tInput))
                 {
-                    wrap.taxToRaw(conn, tInput,100000,100000,4);
+                    System.out.println(wrap.taxToRaw(conn, tInput,100000,100000,4));
                     used.add(tInput);
                 }
             }
