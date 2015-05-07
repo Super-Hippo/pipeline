@@ -101,8 +101,8 @@ public class MainTest {
         String taxon = ""; //"taxonomy|Bacteria; Cyanobacteria";
         Wrap wrap = new Wrap();
         PrintWriter writer = new PrintWriter("lightTest" + new Date( ).toString() + ".txt", "UTF-8");
-        String tInput = "taxonomy|Bacteria; Firmicutes; Clostridia"; //contains about 500,000 seqs
-        System.out.println(wrap.taxToRaw(conn, tInput, 50000, 25000,3));
+        String tInput = "taxonomy|Bacteria"; //; Firmicutes; Clostridia"; //contains about 500,000 seqs
+        System.out.println(wrap.taxToRaw(conn, tInput, 80000, 80000,3));
     }
 
 
@@ -123,8 +123,8 @@ public class MainTest {
 
         for(int iterBatchSize = 10000; iterBatchSize <= 100000; iterBatchSize+=10000)
         {
-                System.out.println(Integer.toString(iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, iterBatchSize, iterBatchSize,1));
-                //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
+            System.out.println(Integer.toString(iterBatchSize) + " " + Integer.toString(iterBatchSize) + " " + wrap.taxToRaw(conn, tInput, iterBatchSize, iterBatchSize,1));
+            //acc ids batch size; iterator batch size; how many of taxon was in database; total scan time; total compute time
         }
     }
 
@@ -265,7 +265,7 @@ public class MainTest {
                 //System.out.println("scanning with : " + tInput);
                 if(!used.contains(tInput))
                 {
-                    wrap.taxToRaw(conn, tInput,100000,100000,4);
+                    wrap.taxToRaw(conn, tInput,80000,80000,3);
                     used.add(tInput);
                 }
             }
