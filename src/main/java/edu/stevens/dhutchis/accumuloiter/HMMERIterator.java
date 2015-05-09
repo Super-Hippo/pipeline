@@ -37,6 +37,7 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
   private Key topKey;
   private Value topValue;
   private int batchSize = 10000;
+  private long maxNumBytes = 1000000000;
 
 //  private static final AtomicBoolean loadedNativeLibraries = new AtomicBoolean(false);
 
@@ -77,8 +78,6 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
   }
 
 
-
-
   //  @SuppressWarnings("unchecked")
   private Value hmmerAttachBool(String[] accIDs, String[] rawSeqs) {
     // TODO: at some point later, return the score/probability
@@ -98,10 +97,10 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
   private void prepareNextEntry() throws IOException {
     topKey = null;
     topValue = null;
-    long numBases=0;
+    long numBytes=0;
     List<String> accIDs = new ArrayList<>(), rawSeqs = new ArrayList<>();
     Key k = new Key();
-    for (int i = 0; i < batchSize && (source.hasTop() || rangeIter.hasNext()); source.next(), i++) {
+    for (int i = 0; numBytes < maxNumBytes && i < batchSize && (source.hasTop() || rangeIter.hasNext()); source.next(), i++) {
       // if finished this range, then goto next range
       while (!source.hasTop() && rangeIter.hasNext())
         source.seek(rangeIter.next(), columnFamilies, inclusive);
@@ -114,11 +113,11 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
       k.set(source.getTopKey());
       accIDs.add(source.getTopKey().getRow().toString());
       String rawSeq = source.getTopValue().toString();
+      numBytes += rawSeq.getBytes().length*8;
       rawSeqs.add(rawSeq);
-      numBases += rawSeq.length();
     }
     if (rawSeqs.size() > 0) {
-      System.out.printf("hmmerAttachBool: rawSeqs.length= %5d numBases= %6d memEstimate=%,7dB  Thread= %s\n", rawSeqs.size(), numBases, numBases*2+ rawSeqs.size()*8*2, Thread.currentThread().getName());
+      System.out.printf("hmmerAttachBool: rawSeqs.length= %5d numBytes= %9d Thread= %s\n", rawSeqs.size(), numBytes, Thread.currentThread().getName());
       long free = Runtime.getRuntime().freeMemory();
       long max = Runtime.getRuntime().maxMemory();
       long avail = Runtime.getRuntime().totalMemory();
@@ -140,6 +139,8 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
       rowRanges.setTargetRanges(GraphuloUtil.d4mRowToRanges(map.get("rowRanges")));
     if (map != null && map.containsKey("batchSize"))
       batchSize = Integer.parseInt(map.get("batchSize"));
+    if (map != null && map.containsKey("maxNumBytes"))
+      maxNumBytes = Long.parseLong(map.get("maxNumBytes"));
   }
 
   @Override

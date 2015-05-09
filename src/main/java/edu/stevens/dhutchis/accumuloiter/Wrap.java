@@ -91,7 +91,7 @@ public class Wrap {
     return accList;
   }
 
-  public String taxToRaw(Connector conn, String taxon, int accIdSize, int iterBatchSize, int threadNumber) throws AccumuloSecurityException, AccumuloException, TableNotFoundException {
+  public String taxToRaw(Connector conn, String taxon, int accIdSize, int iterBatchSize, long iterGPUMaxNumBytes, int threadNumber) throws AccumuloSecurityException, AccumuloException, TableNotFoundException {
     long startTime = System.currentTimeMillis();
 
     final int batchSize = accIdSize;// increase size
@@ -124,7 +124,7 @@ public class Wrap {
       {
         // BatchScan TseqRaw with accession IDs from TseqT.
         startComputeTime = System.currentTimeMillis();
-        scanTseqRaw(batScan, hmm_path, accList,iterBatchSize);
+        scanTseqRaw(batScan, hmm_path, accList,iterBatchSize, iterGPUMaxNumBytes);
         computeTime += System.currentTimeMillis() - startComputeTime;
         accList.clear();
       }
@@ -133,7 +133,7 @@ public class Wrap {
     //System.out.println("entering last batch");
     if (!accList.isEmpty()) {
       startComputeTime = System.currentTimeMillis();
-      scanTseqRaw(batScan, hmm_path, accList,iterBatchSize);
+      scanTseqRaw(batScan, hmm_path, accList,iterBatchSize, iterGPUMaxNumBytes);
       computeTime += System.currentTimeMillis() - startComputeTime;
       accList.clear();
     }
@@ -145,13 +145,14 @@ public class Wrap {
   }
 
   @SuppressWarnings("unchecked")
-  private static void scanTseqRaw(BatchScanner batScan, String hmm_path, Collection<Range> accList, int iterBatchSize) {
+  private static void scanTseqRaw(BatchScanner batScan, String hmm_path, Collection<Range> accList, int iterBatchSize, long iterGPUMaxNumBytes) {
     //                batScan.setRanges(accList);
     batScan.clearScanIterators();
     Map<String, String> options = new HashMap<>();
     options.put("hmm_path", hmm_path);
     options.put("rowRanges", GraphuloUtil.rangesToD4MString(accList));
     options.put("batchSize",Integer.toString(iterBatchSize));
+    options.put("maxNumBytes", Long.toString(iterGPUMaxNumBytes));
     IteratorSetting itset = new IteratorSetting(18, HMMERIterator.class, options);
     batScan.addScanIterator(itset);
 
