@@ -113,7 +113,7 @@ public class HMMERIterator implements SortedKeyValueIterator<Key,Value> {
       k.set(source.getTopKey());
       accIDs.add(source.getTopKey().getRow().toString());
       String rawSeq = source.getTopValue().toString();
-      numBytes += rawSeq.getBytes().length*8;
+      numBytes += rawSeq.getBytes().length;
       rawSeqs.add(rawSeq);
     }
     if (rawSeqs.size() > 0) {
