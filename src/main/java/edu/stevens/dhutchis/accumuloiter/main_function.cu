@@ -10,14 +10,15 @@
 #include <iostream>
 
 #include "header_def.cuh"
-#include "data_partition.cuh"		/* o	nly for multi-GPU */
+#include "data_partition.cuh"		/* only for multi-GPU */
 
 extern "C" bool* mymain(int sizeout, const char** s, const char *Chmm_path )
 {
 	const char *MODEL_PATH = Chmm_path;
-	//Temporary code here..
-	int ACTIVE_BLOCKS = 30;
-	int ROW_IN_BLOCK = 20;
+
+	/* Good upto size == 800 (temporary fixed) */
+	int ACTIVE_BLOCKS = 32;
+	int ROW_IN_BLOCK = 16;
 
 	/* Once we have multiple devices, display them and set them as 'current' for ready to run */
 	int deviceCount;
@@ -31,8 +32,8 @@ extern "C" bool* mymain(int sizeout, const char** s, const char *Chmm_path )
 		//printf("\nDevice %d has compute capability %d.%d.\n", device, deviceProp.major, deviceProp.minor);
 	}
 
-	HMMER_PROFILE *hmm = NULL;						/* claim hmm         */
-	hmm = hmmer_profile_Create(MODEL_PATH);					/* alloc mem for hmm */
+	HMMER_PROFILE *hmm = NULL;				/* claim hmm         */
+	hmm = hmmer_profile_Create(MODEL_PATH);			/* alloc mem for hmm */
 
 	/* ************************************************ */
 	/* 		1. Parameters, match, insert emission 		*/
@@ -57,24 +58,15 @@ extern "C" bool* mymain(int sizeout, const char** s, const char *Chmm_path )
 
 
 	/* ************************************************************************ */
-	/* 		2. Transition probability only for Viterbi and Forward filter 		*/
+	/* 2. Transition probability only for Viterbi and Forward filter 	    */
 	/* ************************************************************************ */
+#if 0
 
-#if 1
-	/**/
-	get_transition(hmm, MODEL_PATH) ;
-
-	/**/
-	get_entryScore(hmm);
-
-	/**/
-	log_Trans(hmm) ;
-
-	/**/
-	xTrans(hmm) ;
-
-	/**/
-vf_conversion(hmm) ;
+	/**/ get_transition(hmm, MODEL_PATH) ;
+	/**/ get_entryScore(hmm);
+	/**/ log_Trans(hmm) ;
+	/**/ xTrans(hmm) ;
+	/**/ vf_conversion(hmm) ;
 
 	//Until now, all preparation works of Viterbi has been done!
 
@@ -91,37 +83,18 @@ vf_conversion(hmm) ;
 	//printf("\n In this database, we have %d seqs.\n", number);
 
 	/**/
-	const char** seq = (const char**)malloc(number * sizeof(char*));     					//dynamic memory for address value of each sequence: seq[i]->an address value
-	int* seq_len = (int*)malloc(number * sizeof(int));       					//for cache length of each sequence
+	const char** seq = (const char**)malloc(number * sizeof(char*));     //dynamic memory for address value of each sequence: seq[i]->an address value
+	int* seq_len = (int*)malloc(number * sizeof(int));       								//for cache length of each sequence
+
 	//if(alloc_Eachseq(seq, seq_len, number, DATABASE_PATH) != 1) printf("error!\n");
 	//if(fill_Eachseq(seq, seq_len, number, DATABASE_PATH) != 1) printf("error!\n");
 
-	seq = s;
+	seq = s;	/* copy pointer from outside */
 
-	for(int i =0;i< number;i++)//sets seq_length
+	for(int i =0;i< number;i++)		//sets seq_length
 	{
 		seq_len[i] = strlen(seq[i]);
 	}
-
-#if 0
-	/* verify reading data */
-	FILE* vrd = NULL;
-	vrd = fopen("E:\\verify_database", "w");
-	int avg_len = 0;
-	for(int i = 0; i < number; i++)
-	{
-		fprintf(vrd, "\n#%d===\n", i);
-		avg_len = avg_len + seq_len[i];
-
-		for(int j = 0; j < seq_len[i]; j++)
-		{
-			fprintf(vrd, "%c", seq[i][j]);
-		}
-	}
-	avg_len = avg_len/number;
-	fprintf(vrd, "\n==========\n, the avg_len = %d", avg_len);
-	fclose(vrd);
-#endif
 
 	/* transfer seq into int values */
 	char** iSeq = (char**)malloc(number * sizeof(char*));
@@ -147,7 +120,8 @@ vf_conversion(hmm) ;
 	//can try to use multiple threads...
 	for(int i = 0; i < deviceCount; i++)
 	{
-		cudaSetDevice(i);
+		cudaSetDevice(i);									/* CURRENT GPU */
+		cudaDeviceReset();									/* reset current GPU */
 		kernel[i].get_duty(SPAN, REMAIN, i, deviceCount);	/* distribution */
 		kernel[i].compress(iSeq, seq_len);					/* residues pack */
 		kernel[i].get_Real_Length(seq_len);					/* real Length of everyone */
@@ -155,7 +129,7 @@ vf_conversion(hmm) ;
 		kernel[i].host_to_device(hmm);
 	}
 
-	//launch..
+	/* launch */
 	for (int i = 0; i < deviceCount; i++)				 //Now we havent consider the time cost of data copy yet
 	{
 		cudaSetDevice(i);
@@ -163,11 +137,9 @@ vf_conversion(hmm) ;
 	}
 	cudaDeviceSynchronize();
 
-	//get back results and counter..
-
+	/* get back results and counter */
 	bool* passed_msv;
 	passed_msv = (bool*)malloc(number*sizeof(bool));
-
 
 	int counter = 0;
 	for (int i = 0; i < deviceCount; i++)
@@ -176,12 +148,9 @@ vf_conversion(hmm) ;
 		kernel[i].device_to_host(hmm,passed_msv);
 	}
 
-	//printf("\nTotally %d sequences pass through the MSV filter", counter);
-
 	for(int i = 0; i < number ; i++)
 	{
-		//printf("\nsequence %i passed : %d",i,passed_msv[i]);
-		if(passed_msv[i]==1)
+		if(passed_msv[i] == 1)
 		{
 			counter++;
 		}
@@ -194,21 +163,17 @@ vf_conversion(hmm) ;
 	/**/
 	delete[] kernel;
 
-
 	/* Free */
+	free(seq_len);
+
 	for(int i = 0; i < number; i++) {
 		free(iSeq[i]);
-		//free(seq[i]);
 	}
-	free(iSeq);				/* PLEASE REMIND: free child first, then parent */
-	//free(seq);
+	free(iSeq);		/* PLEASE REMIND: free child first, then parent */
 
 	/* HMM model */
 	freeHMM(hmm);
 
-	cudaDeviceReset();		/* should put here since we have many cuda function before */
-
 	return passed_msv;
-
 }
 
